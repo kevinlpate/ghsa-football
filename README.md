@@ -1,4 +1,4 @@
-# Pace & Pate Analytics — GHSA Football
+WBHF Analytics — GHSA Football
 
 Georgia high school football ratings, PnP Résumé rankings, team profiles, playoff odds and game win probabilities.
 Live site: https://kevinlpate.github.io/ghsa-football/
