@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHSA Football Ratings · Pace &amp; Pate Analytics</title>
+<meta name="description" content="Georgia high school football ratings, résumé rankings, team profiles, playoff odds and game win probabilities from Pace &amp; Pate Analytics. Projections, not betting advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root {
+  --font-anthropic-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-anthropic-serif: "Source Serif 4", Georgia, serif;
+  --color-fg: #1d1f23; --color-fg-muted: #626770; --color-bg: #f6f5f2; --color-panel: #ffffff; --color-border-line: #e2e0da;
+  --color-ok: #1a7f37; --color-bad: #c0392b; --color-warn: #b7791f;
+  --cds-chart-1: #2f6fdd; --cds-chart-2: #d0742b; --cds-chart-3: #7a5cc2;
+  --cds-chart-muted: #c9ccd1; --cds-chart-grid: #ebe9e4; --cds-chart-axis: #c9c6be; --cds-chart-reference: #9aa0a8;
+  --cds-text-secondary: #626770; --cds-surface-popover: #ffffff; --cds-border: #dcd9d2; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.12);
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 20px; --cds-gap-xl: 32px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 16px; --cds-pad-xl: 24px;
+  --cds-radius: 8px; --cds-font-size-caption: 12px; --cds-font-size-body: 14px; --cds-font-size-heading: 18px; --cds-font-size-title: 26px;
+  --cds-font-weight-medium: 600; --cds-dur-slow: .3s;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --color-fg: #e8e6e1; --color-fg-muted: #a0a4ab; --color-bg: #15171a; --color-panel: #1d2024; --color-border-line: #33373d;
+  --color-ok: #4cc06a; --color-bad: #ef6b5b; --color-warn: #e0a548;
+  --cds-chart-1: #6ea2f5; --cds-chart-2: #eb9a5c; --cds-chart-3: #a68cf0;
+  --cds-chart-muted: #4a4f57; --cds-chart-grid: #2a2e33; --cds-chart-axis: #474c53; --cds-chart-reference: #7d838b;
+  --cds-text-secondary: #a0a4ab; --cds-surface-popover: #24282d; --cds-border: #3a3f46; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.5); color-scheme: dark; } }
+html { -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: 14px; }
+.site-top { border-bottom: 1px solid var(--color-border-line); background: var(--color-panel); }
+.site-top .in, .site-main, .site-foot .in { max-width: 1240px; margin: 0 auto; padding: 12px 16px; box-sizing: border-box; }
+.site-top .in { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 16px; flex-wrap: wrap; }
+.site-top .brand { font-family: var(--font-anthropic-serif); font-weight: 600; font-size: 18px; }
+.site-top .asof { font-size: 12px; color: var(--color-fg-muted); }
+.site-main { padding-top: 20px; padding-bottom: 32px; }
+.site-foot { border-top: 1px solid var(--color-border-line); font-size: 12px; color: var(--color-fg-muted); }
+.site-foot a { color: inherit; }
+.dash-select { font: inherit; font-size: 14px; color: var(--color-fg); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 6px; padding: 5px 8px; max-width: 100%; }
+.dash-skeleton { color: transparent !important; background: var(--cds-chart-grid); border-radius: 4px; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="js/dash.js"></script>
+</head>
+<body>
+<header class="site-top"><div class="in"><span class="brand">Pace &amp; Pate Analytics · GHSA Football</span><span class="asof" id="site-asof">Updated weekly</span></div></header>
+<main class="site-main" id="dash-root">
+<style>
+.g-wrap{display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.g-head{display:flex;flex-direction:column;gap:var(--cds-gap-sm)}
+.g-head h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0;text-wrap:balance}
+.g-eyebrow{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);letter-spacing:.06em;text-transform:uppercase;margin:0}
+.g-take{font-size:var(--cds-font-size-heading);max-width:62ch;margin:0;line-height:1.45}
+.g-take b,.g-num{font-variant-numeric:tabular-nums;font-weight:var(--cds-font-weight-medium)}
+.g-tabs{display:flex;gap:4px;border-bottom:1px solid var(--color-border-line);overflow-x:auto}
+.g-tab{font:inherit;font-size:var(--cds-font-size-body);background:none;border:0;border-bottom:2px solid transparent;color:var(--color-fg-muted);padding:10px 14px;cursor:pointer;white-space:nowrap;margin-bottom:-1px}
+.g-tab:hover{color:var(--color-fg)}
+.g-tab[aria-selected="true"]{color:var(--color-fg);border-bottom-color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.g-tab:focus-visible,.g-pick:focus-visible,.g-t th[data-sort]:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.g-page{display:flex;flex-direction:column;gap:var(--cds-gap-xl);min-width:0}
+.g-sec{display:flex;flex-direction:column;gap:var(--cds-gap-md);min-width:0}
+.g-sec>h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0;text-wrap:balance}
+.g-note{margin:0;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);max-width:72ch;line-height:1.5}
+.g-ctrl{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm) var(--cds-gap-md);align-items:center}
+.g-ctrl label{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.g-field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.g-picks{display:flex;flex-wrap:wrap;gap:6px}
+.g-pick{font:inherit;font-size:var(--cds-font-size-caption);background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:999px;padding:4px 12px;cursor:pointer;color:var(--color-fg)}
+.g-pick[aria-pressed="true"]{border-color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.g-input{font:inherit;font-size:var(--cds-font-size-body);color:var(--color-fg);background:var(--color-bg);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:6px 10px;min-width:0}
+.g-panel{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-sm);min-width:0}
+.g-panel h3{margin:0;font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium)}
+.g-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:var(--cds-gap-lg);align-items:start}
+.g-profile-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--cds-gap-sm) var(--cds-gap-md)}
+.g-profile-head h3{margin:0;font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title)}
+.g-sub{color:var(--color-fg-muted);font-size:var(--cds-font-size-body)}
+.g-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:var(--cds-gap-sm)}
+.g-tile{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);display:flex;flex-direction:column;gap:2px;min-width:0}
+.g-tile .g-label{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.g-tile .g-val{font-family:var(--font-anthropic-serif);font-weight:400;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.g-tile .g-aux{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.g-label{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);text-transform:uppercase;letter-spacing:.06em}
+.g-tile .g-label{text-transform:none;letter-spacing:0}
+.g-next{display:flex;flex-direction:column;gap:4px;min-height:3.2em}
+.g-odds{display:flex;flex-direction:column;gap:4px}
+.g-orow{display:grid;grid-template-columns:3.4em 1fr 3.2em;align-items:center;gap:var(--cds-gap-sm);font-size:var(--cds-font-size-caption)}
+.g-track{height:8px;border-radius:4px;background:var(--cds-chart-grid);overflow:hidden}
+.g-fill{height:100%;border-radius:4px}
+.g-pv{text-align:right;font-variant-numeric:tabular-nums}
+.g-chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:var(--cds-font-size-caption);border:1px solid var(--color-border-line);white-space:nowrap;line-height:1.5}
+.g-chip[data-t="Fire"]{background:color-mix(in srgb,var(--color-bad) 16%,transparent);border-color:var(--color-bad)}
+.g-chip[data-t="Up"]{background:color-mix(in srgb,var(--color-ok) 14%,transparent);border-color:var(--color-ok)}
+.g-chip[data-t="Down"]{background:color-mix(in srgb,var(--color-warn) 16%,transparent);border-color:var(--color-warn)}
+.g-chip[data-t="Ice"]{background:color-mix(in srgb,var(--cds-chart-reference) 30%,transparent);border-color:var(--color-fg-muted)}
+.g-res{font-weight:var(--cds-font-weight-medium)}
+.g-res[data-r="W"]{color:var(--color-ok)}
+.g-res[data-r="L"]{color:var(--color-bad)}
+.g-tablewrap{overflow-x:auto;min-width:0}
+table.g-t{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-body)}
+.g-t th{text-align:left;font-weight:var(--cds-font-weight-medium);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);padding:6px 8px;border-bottom:1px solid var(--color-border-line);white-space:nowrap;position:sticky;top:0;background:var(--color-panel)}
+.g-t th[data-sort]{cursor:pointer;user-select:none}
+.g-t th[data-sort]:hover{color:var(--color-fg)}
+.g-t th[aria-sort="descending"]::after{content:" ▼";font-size:.75em}
+.g-t th[aria-sort="ascending"]::after{content:" ▲";font-size:.75em}
+.g-t td{padding:6px 8px;border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.g-t .n{text-align:right}
+.g-t tr.g-me td{background:color-mix(in srgb,var(--color-ok) 9%,transparent)}
+.g-t tr.g-me td:first-child{box-shadow:inset 3px 0 0 var(--color-ok)}
+.g-t tr.g-up td{color:var(--color-fg-muted);font-style:italic}
+.g-t td.g-link{cursor:pointer;text-decoration:underline;text-decoration-color:var(--color-border-line);text-underline-offset:3px}
+.g-t td.g-link:hover{text-decoration-color:var(--color-fg)}
+.g-wpbar{display:inline-block;width:46px;height:6px;border-radius:3px;background:var(--cds-chart-grid);vertical-align:middle;margin-right:6px;overflow:hidden}
+.g-wpbar i{display:block;height:100%}
+.g-scroll{max-height:560px;overflow:auto}
+.g-chart{position:relative;min-height:220px;min-width:0}
+.g-chart svg{display:block;overflow:visible}
+.g-chart text{font-size:var(--cds-font-size-caption);fill:var(--cds-text-secondary);font-family:var(--font-anthropic-sans)}
+.g-list{display:flex;flex-direction:column;gap:8px;min-height:240px;position:relative}
+.g-lrow{display:flex;flex-direction:column;gap:3px;font-size:var(--cds-font-size-caption)}
+.g-lt{display:flex;justify-content:space-between;gap:var(--cds-gap-sm)}
+.g-lt span:first-child{min-width:0;overflow-wrap:anywhere}
+.g-ltrack{position:relative;height:8px;border-radius:4px;background:var(--cds-chart-grid)}
+.g-ltrack i{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--cds-chart-reference)}
+.g-tip{position:absolute;z-index:5;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:6px 8px;font-size:var(--cds-font-size-caption);max-width:240px;line-height:1.4}
+.g-tip b{display:block;font-weight:var(--cds-font-weight-medium)}
+.g-weights{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--cds-gap-sm) var(--cds-gap-lg)}
+.g-weights label{display:flex;justify-content:space-between;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.g-weights input[type=range]{width:100%;accent-color:var(--color-fg)}
+.g-btn{font:inherit;font-size:var(--cds-font-size-caption);background:none;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:4px 10px;cursor:pointer;color:var(--color-fg)}
+.g-mu{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:var(--cds-gap-md);align-items:end}
+.g-mu .g-side{display:flex;flex-direction:column;gap:2px;min-width:0}
+.g-mu .g-side.r{text-align:right;align-items:flex-end}
+.g-mu .g-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.g-mu .g-team{font-size:var(--cds-font-size-heading);overflow-wrap:anywhere}
+.g-mu .g-vs{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);padding-bottom:8px}
+.g-split{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--cds-chart-grid)}
+.g-split span{display:block;height:100%}
+.g-cmp td:nth-child(2){color:var(--color-fg-muted);text-align:center;font-size:var(--cds-font-size-caption)}
+.g-cmp td:first-child{text-align:right}
+.g-cmp b{font-weight:var(--cds-font-weight-medium)}
+.g-big2{font-family:var(--font-anthropic-serif);font-weight:400;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.g-kpis{display:flex;flex-wrap:wrap;gap:var(--cds-gap-lg);align-items:flex-end}
+.g-kpis>div{display:flex;flex-direction:column;gap:4px}
+.g-fail{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+details.g-defs{font-size:var(--cds-font-size-body);max-width:72ch}
+details.g-defs summary{cursor:pointer;font-weight:var(--cds-font-weight-medium)}
+details.g-defs dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:6px 14px;margin:var(--cds-gap-md) 0 0}
+details.g-defs dt{font-weight:var(--cds-font-weight-medium)}
+details.g-defs dd{margin:0;color:var(--color-fg-muted)}
+[data-dash-source-state="refreshing"]{opacity:.5}
+</style>
+
+<div class="g-wrap">
+  <header class="g-head" id="top">
+    <p class="g-eyebrow">GHSA football · 2026 playoffs · Round 1, Friday Nov 13</p>
+    <h1>GHSA Football Dashboard</h1>
+    <p class="g-take" id="takeaway" data-read lang="en">Cartersville is a <b data-draw="v" class="dash-skeleton" data-source="my_round1" data-field="win_prob" data-where="team=Cartersville" data-fmt="odds">—</b> favorite over <b data-draw="v" class="dash-skeleton" data-source="my_round1" data-field="opponent" data-where="team=Cartersville">—</b> in round 1, with a <b data-draw="v" class="dash-skeleton" data-source="odds" data-field="title" data-where="team=Cartersville" data-fmt="odds">—</b> chance at the 5A state title. Since Oct 17 the model has picked <b data-draw="v" class="dash-skeleton" data-source="season" data-field="accuracy" data-row="0" data-fmt="pct1">—</b> of <b data-draw="v" class="dash-skeleton" data-source="season" data-field="games" data-row="0" data-fmt="int">—</b> GHSA games correctly.</p>
+  </header>
+
+  <nav class="g-tabs" role="tablist" aria-label="Dashboard sections">
+    <button class="g-tab" role="tab" id="tab-teams" data-tab="teams" aria-selected="true" aria-controls="teams">Teams</button>
+    <button class="g-tab" role="tab" id="tab-rankings" data-tab="rankings" aria-selected="false" aria-controls="rankings">Rankings</button>
+    <button class="g-tab" role="tab" id="tab-matchups" data-tab="matchups" aria-selected="false" aria-controls="matchups">Matchups</button>
+  </nav>
+
+  <!-- ===================== TEAMS ===================== -->
+  <section class="g-page" id="teams" role="tabpanel" aria-labelledby="tab-teams">
+    <div class="g-ctrl">
+      <div class="g-field"><label for="team-pick">Team</label>
+        <select class="dash-select" id="team-pick" data-draw="teampick" data-source="teams" aria-label="Pick a team"></select></div>
+      <div class="g-field"><span class="g-label" style="text-transform:none;letter-spacing:0">Our teams</span>
+        <div class="g-picks">
+          <button class="g-pick" data-team="Cartersville" aria-pressed="true">Cartersville</button>
+          <button class="g-pick" data-team="Cass" aria-pressed="false">Cass</button>
+          <button class="g-pick" data-team="Adairsville" aria-pressed="false">Adairsville</button>
+          <button class="g-pick" data-team="Woodland, Cartersville" aria-pressed="false">Woodland</button>
+        </div></div>
+    </div>
+
+    <div class="g-sec" id="profile">
+      <div class="g-profile-head">
+        <h3 data-draw="pname" data-source="teams">—</h3>
+        <span class="g-sub" data-draw="psub" data-source="teams">—</span>
+        <span data-draw="pchip" data-source="teams"></span>
+      </div>
+      <div class="g-tiles" id="profile-tiles">
+        <div class="g-tile"><span class="g-label">Record</span><span class="g-val" data-draw="pv" data-source="teams" data-field="record">—</span><span class="g-aux">Colley <span data-draw="pv" data-source="teams" data-field="colley_rank_class" data-fmt="rank">—</span> in class</span></div>
+        <div class="g-tile"><span class="g-label">Power rating</span><span class="g-val" data-draw="pv" data-source="teams" data-field="power" data-fmt="signed1">—</span><span class="g-aux"><span data-draw="pv" data-source="teams" data-field="power_rank_class" data-fmt="rank">—</span> in class · ±<span data-draw="pv" data-source="teams" data-field="power_80" data-fmt="dec1">—</span></span></div>
+        <div class="g-tile"><span class="g-label">Offense</span><span class="g-val" data-draw="pv" data-source="teams" data-field="off_rating" data-fmt="signed1">—</span><span class="g-aux"><span data-draw="pv" data-source="teams" data-field="off_rank_class" data-fmt="rank">—</span> · <span data-draw="pv" data-source="teams" data-field="ppg" data-fmt="dec1">—</span> pts/game</span></div>
+        <div class="g-tile"><span class="g-label">Defense</span><span class="g-val" data-draw="pv" data-source="teams" data-field="def_rating" data-fmt="signed1">—</span><span class="g-aux"><span data-draw="pv" data-source="teams" data-field="def_rank_class" data-fmt="rank">—</span> · <span data-draw="pv" data-source="teams" data-field="papg" data-fmt="dec1">—</span> allowed/game</span></div>
+        <div class="g-tile"><span class="g-label">PnP Résumé</span><span class="g-val" data-draw="pv" data-source="teams" data-field="resume_rank_class" data-fmt="rank">—</span><span class="g-aux">in class · GHSA PSR <span data-draw="pv" data-source="teams" data-field="psr_rank_class" data-fmt="rank">—</span></span></div>
+        <div class="g-tile"><span class="g-label">Wins above playoff team</span><span class="g-val" data-draw="pv" data-source="teams" data-field="wapt" data-fmt="signed2">—</span><span class="g-aux"><span data-draw="pv" data-source="teams" data-field="wapt_rank_class" data-fmt="rank">—</span> · schedule <span data-draw="pv" data-source="teams" data-field="sos" data-fmt="signed1">—</span></span></div>
+      </div>
+      <div class="g-grid2">
+        <div class="g-panel" id="profile-next">
+          <h3>Postseason</h3>
+          <div class="g-next" data-draw="pnext" data-source="schedule">—</div>
+          <div class="g-odds" data-draw="podds" data-source="odds"></div>
+        </div>
+        <div class="g-panel" id="profile-chart">
+          <h3>Game by game: actual vs. predicted margin</h3>
+          <p class="g-note">Bars are the final margin. Dots are what the model expected before kickoff.</p>
+          <div class="g-chart" data-draw="pchart" data-source="schedule">—</div>
+        </div>
+      </div>
+      <div class="g-panel" id="profile-schedule">
+        <h3>Schedule and results</h3>
+        <div class="g-tablewrap">
+          <table class="g-t" id="schedule-table" data-source="schedule" data-row-key="team,date,opponent">
+            <thead><tr><th data-field="date">Date</th><th data-field="opponent">Opponent</th><th data-field="site">Site</th><th data-field="result">Result</th><th data-field="pts_for" class="n">For</th><th data-field="pts_against" class="n">Against</th><th data-field="pregame_win_prob">Pregame win chance</th></tr></thead>
+            <tbody data-draw="psched"></tbody>
+          </table>
+        </div>
+        <p class="g-note">Pregame win chance is what the model said that week, using only games played before it. Round 1 shows the projected score. Click an opponent to open its profile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RANKINGS ===================== -->
+  <section class="g-page" id="rankings" role="tabpanel" aria-labelledby="tab-rankings" hidden>
+    <div class="g-ctrl">
+      <div class="g-field"><label for="rk-class">Class</label>
+        <select class="dash-select" id="rk-class" aria-label="Class for rankings">
+          <option value="">All classes</option><option value="7A">7A</option><option value="6A">6A</option><option value="5A" selected>5A</option><option value="4A">4A</option><option value="3A">3A</option><option value="2A">2A</option><option value="A">A</option><option value="Private">Private</option>
+        </select></div>
+      <div class="g-field"><label for="rk-sort">Rank by</label>
+        <select class="dash-select" id="rk-sort" aria-label="Rank by">
+          <option value="resume" selected>PnP Résumé</option><option value="power">Power rating (Bayesian)</option><option value="psr">GHSA PSR</option><option value="colley">Colley</option><option value="wapt">Wins above playoff team</option><option value="off">Offense</option><option value="def">Defense</option><option value="custom">Your ranking</option>
+        </select></div>
+      <div class="g-field"><label for="rk-search">Find a team</label>
+        <input class="g-input" id="rk-search" type="search" placeholder="Type a school" autocomplete="off"></div>
+    </div>
+
+    <div class="g-panel" id="custom-ranking">
+      <div class="g-ctrl" style="justify-content:space-between"><h3>Build your own ranking</h3><button class="g-btn" id="w-reset" type="button">Reset weights</button></div>
+      <p class="g-note">Starts at the PnP Résumé blend (70% WAPT, 30% Colley) without the head-to-head step. Each measure is standardized within the teams shown, then blended by your weights. Moving a slider switches the table to Your ranking.</p>
+      <div class="g-weights">
+        <div><label for="w-power">Power rating <span id="w-power-v" data-draw="wl">—</span></label><input type="range" id="w-power" min="0" max="100" step="5" value="0"></div>
+        <div><label for="w-psr">GHSA PSR <span id="w-psr-v" data-draw="wl">—</span></label><input type="range" id="w-psr" min="0" max="100" step="5" value="0"></div>
+        <div><label for="w-colley">Colley <span id="w-colley-v" data-draw="wl">—</span></label><input type="range" id="w-colley" min="0" max="100" step="5" value="30"></div>
+        <div><label for="w-wapt">Wins above playoff team <span id="w-wapt-v" data-draw="wl">—</span></label><input type="range" id="w-wapt" min="0" max="100" step="5" value="70"></div>
+        <div><label for="w-off">Offense <span id="w-off-v" data-draw="wl">—</span></label><input type="range" id="w-off" min="0" max="100" step="5" value="0"></div>
+        <div><label for="w-def">Defense <span id="w-def-v" data-draw="wl">—</span></label><input type="range" id="w-def" min="0" max="100" step="5" value="0"></div>
+      </div>
+    </div>
+
+    <div class="g-panel" id="rank-table-panel">
+      <div class="g-tablewrap g-scroll">
+        <table class="g-t" id="rank-table" data-source="teams" data-row-key="team">
+          <thead><tr>
+            <th class="n">Rank</th><th data-field="team">Team</th><th data-field="bracket">Class</th><th data-field="record">Record</th>
+            <th data-field="resume_rank_class" class="n" data-sort="resume" tabindex="0">Résumé #</th>
+            <th data-field="power" class="n" data-sort="power" tabindex="0">Power</th>
+            <th data-field="psr" class="n" data-sort="psr" tabindex="0">PSR</th>
+            <th data-field="colley_rank" class="n" data-sort="colley" tabindex="0">Colley #</th>
+            <th data-field="wapt" class="n" data-sort="wapt" tabindex="0">WAPT</th>
+            <th data-field="off_rating" class="n" data-sort="off" tabindex="0">Off</th>
+            <th data-field="def_rating" class="n" data-sort="def" tabindex="0">Def</th>
+            <th data-field="sos" class="n">Sched</th>
+            <th data-field="trend">Trend</th>
+            <th class="n" data-sort="custom" tabindex="0">Your score</th>
+            <th data-field="h2h_note">Head-to-head</th>
+          </tr></thead>
+          <tbody data-draw="rkrows"></tbody>
+        </table>
+      </div>
+      <p class="g-note">PnP Résumé blends wins above playoff team (70%) and Colley (30%), then respects head-to-head: when two teams in a class are close (the winner has no more losses, the scores are within 0.4 SD, and the move is 6 spots or fewer), the winner ranks directly above the team it beat. Résumé # is within the class; with All classes it sorts by the blended score. Click a column heading to rank by it, or a team to open its profile. Colley # is statewide; Sched is the average power rating of GHSA opponents.</p>
+    </div>
+
+    <div class="g-panel" id="resume-vs-strength">
+      <h3>Résumé vs. strength</h3>
+      <p class="g-note">GHSA's PSR (résumé, across) against our power rating (how good, up). Teams above the dashed line are better than their résumé says.</p>
+      <div class="g-chart" data-draw="scatter" data-source="teams">—</div>
+    </div>
+  </section>
+
+  <!-- ===================== MATCHUPS ===================== -->
+  <section class="g-page" id="matchups" role="tabpanel" aria-labelledby="tab-matchups" hidden>
+    <div class="g-sec" id="build-matchup">
+      <h2>Build a matchup</h2>
+      <div class="g-ctrl">
+        <div class="g-field"><label for="mu-a">Team A</label><select class="dash-select" id="mu-a" data-draw="mupick" data-side="a" data-source="teams" aria-label="Team A"></select></div>
+        <div class="g-field"><label for="mu-b">Team B</label><select class="dash-select" id="mu-b" data-draw="mupick" data-side="b" data-source="teams" aria-label="Team B"></select></div>
+        <div class="g-field"><label for="mu-site">Site</label>
+          <select class="dash-select" id="mu-site" aria-label="Site"><option value="0" selected>Neutral site</option><option value="1">Team A at home</option><option value="-1">Team B at home</option></select></div>
+        <button class="g-btn" id="mu-swap" type="button">Swap teams</button>
+      </div>
+      <div class="g-panel" data-draw="muout" data-source="teams params">—</div>
+      <p class="g-note">Worked out in your browser from the two teams' power ratings, their uncertainty, home field and the offense/defense split, with the same formulas as the weekly predictions. Projections, not betting advice.</p>
+    </div>
+
+    <div class="g-sec" id="round-1">
+      <h2>This week: round 1</h2>
+      <div class="g-grid2">
+        <div class="g-panel" id="r1-board">
+          <div class="g-ctrl"><label for="r1-class">Class</label>
+            <select class="dash-select" id="r1-class" aria-label="Class for round 1 games">
+              <option value="7A">7A</option><option value="6A">6A</option><option value="5A" selected>5A</option><option value="4A">4A</option><option value="3A">3A</option><option value="2A">2A</option><option value="A">A</option>
+            </select></div>
+          <div class="g-tablewrap">
+            <table class="g-t" id="r1-table" data-source="games" data-row-key="home">
+              <thead><tr><th data-field="home_seed" class="n">Seed</th><th data-field="home">Home</th><th data-field="away_seed" class="n">Seed</th><th data-field="away">Away</th><th data-field="home_pts" class="n">Home pts</th><th data-field="away_pts" class="n">Away pts</th><th data-field="p_favorite">Favorite wins</th></tr></thead>
+              <tbody data-draw="r1rows"></tbody>
+            </table>
+          </div>
+          <p class="g-note">Higher seed hosts. Pairings match GHSA's official brackets; the Private bracket isn't included.</p>
+        </div>
+        <div class="g-panel" id="upset-watch">
+          <h3>Closest games statewide</h3>
+          <p class="g-note">The 10 games where the favorite's chance is lowest. The tick marks 50%.</p>
+          <div class="g-list" data-draw="closest" data-source="closest">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="g-sec" id="scorecard">
+      <h2>How accurate the model has been</h2>
+      <div class="g-kpis">
+        <div><span class="g-label">Games picked correctly</span><span class="g-big2 dash-skeleton" data-draw="v" data-source="season" data-field="accuracy" data-row="0" data-fmt="pct1">—</span></div>
+        <div><span class="g-label">Correct / games</span><span class="g-num"><span data-draw="v" class="dash-skeleton" data-source="season" data-field="correct" data-row="0" data-fmt="int">—</span> / <span data-draw="v" class="dash-skeleton" data-source="season" data-field="games" data-row="0" data-fmt="int">—</span></span></div>
+        <div><span class="g-label">Log-loss</span><span class="g-num" data-draw="v" data-source="season" data-field="log_loss" data-row="0" data-fmt="dec3">—</span></div>
+      </div>
+      <div class="g-grid2">
+        <div class="g-panel" id="weekly-accuracy">
+          <h3>Accuracy by week</h3>
+          <p class="g-note">Predictions saved before kickoff and scored after the games, from week 10 on.</p>
+          <div class="g-chart" data-draw="weekly" data-source="scorecard">—</div>
+        </div>
+        <div class="g-panel" id="calibration">
+          <h3>Do the probabilities hold up?</h3>
+          <p class="g-note">Favorites grouped by their predicted chance. Dots on the line mean the percentages were right; below it, overconfident.</p>
+          <div class="g-chart" data-draw="calib" data-source="calibration">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <details class="g-defs" id="definitions">
+    <summary>What the numbers mean</summary>
+    <dl>
+      <dt>Power</dt><dd>Bayesian margin rating: points better than an average GHSA team on a neutral field, from every score this season with last season as the starting point. "±" is the 80% range for the true rating.</dd>
+      <dt>Offense / Defense</dt><dd>The same idea split in two. Offense is points scored above what an average offense would score against the same defenses; defense is points kept off the board compared with an average defense (higher is better). They add up to roughly the power rating. Every point counts, including special teams and defensive scores. Pts/game and allowed/game are the raw averages.</dd>
+      <dt>PnP Résumé</dt><dd>Our résumé ranking: 70% wins above playoff team plus 30% Colley, standardized within each class, then head-to-head for comparable teams. It measures what a team has earned, not how good it is.</dd>
+      <dt>PSR</dt><dd>GHSA's Post Season Ranking (35% win %, 35% opponents' win %, 30% opponents' opponents' win %), which sets playoff seeding.</dd>
+      <dt>Colley</dt><dd>Colley Matrix rank from wins and losses only, solved statewide. It measures the résumé.</dd>
+      <dt>WAPT</dt><dd>Wins above playoff team: GHSA wins minus the wins a bubble playoff team (the last qualifier's power rating in that bracket) would expect against the same schedule and sites. Forfeits and non-GHSA games are left out.</dd>
+      <dt>Schedule</dt><dd>Average power rating of GHSA opponents.</dd>
+      <dt>Trend</dt><dd>Last 3 games' opponent-adjusted performance minus the season power rating. Fire is +10 or more, Up +5, Down −5, Ice −10 or worse. It doesn't feed the predictions.</dd>
+      <dt>Win chance</dt><dd>From the power ratings, home field (about 1.5 points) and both teams' rating uncertainty. Projections, not betting advice.</dd>
+    </dl>
+  </details>
+</div>
+
+<script>
+window.G = (function () {
+  const FOCUS = ['Cartersville', 'Cass', 'Adairsville', 'Woodland, Cartersville'];
+  const S = { team: 'Cartersville', muA: 'Cartersville', muB: 'Blessed Trinity', sortDir: {} };
+  const num = (v) => (v == null || v === '' || isNaN(+v)) ? null : +v;
+  const odds = (v) => { v = num(v); if (v == null) return '—'; if (v >= 0.995) return '>99%'; if (v > 0 && v < 0.005) return '<1%'; return Math.round(v * 100) + '%'; };
+  function fmt(v, f) {
+    if (v == null || v === '') return '—';
+    switch (f) {
+      case 'pct1': return (+v * 100).toFixed(1) + '%';
+      case 'odds': return odds(v);
+      case 'signed1': { const n = +v; return isNaN(n) ? '—' : (n > 0 ? '+' : '') + n.toFixed(1); }
+      case 'signed2': { const n = +v; return isNaN(n) ? '—' : (n > 0 ? '+' : '') + n.toFixed(2); }
+      case 'rank': return '#' + (+v);
+      case 'int': return d3.format(',')(+v);
+      case 'dec1': return (+v).toFixed(1);
+      case 'dec3': return (+v).toFixed(3);
+      case 'psr': return (+v).toFixed(4);
+      default: return String(v);
+    }
+  }
+  const enc = (v) => encodeURIComponent(v).replace(/%20/g, ' ').replace(/%2C/g, ',');
+  function where(rows, w) {
+    return rows.find((r) => w.split('&').every((p) => {
+      const i = p.indexOf('=');
+      return String(r[decodeURIComponent(p.slice(0, i))]) === decodeURIComponent(p.slice(i + 1));
+    }));
+  }
+  function tip(box) {
+    let t = box.querySelector(':scope > .g-tip');
+    if (!t) { t = document.createElement('div'); t.className = 'g-tip'; t.hidden = true; box.appendChild(t); }
+    return {
+      el: t,
+      show(ev, title, lines) {
+        const b = document.createElement('b'); b.textContent = title;
+        t.replaceChildren(b, ...lines.map((l) => { const s = document.createElement('div'); s.textContent = l; return s; }));
+        t.hidden = false;
+        const r = box.getBoundingClientRect();
+        const x = ev.clientX - r.left, y = ev.clientY - r.top;
+        t.style.left = Math.max(0, Math.min(r.width - t.offsetWidth, x + 12)) + 'px';
+        t.style.top = Math.max(0, y - t.offsetHeight - 10) + 'px';
+      },
+      hide() { t.hidden = true; }
+    };
+  }
+  function state(el, d) {
+    if (d.status !== 'loading') el.classList.remove('dash-skeleton');
+    if (d.status === 'ok') return true;
+    if (d.status === 'error') { const s = document.createElement('span'); s.className = 'g-fail'; s.textContent = 'Failed to load'; el.replaceChildren(s); }
+    else el.textContent = '—';
+    return false;
+  }
+  function mark(tag, text, src, field, w) {
+    const e = document.createElement(tag); e.textContent = text;
+    e.dataset.source = src; e.dataset.field = field;
+    if (w != null) e.dataset.where = w;
+    return e;
+  }
+  const span = (t, cls) => { const s = document.createElement('span'); s.textContent = t; if (cls) s.className = cls; return s; };
+  const chipText = { Fire: '🔥 Fire', Ice: '🧊 Ice' };
+  function chip(t) { const c = span(chipText[t] || t, 'g-chip'); c.dataset.t = t; return c; }
+  function Phi(x) {
+    const t = 1 / (1 + 0.2316419 * Math.abs(x)), d = 0.3989423 * Math.exp(-x * x / 2);
+    const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+    return x > 0 ? 1 - p : p;
+  }
+  const PROFILE = ['teampick', 'pname', 'psub', 'pchip', 'pv', 'pnext', 'podds', 'pchart', 'psched'];
+  function setTeam(t) {
+    S.team = t;
+    document.querySelectorAll('.g-pick').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.team === t)));
+    PROFILE.forEach((n) => dash.draw(n));
+  }
+  function openTab(id) {
+    let found = false;
+    document.querySelectorAll('.g-tab').forEach((b) => { const on = b.dataset.tab === id; if (on) found = true; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; });
+    if (!found) return;
+    document.querySelectorAll('.g-page').forEach((p) => { p.hidden = p.id !== id; });
+    dash.setLink(id);
+  }
+  function showTeam(t) { openTab('teams'); setTeam(t); }
+  return { FOCUS, S, num, odds, fmt, enc, where, tip, state, mark, span, chip, Phi, setTeam, openTab, showTeam };
+})();
+
+/* ---------- calcs ---------- */
+dash.calc('my_round1', {
+  title: 'Our teams in round 1',
+  description: 'Each of our four teams\' round 1 game from the predictions, seen from that team\'s side.',
+  inputs: ['games'],
+  fn: (games) => ['Cartersville', 'Cass', 'Adairsville', 'Woodland, Cartersville'].map((team) => {
+    const g = games.find((r) => r.home === team || r.away === team);
+    if (!g) return { team, opponent: null, site: null, seed: null, opp_seed: null, opp_record: null, win_prob: null, pts_for: null, pts_against: null };
+    const home = g.home === team;
+    return {
+      team, opponent: home ? g.away : g.home, site: home ? 'Home' : 'Away',
+      seed: +(home ? g.home_seed : g.away_seed), opp_seed: +(home ? g.away_seed : g.home_seed),
+      opp_record: home ? g.away_record : g.home_record,
+      win_prob: Math.round((home ? +g.p_home : 1 - +g.p_home) * 1000) / 1000,
+      pts_for: +(home ? g.home_pts : g.away_pts), pts_against: +(home ? g.away_pts : g.home_pts)
+    };
+  })
+});
+dash.calc('closest', {
+  title: 'Closest round 1 games',
+  description: 'The 10 round 1 games with the lowest favorite win probability.',
+  inputs: ['games'],
+  fn: (games) => games.slice().sort((a, b) => +a.p_favorite - +b.p_favorite).slice(0, 10).map((g) => ({
+    home: g.home, away: g.away, class: g.class, favorite: g.favorite, p_favorite: +g.p_favorite,
+    home_pts: +g.home_pts, away_pts: +g.away_pts, spread: +g.spread
+  }))
+});
+dash.calc('season', {
+  title: 'Season accuracy',
+  description: 'All scored predictions since logging began, summed across weeks.',
+  inputs: ['scorecard'],
+  fn: (weeks) => {
+    const games = d3.sum(weeks, (w) => +w.games), correct = d3.sum(weeks, (w) => +w.correct);
+    const ll = d3.sum(weeks, (w) => +w.log_loss * +w.games) / games;
+    return [{ games, correct, accuracy: Math.round(correct / games * 10000) / 10000, log_loss: Math.round(ll * 1000) / 1000 }];
+  }
+});
+
+/* ---------- listeners (outside drawings: listen and set attributes only) ---------- */
+(function () {
+  document.querySelectorAll('.g-tab').forEach((b) => {
+    b.addEventListener('click', () => G.openTab(b.dataset.tab));
+    b.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const tabs = [...document.querySelectorAll('.g-tab')]; const i = tabs.indexOf(b);
+      const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); G.openTab(n.dataset.tab);
+    });
+  });
+  const h = (location.hash || '').slice(1);
+  if (h) G.openTab(h);
+  document.querySelectorAll('.g-pick').forEach((b) => b.addEventListener('click', () => G.setTeam(b.dataset.team)));
+  document.querySelectorAll('#team-pick').forEach((s) => s.addEventListener('change', () => G.setTeam(s.value)));
+  const rk = () => { dash.draw('rkrows'); dash.draw('scatter'); };
+  document.querySelectorAll('#rk-class').forEach((s) => s.addEventListener('change', rk));
+  document.querySelectorAll('#rk-sort').forEach((s) => s.addEventListener('change', () => dash.draw('rkrows')));
+  document.querySelectorAll('#rk-search').forEach((s) => s.addEventListener('input', () => dash.draw('rkrows')));
+  const W0 = { power: 0, psr: 0, colley: 30, wapt: 70, off: 0, def: 0 };
+  Object.keys(W0).forEach((k) => document.querySelectorAll('#w-' + k).forEach((inp) => inp.addEventListener('input', () => {
+    document.querySelectorAll('#rk-sort').forEach((s) => { s.value = 'custom'; });
+    dash.draw('rkrows'); dash.draw('wl');
+  })));
+  document.querySelectorAll('#w-reset').forEach((b) => b.addEventListener('click', () => {
+    Object.entries(W0).forEach(([k, v]) => document.querySelectorAll('#w-' + k).forEach((inp) => { inp.value = v; }));
+    dash.draw('rkrows'); dash.draw('wl');
+  }));
+  document.querySelectorAll('#rank-table th[data-sort]').forEach((th) => {
+    const go = () => { document.querySelectorAll('#rk-sort').forEach((s) => { s.value = th.dataset.sort; }); dash.draw('rkrows'); };
+    th.addEventListener('click', go); th.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+  document.querySelectorAll('#mu-site').forEach((s) => s.addEventListener('change', () => dash.draw('muout')));
+  document.querySelectorAll('#mu-swap').forEach((b) => b.addEventListener('click', () => {
+    const a = G.S.muA; G.S.muA = G.S.muB; G.S.muB = a;
+    document.querySelectorAll('#mu-site').forEach((s) => { s.value = String(-(+s.value)); });
+    dash.draw('mupick'); dash.draw('muout');
+  }));
+  document.querySelectorAll('#r1-class').forEach((s) => s.addEventListener('change', () => dash.draw('r1rows')));
+})();
+
+/* ---------- shared drawings ---------- */
+dash.draw('v', (el) => {
+  const d = dash.data(el.dataset.source);
+  if (!G.state(el, d)) return;
+  const rows = Array.isArray(d.data) ? d.data : [];
+  const row = el.dataset.where ? G.where(rows, el.dataset.where) : rows[+(el.dataset.row || 0)];
+  el.textContent = row ? G.fmt(row[el.dataset.field], el.dataset.fmt) : '—';
+});
+/* slider value labels */
+dash.draw('wl', (o) => {
+  const k = o.id.replace(/^w-|-v$/g, '');
+  const inp = document.querySelector('#w-' + k);
+  o.textContent = inp ? inp.value : '';
+});
+
+/* ---------- TEAMS ---------- */
+dash.draw('teampick', (sel) => {
+  const d = dash.data('teams');
+  const rows = d.status === 'ok' ? d.data.slice().sort((a, b) => a.team.localeCompare(b.team)) : [];
+  const groups = ['7A', '6A', '5A', '4A', '3A', '2A', 'A', 'Private'].map((c) => {
+    const og = document.createElement('optgroup'); og.label = c;
+    rows.filter((r) => r.bracket === c).forEach((r) => og.append(new Option(r.team, r.team)));
+    return og;
+  });
+  sel.replaceChildren(...groups);
+  sel.value = G.S.team;
+});
+function prow() { const d = dash.data('teams'); return d.status === 'ok' ? d.data.find((r) => r.team === G.S.team) : null; }
+dash.draw('pname', (el) => { const d = dash.data('teams'); if (!G.state(el, d)) return; el.textContent = G.S.team; });
+dash.draw('psub', (el) => {
+  const d = dash.data('teams'); if (!G.state(el, d)) return;
+  const r = prow(); if (!r) { el.textContent = '—'; return; }
+  const w = 'team=' + G.enc(r.team);
+  el.replaceChildren(G.mark('span', r.class, 'teams', 'class', w), ' · Region ', G.mark('span', r.region, 'teams', 'region', w),
+    r.bracket === 'Private' ? ' · Private bracket' : '');
+});
+dash.draw('pchip', (el) => { const r = prow(); el.replaceChildren(); if (r && r.trend) { const c = G.chip(r.trend); c.dataset.source = 'teams'; c.dataset.field = 'trend'; c.dataset.where = 'team=' + G.enc(r.team); el.append(c); } });
+dash.draw('pv', (el) => {
+  const d = dash.data('teams');
+  if (!G.state(el, d)) return;
+  el.dataset.where = 'team=' + G.enc(G.S.team);
+  const r = prow();
+  el.textContent = r ? G.fmt(r[el.dataset.field], el.dataset.fmt) : '—';
+});
+dash.draw('pnext', (el) => {
+  const d = dash.data('schedule');
+  if (!G.state(el, d)) return;
+  const g = d.data.find((r) => r.team === G.S.team && r.status === 'upcoming');
+  const w = g ? 'team=' + G.enc(g.team) + '&date=' + G.enc(g.date) : null;
+  if (!g) { el.replaceChildren(G.span('Round 1', 'g-label'), G.span('Season over. Not in a public round 1 bracket.')); return; }
+  const a = document.createElement('div');
+  a.append(g.site === 'Home' ? 'Hosts ' : 'At ', G.mark('b', g.opponent, 'schedule', 'opponent', w), ' · ', G.span(d3.utcFormat('%a %b %-d')(new Date(g.date))));
+  const b = document.createElement('div');
+  b.append('Win chance ', G.mark('b', G.odds(g.pregame_win_prob), 'schedule', 'pregame_win_prob', w), ' · projected ',
+    G.mark('span', g.pts_for, 'schedule', 'pts_for', w), '–', G.mark('span', g.pts_against, 'schedule', 'pts_against', w));
+  el.replaceChildren(G.span(g.round, 'g-label'), a, b);
+});
+dash.draw('podds', (el) => {
+  const d = dash.data('odds');
+  el.replaceChildren();
+  if (d.status !== 'ok') return;
+  const r = d.data.find((x) => x.team === G.S.team);
+  if (!r || +r.make_playoffs === 0) return;
+  const w = 'team=' + G.enc(r.team);
+  const stages = [['reach_rd2', 'Rd 2'], ['quarterfinal', 'QF'], ['semifinal', 'Semis'], ['final', 'Final'], ['title', 'Title']];
+  el.append(G.span('Chance to reach', 'g-label'), ...stages.map(([f, lab], i) => {
+    const row = document.createElement('div'); row.className = 'g-orow';
+    const track = document.createElement('div'); track.className = 'g-track';
+    const fill = document.createElement('div'); fill.className = 'g-fill';
+    fill.style.width = (Math.max(0, Math.min(1, +r[f])) * 100) + '%';
+    fill.style.background = i === 4 ? (dash.colors[1] || dash.colors[0]) : dash.colors[0];
+    track.append(fill);
+    const v = G.mark('span', G.odds(r[f]), 'odds', f, w); v.className = 'g-pv';
+    row.append(G.span(lab), track, v);
+    return row;
+  }));
+});
+dash.draw('psched', (tb) => {
+  const d = dash.data('schedule');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const rows = d.data.filter((r) => r.team === G.S.team);
+  const fd = d3.utcFormat('%b %-d');
+  tb.replaceChildren(...rows.map((g) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = [g.team, g.date, g.opponent].map(encodeURIComponent).join(',');
+    if (g.status === 'upcoming') tr.className = 'g-up';
+    const td = (t, n) => { const c = document.createElement('td'); c.textContent = t == null ? '' : t; if (n) c.className = 'n'; return c; };
+    const opp = td(g.opponent);
+    if (String(g.opp_ghsa).toLowerCase() === 'true') { opp.className = 'g-link'; opp.tabIndex = 0; opp.addEventListener('click', () => G.setTeam(g.opponent)); opp.addEventListener('keydown', (e) => { if (e.key === 'Enter') G.setTeam(g.opponent); }); }
+    else opp.append(G.span(' (non-GHSA)', 'g-note'));
+    const res = td(''); const r0 = (g.result || '').charAt(0);
+    if (g.result) { const s = G.span(g.result, 'g-res'); s.dataset.r = r0; res.append(s); } else res.textContent = g.status === 'upcoming' ? g.round : '—';
+    const wp = td(''); const p = G.num(g.pregame_win_prob);
+    if (p != null) {
+      const bar = document.createElement('span'); bar.className = 'g-wpbar'; const i = document.createElement('i');
+      i.style.width = (p * 100) + '%'; i.style.background = dash.colors[0]; bar.append(i);
+      wp.append(bar, G.span(G.odds(p)));
+    } else wp.textContent = '—';
+    tr.append(td(fd(new Date(g.date))), opp, td(g.site), res, td(g.pts_for, true), td(g.pts_against, true), wp);
+    return tr;
+  }));
+});
+dash.draw('pchart', (el) => {
+  const d = dash.data('schedule');
+  if (!G.state(el, d)) return;
+  const rows = d.data.filter((r) => r.team === G.S.team && r.status === 'final' && r.pts_for !== '' && r.pts_for != null && !(r.result || '').includes('forfeit'))
+    .map((r) => ({ ...r, m: +r.pts_for - +r.pts_against, pm: G.num(r.pregame_margin) }));
+  if (!rows.length) { el.textContent = 'No scored games.'; return; }
+  const W = Math.max(260, el.clientWidth), H = 240, mg = { t: 14, r: 8, b: 44, l: 36 };
+  const ext = d3.extent(rows.flatMap((r) => [r.m, r.pm ?? r.m, 0]));
+  const x = d3.scaleBand().domain(rows.map((_, i) => i)).range([mg.l, W - mg.r]).padding(0.3);
+  const y = d3.scaleLinear().domain(ext).nice().range([H - mg.b, mg.t]);
+  const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', G.S.team + ' game margins: ' + rows.map((r) => r.opponent + ' ' + (r.m > 0 ? '+' : '') + r.m).join(', '));
+  svg.append('g').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((v) => (v > 0 ? '+' : '') + v).tickSize(-(W - mg.l - mg.r)))
+    .call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-axis)');
+  const every = Math.ceil(rows.length / Math.max(1, Math.floor((W - mg.l) / 46)));
+  svg.append('g').selectAll('text').data(rows).join('text').attr('text-anchor', 'end')
+    .attr('transform', (r, i) => `translate(${x(i) + x.bandwidth() / 2},${H - mg.b + 12}) rotate(-35)`)
+    .text((r, i) => i % every ? '' : r.opponent.split(',')[0].slice(0, 12));
+  svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r, i) => x(i)).attr('width', x.bandwidth())
+    .attr('y', (r) => y(Math.max(0, r.m))).attr('height', (r) => Math.abs(y(r.m) - y(0)) || 1).attr('rx', 2)
+    .style('fill', (r) => r.m > 0 ? 'var(--color-ok)' : r.m < 0 ? 'var(--color-bad)' : 'var(--cds-chart-muted)').style('fill-opacity', 0.75);
+  svg.append('g').selectAll('circle').data(rows.filter((r) => r.pm != null)).join('circle')
+    .attr('cx', (r) => x(rows.indexOf(r)) + x.bandwidth() / 2).attr('cy', (r) => y(r.pm)).attr('r', 4)
+    .style('fill', 'var(--color-panel)').style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+  el.replaceChildren(svg.node());
+  const tp = G.tip(el);
+  const band = x.step();
+  svg.on('pointermove', (ev) => {
+    const r0 = svg.node().getBoundingClientRect(); const px = (ev.clientX - r0.left) * (W / r0.width);
+    const i = Math.floor((px - mg.l) / band); const r = rows[i];
+    if (!r) { tp.hide(); return; }
+    tp.show(ev, (r.site === 'Away' ? 'at ' : 'vs ') + r.opponent, [r.result + ' ' + r.pts_for + '–' + r.pts_against,
+      r.pm != null ? 'Expected ' + (r.pm > 0 ? '+' : '') + r.pm + ' · win chance ' + G.odds(r.pregame_win_prob) : 'No pregame number']);
+  }).on('pointerleave', () => tp.hide());
+});
+
+/* ---------- RANKINGS ---------- */
+dash.draw('rkrows', (tb) => {
+  const d = dash.data('teams');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const val = (q) => { const s = document.querySelector(q); return s ? s.value : ''; };
+  const cls = val('#rk-class'), sort = val('#rk-sort') || 'resume', q = val('#rk-search').trim().toLowerCase();
+  const pool = d.data.filter((t) => !cls || t.bracket === cls);
+  const M = { power: (t) => G.num(t.power), psr: (t) => G.num(t.psr), colley: (t) => { const v = G.num(t.colley_rank); return v == null ? null : -v; },
+    wapt: (t) => G.num(t.wapt), off: (t) => G.num(t.off_rating), def: (t) => G.num(t.def_rating) };
+  const z = {};
+  Object.entries(M).forEach(([k, f]) => {
+    const vs = pool.map(f).filter((v) => v != null); const m = d3.mean(vs), s = d3.deviation(vs) || 1;
+    z[k] = (t) => { const v = f(t); return v == null ? null : (v - m) / s; };
+  });
+  const w = {}; Object.keys(M).forEach((k) => { const i = document.querySelector('#w-' + k); w[k] = i ? +i.value : 0; });
+  const custom = (t) => { let a = 0, b = 0; Object.keys(M).forEach((k) => { const v = z[k](t); if (v != null && w[k] > 0) { a += w[k] * v; b += w[k]; } }); return b ? a / b : null; };
+  const resumeKey = cls ? (t) => { const v = G.num(t.resume_rank_class); return v == null ? null : -v; } : (t) => G.num(t.resume_score);
+  const key = sort === 'custom' ? custom : sort === 'resume' ? resumeKey : M[sort];
+  const ranked = pool.map((t) => ({ t, k: key(t), c: custom(t) })).sort((a, b) => (b.k ?? -1e9) - (a.k ?? -1e9));
+  ranked.forEach((r, i) => { r.rank = r.k == null ? null : i + 1; });
+  document.querySelectorAll('#rank-table th[data-sort]').forEach((th) => th.setAttribute('aria-sort', th.dataset.sort === sort ? 'descending' : 'none'));
+  const show = q ? ranked.filter((r) => r.t.team.toLowerCase().includes(q)) : ranked;
+  tb.replaceChildren(...show.map(({ t, rank, c }) => {
+    const tr = document.createElement('tr');
+    if (G.FOCUS.includes(t.team)) tr.className = 'g-me';
+    const td = (v, n) => { const e = document.createElement('td'); e.textContent = v == null ? '—' : v; if (n) e.className = 'n'; return e; };
+    const name = td(t.team); name.className = 'g-link'; name.tabIndex = 0;
+    name.addEventListener('click', () => G.showTeam(t.team)); name.addEventListener('keydown', (e) => { if (e.key === 'Enter') G.showTeam(t.team); });
+    const tr2 = td(''); if (t.trend) tr2.append(G.chip(t.trend));
+    tr.append(td(rank, true), name, td(t.bracket), td(t.record), td(t.resume_rank_class, true), td(G.fmt(t.power, 'signed1'), true), td(t.psr ? (+t.psr).toFixed(4) : '—', true),
+      td(t.colley_rank, true), td(G.fmt(t.wapt, 'signed2'), true), td(G.fmt(t.off_rating, 'signed1'), true), td(G.fmt(t.def_rating, 'signed1'), true),
+      td(G.fmt(t.sos, 'signed1'), true), tr2, td(c == null ? '—' : (c > 0 ? '+' : '') + c.toFixed(2), true), td(t.h2h_note || ''));
+    return tr;
+  }));
+});
+dash.draw('scatter', (el) => {
+  const d = dash.data('teams');
+  if (!G.state(el, d)) return;
+  const s = document.querySelector('#rk-class'); const cls = s ? s.value : '5A';
+  const pts = d.data.filter((t) => (!cls || t.bracket === cls) && G.num(t.psr) != null).map((t) => ({ ...t, x: +t.psr, y: +t.power }));
+  const W = Math.max(260, el.clientWidth), H = Math.min(380, Math.max(240, W * 0.5)), m = { t: 14, r: 14, b: 36, l: 40 };
+  const x = d3.scaleLinear().domain(d3.extent(pts, (p) => p.x)).nice().range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain(d3.extent(pts, (p) => p.y)).nice().range([H - m.b, m.t]);
+  const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', `${cls || 'All classes'}: power rating against GHSA PSR for ${pts.length} teams`);
+  svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(3, Math.floor(W / 90))).tickFormat(d3.format('.2f')).tickSize(-(H - m.t - m.b))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((v) => (v > 0 ? '+' : '') + v).tickSize(-(W - m.l - m.r))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text('GHSA PSR →');
+  svg.append('text').attr('x', m.l + 4).attr('y', m.t + 10).text('Power ↑');
+  if (pts.length > 2) {
+    const mx = d3.mean(pts, (p) => p.x), my = d3.mean(pts, (p) => p.y);
+    const b = d3.sum(pts, (p) => (p.x - mx) * (p.y - my)) / d3.sum(pts, (p) => (p.x - mx) ** 2);
+    const [x0, x1] = x.domain();
+    svg.append('line').attr('x1', x(x0)).attr('x2', x(x1)).attr('y1', y(my + b * (x0 - mx))).attr('y2', y(my + b * (x1 - mx))).style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+  }
+  const me = (p) => G.FOCUS.includes(p.team);
+  svg.append('g').selectAll('circle').data(pts).join('circle').attr('cx', (p) => x(p.x)).attr('cy', (p) => y(p.y)).attr('r', (p) => me(p) ? 6 : 3.5)
+    .style('fill', (p) => me(p) ? (dash.colors[1] || dash.colors[0]) : dash.colors[0]).style('fill-opacity', (p) => me(p) ? 1 : 0.5).style('stroke', 'var(--color-panel)');
+  svg.append('g').selectAll('text').data(pts.filter(me)).join('text').attr('x', (p) => x(p.x) + 8).attr('y', (p) => y(p.y) + 4).style('fill', 'var(--color-fg)').text((p) => p.team.split(',')[0]);
+  el.replaceChildren(svg.node());
+  const tp = G.tip(el); const node = svg.node();
+  const near = (ev) => { const r = node.getBoundingClientRect(); const k = W / r.width; const px = (ev.clientX - r.left) * k, py = (ev.clientY - r.top) * k; let best = null, bd = 300; pts.forEach((p) => { const dd = (x(p.x) - px) ** 2 + (y(p.y) - py) ** 2; if (dd < bd) { bd = dd; best = p; } }); return best; };
+  node.addEventListener('pointermove', (ev) => { const p = near(ev); if (!p) { tp.hide(); return; } tp.show(ev, p.team, [p.bracket + ' · ' + p.record, 'Power ' + G.fmt(p.power, 'signed1') + ' (#' + p.power_rank_class + ' in class)', 'PSR ' + (+p.psr).toFixed(4) + ' (#' + p.psr_rank_class + ')']); });
+  node.addEventListener('pointerleave', () => tp.hide());
+  node.addEventListener('click', (ev) => { const p = near(ev); if (p) G.showTeam(p.team); });
+});
+
+/* ---------- MATCHUPS ---------- */
+dash.draw('mupick', (sel) => {
+  const d = dash.data('teams');
+  const rows = d.status === 'ok' ? d.data.slice().sort((a, b) => a.team.localeCompare(b.team)) : [];
+  const groups = ['7A', '6A', '5A', '4A', '3A', '2A', 'A', 'Private'].map((c) => {
+    const og = document.createElement('optgroup'); og.label = c;
+    rows.filter((r) => r.bracket === c).forEach((r) => og.append(new Option(r.team, r.team)));
+    return og;
+  });
+  sel.replaceChildren(...groups);
+  const side = sel.dataset.side;
+  sel.value = side === 'a' ? G.S.muA : G.S.muB;
+  sel.onchange = () => { if (side === 'a') G.S.muA = sel.value; else G.S.muB = sel.value; dash.draw('muout'); };
+});
+dash.draw('muout', (el) => {
+  const d = dash.data('teams'), pr = dash.data('params');
+  if (!G.state(el, d.status !== 'ok' ? d : pr)) return;
+  const P = pr.data[0];
+  const A = d.data.find((t) => t.team === G.S.muA), B = d.data.find((t) => t.team === G.S.muB);
+  if (!A || !B) { el.textContent = 'Pick two teams.'; return; }
+  if (A.team === B.team) { el.textContent = 'Pick two different teams.'; return; }
+  const ss = document.querySelector('#mu-site'); const site = ss ? +ss.value : 0;
+  const m = +A.power - +B.power + +P.hfa * site;
+  const sd = Math.sqrt((+P.sigma) ** 2 + (+A.power_sd) ** 2 + (+B.power_sd) ** 2);
+  const pA = G.Phi(m / sd);
+  const mu = +P.mu, hp = +P.h_pts;
+  const raw = (mu + +A.off_rating - +B.def_rating + hp * site) + (mu + +B.off_rating - +A.def_rating - hp * site);
+  let tot = +P.league_total + +P.shrink * (raw - +P.league_total); tot = Math.max(tot, Math.abs(m));
+  let sA = Math.round((tot + m) / 2), sB = Math.round((tot - m) / 2);
+  if (pA >= 0.5 && sA <= sB) sA = sB + 1; if (pA < 0.5 && sB <= sA) sB = sA + 1;
+  const wA = 'team=' + G.enc(A.team), wB = 'team=' + G.enc(B.team);
+  const side = (t, p, s, r) => {
+    const box = document.createElement('div'); box.className = 'g-side' + (r ? ' r' : '');
+    box.append(G.span(t.team, 'g-team'), G.span(G.odds(p), 'g-big'), G.span('Projected ' + s, 'g-note'));
+    return box;
+  };
+  const top = document.createElement('div'); top.className = 'g-mu';
+  top.append(side(A, pA, sA), G.span(site === 0 ? 'neutral' : site > 0 ? 'at ' + A.team.split(',')[0] : 'at ' + B.team.split(',')[0], 'g-vs'), side(B, 1 - pA, sB, true));
+  const bar = document.createElement('div'); bar.className = 'g-split'; bar.setAttribute('role', 'img'); bar.setAttribute('aria-label', `${A.team} ${G.odds(pA)}, ${B.team} ${G.odds(1 - pA)}`);
+  const s1 = document.createElement('span'); s1.style.width = (pA * 100) + '%'; s1.style.background = dash.colors[0];
+  const s2 = document.createElement('span'); s2.style.width = ((1 - pA) * 100) + '%'; s2.style.background = dash.colors[1] || 'var(--cds-chart-muted)';
+  bar.append(s1, s2);
+  const fav = m >= 0 ? A : B;
+  const line = G.span(`${fav.team} by ${Math.abs(m).toFixed(1)} points. Score ${A.team.split(',')[0]} ${sA}, ${B.team.split(',')[0]} ${sB}.`, 'g-note');
+  const tbl = document.createElement('table'); tbl.className = 'g-t g-cmp';
+  const rows = [['Record', 'record'], ['Power', 'power', 'signed1'], ['Offense', 'off_rating', 'signed1'], ['Defense', 'def_rating', 'signed1'], ['Pts/game', 'ppg', 'dec1'],
+    ['Allowed/game', 'papg', 'dec1'], ['GHSA PSR', 'psr', 'psr'], ['WAPT', 'wapt', 'signed2'], ['Schedule', 'sos', 'signed1'], ['Trend', 'trend']];
+  const body = document.createElement('tbody');
+  rows.forEach(([lab, f, ft]) => {
+    const tr = document.createElement('tr');
+    const a = document.createElement('td'); a.append(G.mark('b', G.fmt(A[f], ft), 'teams', f, wA));
+    const l = document.createElement('td'); l.textContent = lab;
+    const b = document.createElement('td'); b.append(G.mark('b', G.fmt(B[f], ft), 'teams', f, wB));
+    tr.append(a, l, b); body.append(tr);
+  });
+  tbl.append(body);
+  const wrap = document.createElement('div'); wrap.className = 'g-tablewrap'; wrap.append(tbl);
+  el.replaceChildren(top, bar, line, wrap);
+});
+dash.draw('r1rows', (tb) => {
+  const d = dash.data('games');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const s = document.querySelector('#r1-class'); const cls = s ? s.value : '5A';
+  const rows = d.data.filter((g) => g.class === cls).sort((a, b) => +a.home_seed - +b.home_seed);
+  tb.replaceChildren(...rows.map((g) => {
+    const tr = document.createElement('tr');
+    if (G.FOCUS.includes(g.home) || G.FOCUS.includes(g.away)) tr.className = 'g-me';
+    const td = (t, n) => { const c = document.createElement('td'); c.textContent = t; if (n) c.className = 'n'; return c; };
+    const link = (t) => { const c = td(t); c.className = 'g-link'; c.tabIndex = 0; c.addEventListener('click', () => G.showTeam(t)); c.addEventListener('keydown', (e) => { if (e.key === 'Enter') G.showTeam(t); }); return c; };
+    const wp = td(''); wp.append(G.span(g.favorite + ' '), Object.assign(document.createElement('b'), { textContent: G.odds(+g.p_favorite) }));
+    tr.append(td(g.home_seed, true), link(g.home), td(g.away_seed, true), link(g.away), td(g.home_pts, true), td(g.away_pts, true), wp);
+    return tr;
+  }));
+});
+dash.draw('closest', (el) => {
+  const d = dash.data('closest');
+  if (!G.state(el, d)) return;
+  const tp = G.tip(el);
+  const rows = d.data.map((g, i) => {
+    const row = document.createElement('div'); row.className = 'g-lrow';
+    const top = document.createElement('div'); top.className = 'g-lt';
+    const p = document.createElement('span'); const b = G.mark('b', G.odds(g.p_favorite), 'closest', 'p_favorite'); b.dataset.row = String(i);
+    p.append(g.favorite + ' ', b);
+    top.append(G.span(g.away + ' at ' + g.home + ' · ' + g.class), p);
+    const track = document.createElement('div'); track.className = 'g-ltrack';
+    const fill = document.createElement('div'); fill.className = 'g-fill'; fill.style.width = (g.p_favorite * 100) + '%'; fill.style.background = dash.colors[0];
+    track.append(fill, document.createElement('i'));
+    row.append(top, track);
+    row.addEventListener('pointermove', (ev) => tp.show(ev, g.away + ' at ' + g.home, ['Favorite: ' + g.favorite + ' ' + G.odds(g.p_favorite), 'Projected: ' + g.home + ' ' + g.home_pts + ', ' + g.away + ' ' + g.away_pts, 'Spread: ' + g.spread + ' pts']));
+    row.addEventListener('pointerleave', () => tp.hide());
+    return row;
+  });
+  el.replaceChildren(...rows, tp.el);
+});
+dash.draw('weekly', (el) => {
+  const d = dash.data('scorecard');
+  if (!G.state(el, d)) return;
+  const rows = d.data.map((r) => ({ ...r, acc: +r.accuracy }));
+  const W = Math.max(260, el.clientWidth), H = 220, m = { t: 22, r: 8, b: 40, l: 38 };
+  const fmtD = d3.utcFormat('%b %-d');
+  const x = d3.scaleBand().domain(rows.map((r) => r.week)).range([m.l, W - m.r]).padding(0.35);
+  const y = d3.scaleLinear().domain([0, 1]).range([H - m.b, m.t]);
+  const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', 'Share of games picked correctly each week: ' + rows.map((r) => 'week ' + r.week + ' ' + Math.round(r.acc * 100) + '%').join(', '));
+  svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('.0%')).tickSize(-(W - m.l - m.r))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSize(0).tickFormat((w) => 'Week ' + w)).call((g) => g.select('.domain').style('stroke', 'var(--cds-chart-axis)')).selectAll('text').attr('dy', '1.2em');
+  svg.append('g').selectAll('text').data(rows).join('text').attr('x', (r) => x(r.week) + x.bandwidth() / 2).attr('y', H - m.b + 30).attr('text-anchor', 'middle').text((r) => fmtD(new Date(r.first_date)) + '–' + fmtD(new Date(r.last_date)));
+  svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.week)).attr('width', x.bandwidth()).attr('y', (r) => y(r.acc)).attr('height', (r) => y(0) - y(r.acc)).attr('rx', 3).style('fill', dash.colors[0]);
+  svg.append('g').selectAll('text').data(rows).join('text').attr('x', (r) => x(r.week) + x.bandwidth() / 2).attr('y', (r) => y(r.acc) - 6).attr('text-anchor', 'middle').style('fill', 'var(--color-fg)').text((r) => (r.acc * 100).toFixed(1) + '%');
+  el.replaceChildren(svg.node());
+  const tp = G.tip(el);
+  svg.selectAll('rect').on('pointermove', (ev, r) => tp.show(ev, 'Week ' + r.week, [r.correct + ' of ' + r.games + ' correct', 'Log-loss ' + (+r.log_loss).toFixed(3)])).on('pointerleave', () => tp.hide());
+});
+dash.draw('calib', (el) => {
+  const d = dash.data('calibration');
+  if (!G.state(el, d)) return;
+  const rows = d.data.map((r) => ({ ...r, p: +r.predicted, a: +r.actual, n: +r.games }));
+  const W = Math.max(260, el.clientWidth), H = Math.min(300, Math.max(220, W * 0.6)), m = { t: 12, r: 14, b: 34, l: 42 };
+  const x = d3.scaleLinear().domain([0.5, 1]).range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain([0.4, 1]).range([H - m.b, m.t]);
+  const r = d3.scaleSqrt().domain([0, d3.max(rows, (q) => q.n)]).range([3, 12]);
+  const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', 'Predicted vs actual favorite win rate: ' + rows.map((q) => q.bin + ' predicted, ' + Math.round(q.a * 100) + '% won').join('; '));
+  svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format('.0%')).tickSize(-(H - m.t - m.b))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6).tickFormat(d3.format('.0%')).tickSize(-(W - m.l - m.r))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').style('stroke', 'var(--cds-chart-grid)'));
+  svg.append('line').attr('x1', x(0.5)).attr('y1', y(0.5)).attr('x2', x(1)).attr('y2', y(1)).style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 3');
+  svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text('Predicted →');
+  svg.append('text').attr('x', m.l + 4).attr('y', m.t + 10).text('Actually won ↑');
+  svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (q) => x(q.p)).attr('cy', (q) => y(q.a)).attr('r', (q) => r(q.n)).style('fill', dash.colors[0]).style('fill-opacity', 0.8).style('stroke', 'var(--color-panel)');
+  el.replaceChildren(svg.node());
+  const tp = G.tip(el);
+  svg.selectAll('circle').on('pointermove', (ev, q) => tp.show(ev, q.bin + ' favorites', [q.n + ' games', 'Predicted ' + (q.p * 100).toFixed(1) + '%', 'Won ' + (q.a * 100).toFixed(1) + '%'])).on('pointerleave', () => tp.hide());
+});
+</script>
+</main>
+<footer class="site-foot"><div class="in">Projections, not betting advice. Ratings, résumé rankings and predictions are Pace &amp; Pate Analytics' own model, built from scores and Post Season Rankings published by the GHSA. Win probabilities above 99% are shown as &gt;99%.</div></footer>
+<script>
+fetch('data/meta.json', { cache: 'no-cache' }).then((r) => r.json()).then((m) => {
+  if (m.updated) document.getElementById('site-asof').textContent = 'Data updated ' + new Date(m.updated).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' });
+  dash._start(m.v);
+}).catch(() => dash._start());
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+team,class,region,win_region,make_playoffs,host_rd1,seed,reach_rd2,quarterfinal,semifinal,final,title
+Cartersville,5A,7,1.0,1.0,1.0,2,0.9836,0.9582,0.885,0.7866,0.7032
+Cass,5A,7,0.0,1.0,1.0,7,0.7998,0.1068,0.0012,0.0,0.0
+Adairsville,4A,7,0.0,1.0,0.0,20,0.1632,0.0018,0.0,0.0,0.0
+"Woodland, Cartersville",5A,7,0.0,0.0,0.0,,0.0,0.0,0.0,0.0,0.0
