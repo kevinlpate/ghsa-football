@@ -162,6 +162,7 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
 
   <nav class="g-tabs" role="tablist" aria-label="Dashboard sections">
     <button class="g-tab" role="tab" id="tab-teams" data-tab="teams" aria-selected="true" aria-controls="teams">Teams</button>
+    <button class="g-tab" role="tab" id="tab-resume" data-tab="resume" aria-selected="false" aria-controls="resume">Résumé</button>
     <button class="g-tab" role="tab" id="tab-rankings" data-tab="rankings" aria-selected="false" aria-controls="rankings">Rankings</button>
     <button class="g-tab" role="tab" id="tab-matchups" data-tab="matchups" aria-selected="false" aria-controls="matchups">Matchups</button>
   </nav>
@@ -217,6 +218,37 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
         <p class="g-note">Pregame win chance is what the model said that week, using only games played before it. Round 1 shows the projected score. Click an opponent to open its profile.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ===================== RÉSUMÉ ===================== -->
+  <section class="g-page" id="resume" role="tabpanel" aria-labelledby="tab-resume" hidden>
+    <div class="g-sec">
+      <h2>Résumé rankings</h2>
+      <p class="g-note">What each team has done, not how good it is. The power rating answers "who would win?"; this answers "who has earned it?"</p>
+      <p class="g-note">PnP Résumé blends wins above a playoff team (70%) with Colley (30%), using only actual wins and losses, then respects head-to-head: when two teams in a class are comparable (the winner has no more losses, the two are close on the blend, and the move is 6 spots or fewer), the winner ranks directly above the team it beat, unless that would put it above a team that beat it. The other columns are the pieces, so you can check every spot.</p>
+    </div>
+    <div class="g-ctrl">
+      <div class="g-field"><label for="rs-class">Class</label>
+        <select class="dash-select" id="rs-class" aria-label="Class for résumé rankings">
+          <option value="7A">7A</option><option value="6A">6A</option><option value="5A" selected>5A</option><option value="4A">4A</option><option value="3A">3A</option><option value="2A">2A</option><option value="A">A</option><option value="Private">Private</option>
+        </select></div>
+      <div class="g-field"><label for="rs-search">Find a team</label>
+        <input class="g-input" id="rs-search" type="search" placeholder="Type a school" autocomplete="off"></div>
+    </div>
+    <div class="g-panel" id="resume-table-panel">
+      <div class="g-tablewrap g-scroll">
+        <table class="g-t" id="resume-table" data-source="teams" data-row-key="team">
+          <thead><tr>
+            <th data-field="resume_rank_class" class="n">PnP Résumé</th><th data-field="team">Team</th><th data-field="record">Record</th>
+            <th data-field="wapt" class="n">WAPT</th><th data-field="p_match" class="n">Playoff team matches</th><th data-field="p_match_elite" class="n">Elite team matches</th>
+            <th data-field="wapt_rank_class" class="n">WAPT #</th><th data-field="colley_rank_class" class="n">Colley #</th><th data-field="sched_rank_class" class="n">Schedule</th>
+            <th data-field="rating_vs_resume" class="n">Rating vs résumé</th><th data-field="best_win">Best win</th><th data-field="losses_to">Losses</th><th data-field="h2h_note">Head-to-head</th>
+          </tr></thead>
+          <tbody data-draw="rsrows"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="g-note">Wins above a playoff team (WAPT) = actual wins minus the wins a playoff-caliber team (the last qualifier's power rating in that bracket: the 32nd-best team, 28th in Private) would expect against the same schedule, at the same sites. Opponent strength comes from our ratings; the team's own rating plays no part, and margin doesn't matter, only wins and losses. "Playoff team matches" is the chance that team would do as well or better; lower is a harder record to earn. Because 32 teams per class qualify, that bar is low, so it separates teams near the bubble. "Elite team matches" uses the class's No. 4 team instead and separates the top. Colley is the classic computer ranking from wins and losses alone, adjusted for schedule, with no margin, site or preseason opinion. Schedule = how many losses a playoff team would expect against it (No. 1 is the hardest). Rating vs résumé = power-rating rank minus résumé rank: positive means the résumé is better than the team. Non-GHSA opponents and forfeits are left out. Ranks of best wins and losses are power-rating ranks within the opponent's class.</p>
   </section>
 
   <!-- ===================== RANKINGS ===================== -->
@@ -513,6 +545,8 @@ dash.calc('season', {
     dash.draw('mupick'); dash.draw('muout');
   }));
   document.querySelectorAll('#r1-class').forEach((s) => s.addEventListener('change', () => dash.draw('r1rows')));
+  document.querySelectorAll('#rs-class').forEach((s) => s.addEventListener('change', () => dash.draw('rsrows')));
+  document.querySelectorAll('#rs-search').forEach((s) => s.addEventListener('input', () => dash.draw('rsrows')));
 })();
 
 /* ---------- shared drawings ---------- */
@@ -652,6 +686,30 @@ dash.draw('pchart', (el) => {
     tp.show(ev, (r.site === 'Away' ? 'at ' : 'vs ') + r.opponent, [r.result + ' ' + r.pts_for + '–' + r.pts_against,
       r.pm != null ? 'Expected ' + (r.pm > 0 ? '+' : '') + r.pm + ' · win chance ' + G.odds(r.pregame_win_prob) : 'No pregame number']);
   }).on('pointerleave', () => tp.hide());
+});
+
+/* ---------- RÉSUMÉ ---------- */
+dash.draw('rsrows', (tb) => {
+  const d = dash.data('teams');
+  if (d.status !== 'ok') { tb.replaceChildren(); return; }
+  const val = (q) => { const s = document.querySelector(q); return s ? s.value : ''; };
+  const cls = val('#rs-class') || '5A', q = val('#rs-search').trim().toLowerCase();
+  const pct = (v) => { v = G.num(v); return v == null ? '—' : v < 0.01 ? '<1%' : v > 0.99 ? '>99%' : Math.round(v * 100) + '%'; };
+  const rows = d.data.filter((t) => t.bracket === cls && (!q || t.team.toLowerCase().includes(q)))
+    .sort((a, b) => (G.num(a.resume_rank_class) ?? 999) - (G.num(b.resume_rank_class) ?? 999));
+  tb.replaceChildren(...rows.map((t) => {
+    const tr = document.createElement('tr');
+    if (G.FOCUS.includes(t.team)) tr.className = 'g-me';
+    const td = (v, n) => { const e = document.createElement('td'); e.textContent = v == null || v === '' ? '—' : v; if (n) e.className = 'n'; return e; };
+    const name = td(t.team); name.className = 'g-link'; name.tabIndex = 0;
+    name.addEventListener('click', () => G.showTeam(t.team)); name.addEventListener('keydown', (e) => { if (e.key === 'Enter') G.showTeam(t.team); });
+    const gap = G.num(t.rating_vs_resume);
+    const wrapCell = (v) => { const e = td(v); e.style.whiteSpace = 'normal'; e.style.minWidth = '12em'; return e; };
+    tr.append(td(t.resume_rank_class, true), name, td(t.record), td(G.fmt(t.wapt, 'signed2'), true), td(pct(t.p_match), true), td(pct(t.p_match_elite), true),
+      td(t.wapt_rank_class, true), td(t.colley_rank_class, true), td(t.sched_rank_class, true), td(gap == null ? '—' : (gap > 0 ? '+' : '') + gap, true),
+      wrapCell(t.best_win), wrapCell(t.losses_to), td(t.h2h_note || ''));
+    return tr;
+  }));
 });
 
 /* ---------- RANKINGS ---------- */
