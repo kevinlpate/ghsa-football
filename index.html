@@ -150,6 +150,20 @@ details.g-defs summary{cursor:pointer;font-weight:var(--cds-font-weight-medium)}
 details.g-defs dl{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr);gap:6px 14px;margin:var(--cds-gap-md) 0 0}
 details.g-defs dt{font-weight:var(--cds-font-weight-medium)}
 details.g-defs dd{margin:0;color:var(--color-fg-muted)}
+@media (max-width:560px){details.g-defs dl{grid-template-columns:1fr;gap:2px 0}details.g-defs dd{margin-bottom:10px}}
+.g-chk{display:flex;align-items:center;gap:6px;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.g-live{display:flex;flex-direction:column;gap:var(--cds-gap-md);min-height:400px}
+.g-sb{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;padding-block:6px;border-bottom:1px solid var(--color-border-line)}
+.g-sbn{min-width:0}.g-sbname{font-family:var(--font-anthropic-serif);font-size:var(--cds-font-size-heading);overflow-wrap:anywhere}
+.g-sbscore{font-family:var(--font-anthropic-serif);font-size:2.4rem;line-height:1;font-variant-numeric:tabular-nums;text-align:right;min-width:2ch}
+.g-sb .g-seg{grid-column:1/-1}
+.g-seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.g-btn[aria-pressed="true"]{background:var(--color-fg);color:var(--color-panel);border-color:var(--color-fg)}
+.g-lwctrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:var(--cds-gap-md);padding-top:var(--cds-pad-md)}
+.g-lwlab{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.g-clock{width:6.5ch;text-align:center;font-variant-numeric:tabular-nums;font-size:var(--cds-font-size-heading)}
+.g-onair{margin:0;flex:1 1 260px;font-size:var(--cds-font-size-heading);min-width:0}
+.g-live .g-btn{font-size:var(--cds-font-size-body);padding:6px 11px}
 [data-dash-source-state="refreshing"]{opacity:.5}
 </style>
 
@@ -165,6 +179,7 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
     <button class="g-tab" role="tab" id="tab-resume" data-tab="resume" aria-selected="false" aria-controls="resume">Résumé</button>
     <button class="g-tab" role="tab" id="tab-rankings" data-tab="rankings" aria-selected="false" aria-controls="rankings">Rankings</button>
     <button class="g-tab" role="tab" id="tab-matchups" data-tab="matchups" aria-selected="false" aria-controls="matchups">Matchups</button>
+    <button class="g-tab" role="tab" id="tab-live" data-tab="live" aria-selected="false" aria-controls="live">Live</button>
   </nav>
 
   <!-- ===================== TEAMS ===================== -->
@@ -370,19 +385,36 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
     </div>
   </section>
 
-  <details class="g-defs" id="definitions">
-    <summary>What the numbers mean</summary>
+  <!-- ===================== LIVE ===================== -->
+  <section class="g-page" id="live" role="tabpanel" aria-labelledby="tab-live" hidden>
+    <div class="g-sec">
+      <h2>Live win probability</h2>
+      <p class="g-note">For the booth: pick the game, then update the score, quarter, clock and who has the ball. The chance to win updates as you go, and "Copy line" gives you a sentence to read on air. Log moments after scores or at quarter breaks to build a chart of the game.</p>
+    </div>
+    <div class="g-live" data-draw="livewp" data-source="teams params games">—</div>
+    <p class="g-note">Before kickoff, the chance comes from the power ratings, as in the weekly predictions. During the game, the tool plays out the remaining possessions 20,000 times, with each team's touchdown and field-goal rates set by its projected points and the drive in progress always played out. A tie at 0:00 goes to NFHS overtime with a slight edge to the stronger team. It doesn't know about injuries, weather, timeouts or a running clock. The in-game numbers haven't been checked against Georgia play-by-play yet. Entries stay while this page is open and reset when it reloads. Projections, not betting advice.</p>
+  </section>
+
+  <details class="g-defs" id="definitions" open>
+    <summary>What each number means</summary>
     <dl>
-      <dt>Power</dt><dd>Bayesian margin rating: points better than an average GHSA team on a neutral field, from every score this season with last season as the starting point. "±" is the 80% range for the true rating.</dd>
-      <dt>Offense / Defense</dt><dd>The same idea split in two. Offense is points scored above what an average offense would score against the same defenses; defense is points kept off the board compared with an average defense (higher is better). They add up to roughly the power rating. Every point counts, including special teams and defensive scores. Pts/game and allowed/game are the raw averages.</dd>
-      <dt>WBHF Résumé</dt><dd>Our résumé ranking: 70% wins above playoff team plus 30% Colley, standardized within each class, then head-to-head for comparable teams. It measures what a team has earned, not how good it is.</dd>
-      <dt>PSR</dt><dd>GHSA's Post Season Ranking (35% win %, 35% opponents' win %, 30% opponents' opponents' win %), which sets playoff seeding.</dd>
-      <dt>Colley</dt><dd>Colley Matrix rank from wins and losses only, solved statewide. It measures the résumé.</dd>
-      <dt>WAPT</dt><dd>Wins above playoff team: GHSA wins minus the wins a bubble playoff team (the last qualifier's power rating in that bracket) would expect against the same schedule and sites. Forfeits and non-GHSA games are left out.</dd>
-      <dt>Schedule</dt><dd>Average power rating of GHSA opponents.</dd>
-      <dt>Trend</dt><dd>Last 3 games' opponent-adjusted performance minus the season power rating. Fire is +10 or more, Up +5, Down −5, Ice −10 or worse. It doesn't feed the predictions.</dd>
-      <dt>Win chance</dt><dd>From the power ratings, home field (about 1.5 points) and both teams' rating uncertainty. Projections, not betting advice.</dd>
+      <dt>WBHF Résumé</dt><dd>Our own blend of the résumé rankings for each team: what a team has earned with its wins and losses against the schedule it played. It's 70% wins above a playoff team and 30% Colley, compared within the class, and a head-to-head win counts when two teams are close.</dd>
+      <dt>Power rating</dt><dd>How good a team is overall, without regard to record or résumé. It's in points: +20 means 20 points better than an average GHSA team on a neutral field. It drives every prediction on this site. "±" is the range the true rating is 80% likely to fall in.</dd>
+      <dt>Offense</dt><dd>How many more points a team scores than an average offense would against the same defenses. Pts/game is the plain average, before adjusting for opponents.</dd>
+      <dt>Defense</dt><dd>How many points a team keeps off the board compared with an average defense against the same offenses. Higher is better. Allowed/game is the plain average. Offense plus defense is roughly the power rating. Every point counts, including special teams and defensive scores.</dd>
+      <dt>Wins above playoff team (WAPT)</dt><dd>How many more games a team won than a borderline playoff team would have against the same schedule. +3 means three more wins than a bubble team would be expected to get. Forfeits and non-GHSA games are left out.</dd>
+      <dt>Colley</dt><dd>A computer ranking from wins and losses only, adjusted for who you played. Margin of victory doesn't count.</dd>
+      <dt>GHSA PSR</dt><dd>The GHSA's official Post Season Ranking, which seeds the playoffs: 35% win percentage, 35% opponents' win percentage, 30% opponents' opponents' win percentage.</dd>
+      <dt>Playoff team matches</dt><dd>How often a borderline playoff team would match or beat a team's record against the same schedule. Lower means a harder record to earn. Most useful for teams near the playoff line.</dd>
+      <dt>Elite team matches</dt><dd>The same idea with the class's No. 4 team. It separates the best records from each other.</dd>
+      <dt>Schedule</dt><dd>How tough a team's schedule was. On the Résumé tab it's a rank (No. 1 is the hardest); on the Rankings tab it's the average power rating of GHSA opponents.</dd>
+      <dt>Rating vs résumé</dt><dd>Whether a team's résumé is better (+) or worse (−) than how good the team actually is: power rank minus résumé rank.</dd>
+      <dt>Trend</dt><dd>Whether a team is playing better or worse lately than its season rating, from its last 3 games against the competition: 🔥 Fire (10+ points better), Up, Steady, Down, 🧊 Ice (10+ points worse). It's for color and doesn't change the predictions.</dd>
+      <dt>Win chance and projected score</dt><dd>The chance to win a game and the expected score, from both teams' power ratings, offense and defense, and home field (about 1.5 points).</dd>
+      <dt>Playoff odds</dt><dd>The chance to reach each round, from 5,000 simulated brackets that redraw every team's rating from its uncertainty each time.</dd>
+      <dt>Live win probability</dt><dd>The chance to win from the current score, time left, possession and field position. See the Live tab.</dd>
     </dl>
+    <p class="g-note">All of it is projections, not betting advice.</p>
   </details>
 </div>
 
@@ -558,6 +590,222 @@ dash.draw('v', (el) => {
   el.textContent = row ? G.fmt(row[el.dataset.field], el.dataset.fmt) : '—';
 });
 /* slider value labels */
+/* ---------- LIVE WIN PROBABILITY ---------- */
+/* Same model as the booth page: pregame from power ratings; in game, a drive-by-drive simulation of the remaining
+   possessions (20,000 runs), touchdown and field-goal rates from each team's projected points. */
+window.LWP = (function () {
+  const L = { a: null, h: null, neutral: false, sa: 0, sh: 0, q: '1', clock: '12:00', ball: 0, field: 'mid', log: [], p: null, key: '', all: {} };
+  const FIELD = { own: 0.75, mid: 1.0, opp: 1.45, rz: 2.1 };
+  const otProb = (eh, ea) => Math.min(0.8, Math.max(0.2, 0.5 + 0.25 * Math.tanh((eh - ea) / 28)));
+  function pregame(P, A, H, neutral) {
+    const home = neutral ? 0 : 1;
+    const m = +H.power - +A.power + +P.hfa * home;
+    const sd = Math.sqrt((+P.sigma) ** 2 + (+A.power_sd) ** 2 + (+H.power_sd) ** 2);
+    const mu = +P.mu, hp = +P.h_pts;
+    const mt = (mu + +H.off_rating - +A.def_rating + hp * home) + (mu + +A.off_rating - +H.def_rating - hp * home);
+    let tot = +P.league_total + +P.shrink * (mt - +P.league_total); tot = Math.max(tot, Math.abs(m) + 6);
+    let eh = (tot + m) / 2, ea = (tot - m) / 2; if (ea < 1) { eh += 1 - ea; ea = 1; } if (eh < 1) { ea += 1 - eh; eh = 1; }
+    return { m, sd, p: G.Phi(m / sd), eh, ea };
+  }
+  function rates(P, e) { const fs = +P.fgshare, k = fs / (1 - fs); const ppd = Math.max(e, 0.5) / +P.poss; let td = ppd / (7 + 3 * k), fg = k * td; const s = td + fg; if (s > 0.92) { td *= 0.92 / s; fg *= 0.92 / s; } return [td, fg]; }
+  function wpHome(P, lead, minsLeft, ball, field, eh, ea, ot) {
+    if (ot) {
+      if (lead === 0) return otProb(eh, ea);
+      const trailHome = lead < 0, e = trailHome ? eh : ea, Lg = Math.abs(lead);
+      const td = Math.min(0.85, Math.max(0.3, 0.58 * Math.sqrt(e / 25))), fg = 0.22;
+      const o = trailHome ? otProb(eh, ea) : 1 - otProb(eh, ea);
+      const pT = Lg >= 9 ? 0 : Lg >= 7 ? td * o : Lg >= 4 ? td : td + fg * o;
+      return trailHome ? pT : 1 - pT;
+    }
+    if (minsLeft <= 0) return lead > 0 ? 1 : lead < 0 ? 0 : otProb(eh, ea);
+    const [tdh, fgh] = rates(P, eh), [tda, fga] = rates(P, ea), N = 20000, total = 2 * +P.poss * minsLeft / 48;
+    let win = 0;
+    for (let s = 0; s < N; s++) {
+      let k; if (ball !== 0) { const rest = Math.max(0, total - 1); k = 1 + Math.floor(rest) + (Math.random() < rest - Math.floor(rest) ? 1 : 0); }
+      else k = Math.floor(total) + (Math.random() < total - Math.floor(total) ? 1 : 0);
+      const homeFirst = ball === 0 ? Math.random() < 0.5 : ball > 0; let mg = lead;
+      for (let i = 0; i < k; i++) {
+        const hpos = (i % 2 === 0) === homeFirst, mult = (i === 0 && ball !== 0) ? FIELD[field] : 1;
+        let td = (hpos ? tdh : tda) * mult, fg = (hpos ? fgh : fga) * mult; const sum = td + fg; if (sum > 0.95) { td *= 0.95 / sum; fg *= 0.95 / sum; }
+        const u = Math.random(); const pts = u < td ? 7 : (u < td + fg ? 3 : 0); mg += hpos ? pts : -pts;
+      }
+      win += mg > 0 ? 1 : (mg === 0 ? otProb(eh, ea) : 0);
+    }
+    return win / N;
+  }
+  function minsLeft() { if (L.q === 'OT') return 0; const mm = (L.clock.match(/^(\d{1,2}):?(\d{0,2})$/) || [0, 12, 0]).slice(1).map(Number); return (4 - Number(L.q)) * 12 + Math.min(12, (mm[0] || 0) + (mm[1] || 0) / 60); }
+  const elapsed = () => L.q === 'OT' ? 50 : 48 - minsLeft();
+  const short = (n) => (n || '').split(',')[0];
+  const pct = (p) => p > 0.995 ? '>99%' : p < 0.005 ? '<1%' : Math.round(p * 100) + '%';
+  function setGame(a, h, neutral) {
+    if (L.key) L.all[L.key] = { sa: L.sa, sh: L.sh, q: L.q, clock: L.clock, ball: L.ball, field: L.field, log: L.log };
+    L.key = a + '|' + h + '|' + (neutral ? 1 : 0); L.a = a; L.h = h; L.neutral = neutral;
+    Object.assign(L, { sa: 0, sh: 0, q: '1', clock: '12:00', ball: 0, field: 'mid', log: [] }, L.all[L.key] || {});
+  }
+  return { L, pregame, wpHome, minsLeft, elapsed, short, pct, setGame };
+})();
+
+dash.draw('livewp', {
+  mount(el) {
+    const L = LWP.L, mk = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+    const ui = {};
+    const gameRow = mk('div', 'g-ctrl');
+    const gf = mk('div', 'g-field'); const gl = mk('label', null, 'Game'); gl.htmlFor = 'lw-game';
+    ui.game = mk('select', 'dash-select'); ui.game.id = 'lw-game'; ui.game.setAttribute('aria-label', 'Pick a game'); gf.append(gl, ui.game);
+    const af = mk('div', 'g-field'); const al = mk('label', null, 'Away / first team'); al.htmlFor = 'lw-a'; ui.a = mk('select', 'dash-select'); ui.a.id = 'lw-a'; af.append(al, ui.a);
+    const hf = mk('div', 'g-field'); const hl = mk('label', null, 'Home / second team'); hl.htmlFor = 'lw-h'; ui.h = mk('select', 'dash-select'); ui.h.id = 'lw-h'; hf.append(hl, ui.h);
+    const nf = mk('label', 'g-chk'); ui.nt = mk('input'); ui.nt.type = 'checkbox'; ui.nt.id = 'lw-nt'; nf.append(ui.nt, ' Neutral site');
+    ui.custom = mk('div', 'g-ctrl'); ui.custom.append(af, hf, nf); ui.custom.hidden = true;
+    gameRow.append(gf);
+    ui.pre = mk('p', 'g-note');
+    const top = mk('div', 'g-panel'); top.append(gameRow, ui.custom, ui.pre);
+
+    const board = mk('div', 'g-panel'); board.append(mk('h3', null, 'Scoreboard'));
+    ui.rows = {};
+    ['A', 'H'].forEach((side) => {
+      const r = mk('div', 'g-sb'); const nm = mk('div', 'g-sbn'); const n = mk('span', 'g-sbname'); const rec = mk('small', 'g-note'); nm.append(n, rec);
+      const sc = mk('div', 'g-sbscore', '0'); const adds = mk('div', 'g-seg');
+      [['+7', 7], ['+6', 6], ['+3', 3], ['+2', 2], ['+1', 1], ['−1', -1]].forEach(([lab, v]) => {
+        const b = mk('button', 'g-btn', lab); b.type = 'button'; b.setAttribute('aria-label', lab + ' points');
+        b.onclick = () => { if (side === 'A') L.sa = Math.max(0, L.sa + v); else L.sh = Math.max(0, L.sh + v); go(); }; adds.append(b);
+      });
+      r.append(nm, sc, adds); board.append(r); ui.rows[side] = { n, rec, sc };
+    });
+    const ctrl = mk('div', 'g-lwctrl');
+    const segBox = (label, opts, get, set) => {
+      const box = mk('div', 'g-field'); box.append(mk('span', 'g-lwlab', label)); const s = mk('div', 'g-seg');
+      const btns = opts.map(([lab, v]) => { const b = mk('button', 'g-btn', lab); b.type = 'button'; b.dataset.v = v; b.onclick = () => { set(v); go(); }; s.append(b); return b; });
+      box.append(s); ctrl.append(box);
+      return { btns, sync: () => btns.forEach((b) => b.setAttribute('aria-pressed', String(String(get()) === b.dataset.v))) };
+    };
+    const sq = segBox('Quarter', [['Q1', '1'], ['Q2', '2'], ['Q3', '3'], ['Q4', '4'], ['OT', 'OT']], () => L.q, (v) => { if (v !== L.q) { L.q = v; if (v !== 'OT') L.clock = '12:00'; } });
+    const ck = mk('div', 'g-field'); const ckl = mk('label', 'g-lwlab', 'Clock left in quarter'); ckl.htmlFor = 'lw-clock';
+    ui.clock = mk('input', 'g-input g-clock'); ui.clock.id = 'lw-clock'; ui.clock.value = '12:00'; ui.clock.inputMode = 'numeric';
+    const ckr = mk('div', 'g-seg'); ckr.append(ui.clock);
+    ['12:00', '0:00'].forEach((c) => { const b = mk('button', 'g-btn', c); b.type = 'button'; b.onclick = () => { L.clock = c; ui.clock.value = c; go(); }; ckr.append(b); });
+    ck.append(ckl, ckr); ctrl.append(ck);
+    ui.clock.addEventListener('change', () => { L.clock = ui.clock.value.trim(); go(); });
+    const sb = segBox('Ball', [['Away', -1], ['Unknown', 0], ['Home', 1]], () => L.ball, (v) => { L.ball = Number(v); });
+    const sf = segBox('Ball spot (current drive)', [['Own side', 'own'], ['Midfield', 'mid'], ['Opp. side', 'opp'], ['Red zone', 'rz']], () => L.field, (v) => { L.field = v; });
+    board.append(ctrl);
+
+    const res = mk('div', 'g-panel'); res.setAttribute('aria-live', 'polite');
+    const nums = mk('div', 'g-mu');
+    const sA = mk('div', 'g-side'); ui.pA = mk('span', 'g-big', '—'); ui.wA = mk('span', 'g-team'); sA.append(ui.wA, ui.pA);
+    const sH = mk('div', 'g-side r'); ui.pH = mk('span', 'g-big', '—'); ui.wH = mk('span', 'g-team'); sH.append(ui.wH, ui.pH);
+    nums.append(sA, mk('span', 'g-vs', 'win chance'), sH);
+    const bar = mk('div', 'g-split'); ui.bA = mk('span'); ui.bH = mk('span'); bar.append(ui.bA, ui.bH);
+    const onair = mk('div', 'g-ctrl'); ui.line = mk('p', 'g-onair'); ui.copy = mk('button', 'g-btn', 'Copy line'); ui.copy.type = 'button'; onair.append(ui.line, ui.copy);
+    ui.status = mk('p', 'g-note');
+    res.append(nums, bar, onair, ui.status);
+    ui.copy.onclick = () => {
+      const t = ui.line.textContent;
+      const fall = () => { const r = document.createRange(); r.selectNodeContents(ui.line); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(t).then(() => { ui.copy.textContent = 'Copied'; setTimeout(() => { ui.copy.textContent = 'Copy line'; }, 1500); }).catch(fall); } catch (e) { fall(); }
+    };
+
+    const chartP = mk('div', 'g-panel'); const chHead = mk('div', 'g-ctrl'); chHead.style.justifyContent = 'space-between';
+    chHead.append(mk('h3', null, 'Win probability through the game'));
+    const chBtns = mk('div', 'g-seg'); ui.logB = mk('button', 'g-btn', 'Log this moment'); ui.undo = mk('button', 'g-btn', 'Undo'); ui.clear = mk('button', 'g-btn', 'Clear');
+    [ui.logB, ui.undo, ui.clear].forEach((b) => { b.type = 'button'; chBtns.append(b); }); chHead.append(chBtns);
+    ui.chart = mk('div', 'g-chart'); ui.logc = mk('p', 'g-note');
+    chartP.append(chHead, ui.chart, ui.logc);
+    ui.logB.onclick = () => { L.log.push({ t: LWP.elapsed(), p: L.p, sa: L.sa, sh: L.sh }); go(); };
+    ui.undo.onclick = () => { L.log.pop(); go(); };
+    ui.clear.onclick = () => { L.log = []; go(); };
+
+    el.replaceChildren(top, board, res, chartP);
+    ui.sq = sq; ui.sb = sb; ui.sf = sf;
+    let pend = null;
+    function go() { draw(); }
+    function draw() {
+      const td = dash.data('teams'), pd = dash.data('params');
+      if (td.status !== 'ok' || pd.status !== 'ok') return;
+      const P = pd.data[0], T = {}; td.data.forEach((t) => { T[t.team] = t; });
+      const A = T[L.a], H = T[L.h]; if (!A || !H) return;
+      sq.sync(); sb.sync(); sf.sync();
+      sb.btns[0].textContent = LWP.short(L.a); sb.btns[2].textContent = LWP.short(L.h);
+      ui.clock.value = L.clock;
+      const pg = LWP.pregame(P, A, H, L.neutral);
+      ui.rows.A.n.textContent = L.a; ui.rows.H.n.textContent = L.h;
+      ui.rows.A.rec.textContent = ` ${A.record} · ${A.bracket}${L.neutral ? '' : ' · away'}`; ui.rows.H.rec.textContent = ` ${H.record} · ${H.bracket}${L.neutral ? '' : ' · home'}`;
+      ui.rows.A.sc.textContent = L.sa; ui.rows.H.sc.textContent = L.sh;
+      const fav = pg.m >= 0 ? L.h : L.a;
+      ui.pre.textContent = `Pregame: ${LWP.short(fav)} by ${Math.abs(pg.m).toFixed(1)}, ${LWP.short(fav)} wins ${LWP.pct(Math.max(pg.p, 1 - pg.p))} · predicted score ${LWP.short(L.h)} ${Math.round(pg.eh)}, ${LWP.short(L.a)} ${Math.round(pg.ea)}`;
+      ui.status.textContent = 'Calculating…';
+      clearTimeout(pend); pend = setTimeout(() => {
+        const lead = L.sh - L.sa, ml = LWP.minsLeft(), ot = L.q === 'OT';
+        const p = (!ot && ml >= 48 && lead === 0) ? pg.p : LWP.wpHome(P, lead, ml, L.ball, L.field, pg.eh, pg.ea, ot);
+        L.p = p;
+        ui.pH.textContent = LWP.pct(p); ui.pA.textContent = LWP.pct(1 - p); ui.wA.textContent = LWP.short(L.a); ui.wH.textContent = LWP.short(L.h);
+        ui.bA.style.width = (100 * (1 - p)) + '%'; ui.bA.style.background = dash.colors[1] || 'var(--cds-chart-muted)';
+        ui.bH.style.width = (100 * p) + '%'; ui.bH.style.background = dash.colors[0];
+        const leader = p >= 0.5 ? L.h : L.a, lp = Math.max(p, 1 - p);
+        const when = ot ? 'in overtime' : (ml >= 48 ? 'before kickoff' : `with ${L.clock} left in the ${['first', 'second', 'third', 'fourth'][Number(L.q) - 1]} quarter`);
+        const sc = lead === 0 ? `Tied at ${L.sa}` : `${LWP.short(lead > 0 ? L.h : L.a)} leads ${Math.max(L.sa, L.sh)}-${Math.min(L.sa, L.sh)}`;
+        ui.line.textContent = `${sc} ${when}. ${LWP.short(leader)} has ${/^(8|11%|18%)/.test(LWP.pct(lp)) ? 'an' : 'a'} ${LWP.pct(lp)} chance to win, according to our model.`;
+        const spot = { own: 'own side of the field', mid: 'near midfield', opp: "opponent's side", rz: 'red zone' }[L.field];
+        ui.status.textContent = ot ? 'Overtime: NFHS format, trailing team answers from the 10.' : (L.ball === 0 ? 'Ball unknown: possession is randomized.' : `${LWP.short(L.ball > 0 ? L.h : L.a)} has the ball, ${spot}.`);
+        chart(pg);
+      }, 30);
+    }
+    function chart(pg) {
+      const W = Math.max(280, ui.chart.clientWidth || 600), H = 230, l = 40, r = 12, t = 12, b = 28;
+      const x = (v) => l + (W - l - r) * Math.min(v, 52) / 52, y = (p) => t + (H - t - b) * (1 - p);
+      const pts = [{ t: 0, p: pg.p }].concat(L.log.slice().sort((a, c) => a.t - c.t)).concat([{ t: LWP.elapsed(), p: L.p, cur: true }]);
+      const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+        .attr('aria-label', `Win probability for ${L.h} through the game; now ${LWP.pct(L.p)}`);
+      [0, 0.25, 0.5, 0.75, 1].forEach((v) => {
+        svg.append('line').attr('x1', l).attr('x2', W - r).attr('y1', y(v)).attr('y2', y(v)).style('stroke', v === 0.5 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)');
+        svg.append('text').attr('x', l - 6).attr('y', y(v) + 4).attr('text-anchor', 'end').text(Math.round(v * 100) + '%');
+      });
+      [[0, 'Kick'], [12, 'Q2'], [24, 'Half'], [36, 'Q4'], [48, 'End']].forEach(([tt, lab]) => {
+        svg.append('line').attr('x1', x(tt)).attr('x2', x(tt)).attr('y1', t).attr('y2', H - b).style('stroke', 'var(--cds-chart-grid)');
+        svg.append('text').attr('x', x(tt)).attr('y', H - 8).attr('text-anchor', 'middle').text(lab);
+      });
+      svg.append('text').attr('x', l + 4).attr('y', t + 12).style('fill', 'var(--color-fg)').text(LWP.short(L.h) + ' ↑');
+      svg.append('text').attr('x', l + 4).attr('y', H - b - 6).style('fill', 'var(--color-fg)').text(LWP.short(L.a) + ' ↓');
+      svg.append('path').attr('d', pts.map((p, i) => `${i ? 'L' : 'M'}${x(p.t).toFixed(1)},${y(p.p).toFixed(1)}`).join(' '))
+        .style('fill', 'none').style('stroke', dash.colors[0]).style('stroke-width', 2.2);
+      pts.forEach((p) => svg.append('circle').attr('cx', x(p.t)).attr('cy', y(p.p)).attr('r', p.cur ? 5 : 3.5)
+        .style('fill', p.cur ? dash.colors[0] : 'var(--color-panel)').style('stroke', dash.colors[0]).style('stroke-width', 1.5));
+      ui.chart.replaceChildren(svg.node());
+      ui.logc.textContent = L.log.length ? `${L.log.length} logged moment${L.log.length > 1 ? 's' : ''}. The filled dot is the current state.` : 'Tap "Log this moment" after scores or at quarter breaks to build the game chart.';
+    }
+    ui.game.addEventListener('change', () => {
+      if (ui.game.value === 'custom') { ui.custom.hidden = false; pickCustom(); return; }
+      ui.custom.hidden = true; const [a, h, n] = ui.game.value.split('|'); LWP.setGame(a, h, n === '1'); go();
+    });
+    function pickCustom() { if (ui.a.value && ui.h.value && ui.a.value !== ui.h.value) { LWP.setGame(ui.a.value, ui.h.value, ui.nt.checked); go(); } }
+    [ui.a, ui.h, ui.nt].forEach((e) => e.addEventListener('change', pickCustom));
+    return { ui, draw };
+  },
+  update(el, made) {
+    const { ui, draw } = made, L = LWP.L;
+    const gd = dash.data('games'), td = dash.data('teams');
+    if (gd.status === 'ok' && !ui.game.options.length) {
+      const fd = d3.utcFormat('%a %-m/%-d');
+      const games = gd.data.slice().sort((x, y) => (x.class + x.home).localeCompare(y.class + y.home));
+      ['7A', '6A', '5A', '4A', '3A', '2A', 'A'].forEach((c) => {
+        const og = document.createElement('optgroup'); og.label = c + ' round 1';
+        games.filter((g) => g.class === c).forEach((g) => og.append(new Option(`${fd(new Date(g.date))} · #${g.away_seed} ${g.away} at #${g.home_seed} ${g.home}`, `${g.away}|${g.home}|0`)));
+        ui.game.append(og);
+      });
+      ui.game.append(new Option('Custom matchup (any two teams)…', 'custom'));
+      if (!L.key) {
+        const s = gd.data.find((g) => g.home === 'Cartersville') || gd.data[0];
+        if (s) { LWP.setGame(s.away, s.home, false); ui.game.value = `${s.away}|${s.home}|0`; }
+      }
+    }
+    if (td.status === 'ok' && !ui.a.options.length) {
+      const names = td.data.map((t) => t.team).sort((a, b) => a.localeCompare(b));
+      [ui.a, ui.h].forEach((s) => names.forEach((n) => s.append(new Option(n, n))));
+      ui.a.value = 'Cass'; ui.h.value = 'Cartersville';
+    }
+    draw();
+  }
+});
+
 dash.draw('wl', (o) => {
   const k = o.id.replace(/^w-|-v$/g, '');
   const inp = document.querySelector('#w-' + k);

@@ -38,7 +38,10 @@
     onData(fn) { cbs.push(fn); try { fn(); } catch (e) { console.error(e); } },
     calc(id, spec) { calcs[id] = spec; },
     draw(name, fn) {
-      if (fn) { draws[name] = typeof fn === 'function' ? fn : (el) => { const m = fn.mount ? fn.mount(el) : undefined; if (fn.update) fn.update(el, m); }; }
+      if (fn) {
+        if (typeof fn === 'function') draws[name] = fn;
+        else { const made = new WeakMap(); draws[name] = (el) => { if (!made.has(el)) { el.replaceChildren(); made.set(el, fn.mount ? fn.mount(el) : undefined); } if (fn.update) fn.update(el, made.get(el)); }; }
+      }
       else runDraw(name);
     },
     loader() {}, refresh() {}, params() { return {}; }, setParams() {}, resetParams() {},
