@@ -171,11 +171,12 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
   <header class="g-head" id="top">
     <p class="g-eyebrow">GHSA football · 2026 playoffs · <span data-draw="nextround" data-source="games">—</span></p>
     <h1>GHSA Football Dashboard</h1>
-    <p class="g-take" id="takeaway" data-read lang="en">Cartersville is a <b data-draw="v" class="dash-skeleton" data-source="our_next" data-field="win_prob" data-where="team=Cartersville" data-fmt="odds">—</b> favorite over <b data-draw="v" class="dash-skeleton" data-source="our_next" data-field="opponent" data-where="team=Cartersville">—</b> in <span data-draw="v" class="dash-skeleton" data-source="our_next" data-field="round" data-where="team=Cartersville" data-fmt="round">—</span>, with a <b data-draw="v" class="dash-skeleton" data-source="odds" data-field="title" data-where="team=Cartersville" data-fmt="odds">—</b> chance at the 5A state title. Since Oct 17 the model has picked <b data-draw="v" class="dash-skeleton" data-source="season" data-field="accuracy" data-row="0" data-fmt="pct1">—</b> of <b data-draw="v" class="dash-skeleton" data-source="season" data-field="games" data-row="0" data-fmt="int">—</b> GHSA games correctly.</p>
+
   </header>
 
   <nav class="g-tabs" role="tablist" aria-label="Dashboard sections">
     <button class="g-tab" role="tab" id="tab-teams" data-tab="teams" aria-selected="true" aria-controls="teams">Teams</button>
+    <button class="g-tab" role="tab" id="tab-week" data-tab="week" aria-selected="false" aria-controls="week">This Week's Games</button>
     <button class="g-tab" role="tab" id="tab-resume" data-tab="resume" aria-selected="false" aria-controls="resume">Résumé</button>
     <button class="g-tab" role="tab" id="tab-rankings" data-tab="rankings" aria-selected="false" aria-controls="rankings">Rankings</button>
     <button class="g-tab" role="tab" id="tab-matchups" data-tab="matchups" aria-selected="false" aria-controls="matchups">Matchups</button>
@@ -202,6 +203,7 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
         <span class="g-sub" data-draw="psub" data-source="teams">—</span>
         <span data-draw="pchip" data-source="teams"></span>
       </div>
+      <p class="g-take" id="profile-blurb" data-read lang="en" data-draw="pblurb" data-source="teams schedule odds">—</p>
       <div class="g-tiles" id="profile-tiles">
         <div class="g-tile"><span class="g-label">Record</span><span class="g-val" data-draw="pv" data-source="teams" data-field="record">—</span><span class="g-aux">Colley <span data-draw="pv" data-source="teams" data-field="colley_rank_class" data-fmt="rank">—</span> in class</span></div>
         <div class="g-tile"><span class="g-label">Power rating</span><span class="g-val" data-draw="pv" data-source="teams" data-field="power" data-fmt="signed1">—</span><span class="g-aux"><span data-draw="pv" data-source="teams" data-field="power_rank_class" data-fmt="rank">—</span> in class · ±<span data-draw="pv" data-source="teams" data-field="power_80" data-fmt="dec1">—</span></span></div>
@@ -232,6 +234,45 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
         </div>
         <p class="g-note">Pregame win chance is what the model said that week, using only games played before it. Upcoming playoff games show the projected score. Click an opponent to open its profile.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== THIS WEEK'S GAMES ===================== -->
+  <section class="g-page" id="week" role="tabpanel" aria-labelledby="tab-week" hidden>
+    <div class="g-sec">
+      <h2><span data-draw="nextround" data-source="games">—</span></h2>
+      <p class="g-note">Every public-bracket game this week from GHSA's official brackets, with our projected score and each favorite's chance to win. Higher seed hosts through the semifinals; the final is neutral. The Private bracket isn't included. Click a team to open its profile.</p>
+    </div>
+    <div class="g-ctrl">
+      <div class="g-field"><label for="wk-class">Class</label>
+        <select class="dash-select" id="wk-class" aria-label="Class for this week's games">
+          <option value="" selected>All classes</option><option value="7A">7A</option><option value="6A">6A</option><option value="5A">5A</option><option value="4A">4A</option><option value="3A">3A</option><option value="2A">2A</option><option value="A">A</option>
+        </select></div>
+      <div class="g-field"><label for="wk-sort">Sort by</label>
+        <select class="dash-select" id="wk-sort" aria-label="Sort this week's games">
+          <option value="bracket" selected>Class and seed</option><option value="close">Closest games first</option><option value="lopsided">Biggest favorites first</option>
+        </select></div>
+      <div class="g-field"><label for="wk-search">Find a team</label>
+        <input class="g-input" id="wk-search" type="search" placeholder="Type a school" autocomplete="off"></div>
+    </div>
+    <div class="g-panel" id="week-board">
+      <div class="g-tablewrap g-scroll">
+        <table class="g-t" id="week-table" data-source="games" data-row-key="home">
+          <thead><tr>
+            <th data-field="class">Class</th><th data-field="home_seed" class="n">Seed</th><th data-field="home">Home</th><th data-field="home_record">Record</th>
+            <th data-field="away_seed" class="n">Seed</th><th data-field="away">Away</th><th data-field="away_record">Record</th>
+            <th data-field="home_pts" class="n">Home pts</th><th data-field="away_pts" class="n">Away pts</th><th data-field="favorite">Favorite</th>
+            <th data-field="p_favorite">Win chance</th><th data-field="spread" class="n">Spread</th>
+          </tr></thead>
+          <tbody data-draw="wkrows"></tbody>
+        </table>
+      </div>
+      <p class="g-note" data-draw="wkcount" data-source="games">—</p>
+    </div>
+    <div class="g-panel" id="upset-watch">
+      <h3>Closest games statewide</h3>
+      <p class="g-note">The 10 games where the favorite's chance is lowest. The tick marks 50%.</p>
+      <div class="g-list" data-draw="closest" data-source="closest">—</div>
     </div>
   </section>
 
@@ -337,30 +378,6 @@ details.g-defs dd{margin:0;color:var(--color-fg-muted)}
       </div>
       <div class="g-panel" data-draw="muout" data-source="teams params">—</div>
       <p class="g-note">Worked out in your browser from the two teams' power ratings, their uncertainty, home field and the offense/defense split, with the same formulas as the weekly predictions. Projections, not betting advice.</p>
-    </div>
-
-    <div class="g-sec" id="round-1">
-      <h2>This week's playoff games</h2>
-      <div class="g-grid2">
-        <div class="g-panel" id="r1-board">
-          <div class="g-ctrl"><label for="r1-class">Class</label>
-            <select class="dash-select" id="r1-class" aria-label="Class for this week's games">
-              <option value="7A">7A</option><option value="6A">6A</option><option value="5A" selected>5A</option><option value="4A">4A</option><option value="3A">3A</option><option value="2A">2A</option><option value="A">A</option>
-            </select></div>
-          <div class="g-tablewrap">
-            <table class="g-t" id="r1-table" data-source="games" data-row-key="home">
-              <thead><tr><th data-field="home_seed" class="n">Seed</th><th data-field="home">Home</th><th data-field="away_seed" class="n">Seed</th><th data-field="away">Away</th><th data-field="home_pts" class="n">Home pts</th><th data-field="away_pts" class="n">Away pts</th><th data-field="p_favorite">Favorite wins</th></tr></thead>
-              <tbody data-draw="r1rows"></tbody>
-            </table>
-          </div>
-          <p class="g-note">From GHSA's official brackets. Higher seed hosts through the semifinals; the final is neutral. The Private bracket isn't included.</p>
-        </div>
-        <div class="g-panel" id="upset-watch">
-          <h3>Closest games statewide</h3>
-          <p class="g-note">The 10 games where the favorite's chance is lowest. The tick marks 50%.</p>
-          <div class="g-list" data-draw="closest" data-source="closest">—</div>
-        </div>
-      </div>
     </div>
 
     <div class="g-sec" id="scorecard">
@@ -491,7 +508,7 @@ window.G = (function () {
     const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
     return x > 0 ? 1 - p : p;
   }
-  const PROFILE = ['teampick', 'pname', 'psub', 'pchip', 'pv', 'pnext', 'podds', 'pchart', 'psched'];
+  const PROFILE = ['teampick', 'pname', 'psub', 'pchip', 'pblurb', 'pv', 'pnext', 'podds', 'pchart', 'psched'];
   function setTeam(t) {
     S.team = t;
     document.querySelectorAll('.g-pick').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.team === t)));
@@ -509,23 +526,6 @@ window.G = (function () {
 })();
 
 /* ---------- calcs ---------- */
-dash.calc('our_next', {
-  title: 'Our teams\' next game',
-  description: 'Each of our four teams\' next playoff game from the predictions, seen from that team\'s side.',
-  inputs: ['games'],
-  fn: (games) => ['Cartersville', 'Cass', 'Adairsville', 'Woodland, Cartersville'].map((team) => {
-    const g = games.find((r) => r.home === team || r.away === team);
-    if (!g) return { team, round: null, opponent: null, site: null, seed: null, opp_seed: null, opp_record: null, win_prob: null, pts_for: null, pts_against: null };
-    const home = g.home === team;
-    return {
-      team, round: g.round, opponent: home ? g.away : g.home, site: home ? 'Home' : 'Away',
-      seed: +(home ? g.home_seed : g.away_seed), opp_seed: +(home ? g.away_seed : g.home_seed),
-      opp_record: home ? g.away_record : g.home_record,
-      win_prob: Math.round((home ? +g.p_home : 1 - +g.p_home) * 1000) / 1000,
-      pts_for: +(home ? g.home_pts : g.away_pts), pts_against: +(home ? g.away_pts : g.home_pts)
-    };
-  })
-});
 dash.calc('closest', {
   title: 'Closest playoff games this week',
   description: 'The 10 games this week with the lowest favorite win probability.',
@@ -583,7 +583,8 @@ dash.calc('season', {
     document.querySelectorAll('#mu-site').forEach((s) => { s.value = String(-(+s.value)); });
     dash.draw('mupick'); dash.draw('muout');
   }));
-  document.querySelectorAll('#r1-class').forEach((s) => s.addEventListener('change', () => dash.draw('r1rows')));
+  ['#wk-class', '#wk-sort'].forEach((q) => document.querySelectorAll(q).forEach((s) => s.addEventListener('change', () => { dash.draw('wkrows'); dash.draw('wkcount'); })));
+  document.querySelectorAll('#wk-search').forEach((s) => s.addEventListener('input', () => { dash.draw('wkrows'); dash.draw('wkcount'); }));
   document.querySelectorAll('#rs-class').forEach((s) => s.addEventListener('change', () => dash.draw('rsrows')));
   document.querySelectorAll('#rs-search').forEach((s) => s.addEventListener('input', () => dash.draw('rsrows')));
 })();
@@ -847,6 +848,58 @@ dash.draw('psub', (el) => {
     r.bracket === 'Private' ? ' · Private bracket' : '');
 });
 dash.draw('pchip', (el) => { const r = prow(); el.replaceChildren(); if (r && r.trend) { const c = G.chip(r.trend); c.dataset.source = 'teams'; c.dataset.field = 'trend'; c.dataset.where = 'team=' + G.enc(r.team); el.append(c); } });
+dash.draw('pblurb', (el) => {
+  const td = dash.data('teams'), sd = dash.data('schedule'), od = dash.data('odds');
+  if (!G.state(el, td.status !== 'ok' ? td : sd)) return;
+  const t = td.data.find((r) => r.team === G.S.team); if (!t) { el.textContent = '—'; return; }
+  const w = 'team=' + G.enc(t.team), short = t.team.split(',')[0];
+  const cls = t.bracket === 'Private' ? 'the Private bracket' : t.bracket;
+  const ord = (n) => { n = +n; const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
+  const M = (txt, f, src, where) => G.mark('b', txt, src || 'teams', f, where || w);
+  const games = sd.data.filter((r) => r.team === t.team);
+  const next = games.find((r) => r.status === 'upcoming');
+  const po = games.filter((r) => r.round && r.round !== 'Regular season' && r.status === 'final');
+  const last = po[po.length - 1];
+  const o = od.status === 'ok' ? od.data.find((r) => r.team === t.team) : null;
+  const parts = [];
+  // sentence 1: where the season stands
+  if (next) {
+    const p = G.num(next.pregame_win_prob), nw = 'team=' + G.enc(next.team) + '&date=' + G.enc(next.date);
+    const where = next.site === 'Home' ? 'at home against' : next.site === 'Away' ? 'at' : 'against';
+    const pm = G.mark('b', G.odds(p), 'schedule', 'pregame_win_prob', nw), opp = G.mark('b', next.opponent, 'schedule', 'opponent', nw);
+    if (p >= 0.5) parts.push(short + ' (', M(t.record, 'record'), ') is ', /^(8|11%|18%)/.test(G.odds(p)) ? 'an ' : 'a ', pm, ` favorite ${where} `, opp);
+    else parts.push(short + ' (', M(t.record, 'record'), `) is the underdog ${where} `, opp, ', with a ', pm, ' chance to win');
+    parts.push(` in ${G.roundPhrase(next.round)}. Projected score: ${next.pts_for}–${next.pts_against}. `);
+  } else if (last && (last.result || '').startsWith('L')) {
+    parts.push(short + "'s season ended in " + G.roundPhrase(last.round) + ` with a ${last.pts_for}–${last.pts_against} loss ${last.site === 'Away' ? 'at' : 'to'} ${last.opponent}. It finished `, M(t.record, 'record'), '. ');
+  } else if (t.bracket === 'Private') {
+    parts.push(short + ' went ', M(t.record, 'record'), '. Private-bracket playoff games aren\'t predicted here. ');
+  } else {
+    parts.push(short + ' finished ', M(t.record, 'record'), ' and missed the playoffs. ');
+  }
+  // sentence 2: résumé and quality
+  const rr = G.num(t.resume_rank_class), pr = G.num(t.power_rank_class);
+  if (rr != null && pr != null) {
+    const gap = pr - rr;
+    parts.push('It ranks ', M(ord(rr), 'resume_rank_class'), ` in ${cls} on the WBHF Résumé and `, M(ord(pr), 'power_rank_class'), ' by power rating',
+      Math.abs(gap) >= 8 ? (gap > 0 ? ', so its record is better than the team is. ' : ', so it is better than its record. ') : '. ');
+  }
+  // sentence 3: what drives it
+  const off = G.num(t.off_rank_class), def = G.num(t.def_rank_class);
+  if (off != null && def != null) {
+    const strong = off <= def ? ['offense', off, 'off_rank_class', t.ppg, 'ppg', 'points a game'] : ['defense', def, 'def_rank_class', t.papg, 'papg', 'allowed a game'];
+    parts.push(strong[1] <= 10 ? 'Its ' + strong[0] + ' leads the way (' : 'Its ' + strong[0] + ' is the better side (', M(ord(strong[1]), strong[2]), ` in ${cls}, `, M((+strong[3]).toFixed(1), strong[4]), ' ' + strong[5] + ')');
+    if (t.trend && t.trend !== 'Steady') parts.push(', and it is trending ', M({ Fire: '🔥 hot', Up: 'up', Down: 'down', Ice: '🧊 cold' }[t.trend] || t.trend.toLowerCase(), 'trend'));
+    parts.push('. ');
+  }
+  // sentence 4: title odds while alive
+  if (next && o && G.num(o.title) != null) {
+    const ow = 'team=' + G.enc(t.team);
+    const ti = G.num(o.title);
+    parts.push('Its chance to win the state title is ', G.mark('b', ti < 0.005 ? 'less than 1%' : G.odds(ti), 'odds', 'title', ow), '.');
+  }
+  el.replaceChildren(...parts);
+});
 dash.draw('pv', (el) => {
   const d = dash.data('teams');
   if (!G.state(el, d)) return;
@@ -1108,20 +1161,36 @@ dash.draw('muout', (el) => {
   const wrap = document.createElement('div'); wrap.className = 'g-tablewrap'; wrap.append(tbl);
   el.replaceChildren(top, bar, line, wrap);
 });
-dash.draw('r1rows', (tb) => {
+function wkFilter(d) {
+  const val = (q) => { const s = document.querySelector(q); return s ? s.value : ''; };
+  const cls = val('#wk-class'), sort = val('#wk-sort') || 'bracket', q = val('#wk-search').trim().toLowerCase();
+  const order = { '7A': 0, '6A': 1, '5A': 2, '4A': 3, '3A': 4, '2A': 5, A: 6 };
+  let rows = d.data.filter((g) => (!cls || g.class === cls) && (!q || (g.home + ' ' + g.away).toLowerCase().includes(q)));
+  rows = rows.slice().sort(sort === 'close' ? (a, b) => +a.p_favorite - +b.p_favorite : sort === 'lopsided' ? (a, b) => +b.p_favorite - +a.p_favorite
+    : (a, b) => (order[a.class] - order[b.class]) || (+a.home_seed - +b.home_seed));
+  return rows;
+}
+dash.draw('wkrows', (tb) => {
   const d = dash.data('games');
   if (d.status !== 'ok') { tb.replaceChildren(); return; }
-  const s = document.querySelector('#r1-class'); const cls = s ? s.value : '5A';
-  const rows = d.data.filter((g) => g.class === cls).sort((a, b) => +a.home_seed - +b.home_seed);
-  tb.replaceChildren(...rows.map((g) => {
+  tb.replaceChildren(...wkFilter(d).map((g) => {
     const tr = document.createElement('tr');
     if (G.FOCUS.includes(g.home) || G.FOCUS.includes(g.away)) tr.className = 'g-me';
     const td = (t, n) => { const c = document.createElement('td'); c.textContent = t; if (n) c.className = 'n'; return c; };
     const link = (t) => { const c = td(t); c.className = 'g-link'; c.tabIndex = 0; c.addEventListener('click', () => G.showTeam(t)); c.addEventListener('keydown', (e) => { if (e.key === 'Enter') G.showTeam(t); }); return c; };
-    const wp = td(''); wp.append(G.span(g.favorite + ' '), Object.assign(document.createElement('b'), { textContent: G.odds(+g.p_favorite) }));
-    tr.append(td(g.home_seed, true), link(g.home), td(g.away_seed, true), link(g.away), td(g.home_pts, true), td(g.away_pts, true), wp);
+    const p = +g.p_favorite;
+    const wp = td(''); const bar = document.createElement('span'); bar.className = 'g-wpbar'; const i = document.createElement('i');
+    i.style.width = (p * 100) + '%'; i.style.background = dash.colors[0]; bar.append(i); wp.append(bar, G.span(G.odds(p)));
+    tr.append(td(g.class), td(g.home_seed, true), link(g.home), td(g.home_record), td(g.away_seed, true), link(g.away), td(g.away_record),
+      td(g.home_pts, true), td(g.away_pts, true), td(g.favorite), wp, td((+g.spread).toFixed(1), true));
     return tr;
   }));
+});
+dash.draw('wkcount', (el) => {
+  const d = dash.data('games');
+  if (!G.state(el, d)) return;
+  const n = wkFilter(d).length, upsets = wkFilter(d).filter((g) => g.favorite !== g.home).length;
+  el.textContent = `${n} game${n === 1 ? '' : 's'} shown. In ${upsets} of them the road team is the favorite.`;
 });
 dash.draw('closest', (el) => {
   const d = dash.data('closest');
