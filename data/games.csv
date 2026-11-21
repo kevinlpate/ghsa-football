@@ -1,57 +1,29 @@
 date,round,class,home,home_seed,home_record,home_power,home_trend,away,away_seed,away_record,away_power,away_trend,home_pts,away_pts,favorite,p_favorite,p_home,spread,region_champ_home
-2026-11-20,Round 2,7A,Valdosta,1,10-1,55.7,Steady,East Coweta,17,7-4,33.8,Steady,42,18,Valdosta,0.951,0.951,23.5,False
-2026-11-20,Round 2,7A,Newton,2,11-0,48.8,Steady,Peachtree Ridge,15,8-3,16.4,Down,45,11,Newton,0.992,0.992,34.0,False
-2026-11-20,Round 2,7A,Carrollton,3,11-0,62.2,Up,Parkview,14,8-3,31.6,Up,51,19,Carrollton,0.988,0.988,32.3,False
-2026-11-20,Round 2,7A,Brookwood,4,10-1,43.8,Steady,Richmond Hill,20,6-5,23.7,Steady,36,15,Brookwood,0.937,0.937,21.8,False
-2026-11-20,Round 2,7A,Lowndes,5,10-1,43.1,Steady,Grayson,12,7-4,47.5,Fire,23,25,Grayson,0.575,0.425,2.7,False
-2026-11-20,Round 2,7A,North Gwinnett,6,10-1,39.7,Steady,Westlake,11,9-2,35.0,Steady,34,28,North Gwinnett,0.674,0.674,6.4,False
-2026-11-20,Round 2,7A,Colquitt County,7,8-3,39.3,Steady,McEachern,10,9-2,35.5,Up,29,23,Colquitt County,0.649,0.649,5.5,False
-2026-11-20,Round 2,7A,Buford,9,11-0,51.7,Steady,Archer,25,6-5,25.5,Steady,39,11,Buford,0.975,0.975,27.8,False
-2026-11-20,Round 2,6A,Thomas County Central,1,11-0,60.7,Down,Roswell,17,8-3,26.6,Steady,46,10,Thomas County Central,0.994,0.994,35.8,False
-2026-11-20,Round 2,6A,Lee County,2,10-1,52.0,Up,Kell,15,9-2,26.1,Fire,41,14,Lee County,0.974,0.974,27.6,False
-2026-11-20,Round 2,6A,Jackson County,3,11-0,38.0,Up,Gainesville,14,8-3,36.4,Steady,31,27,Jackson County,0.591,0.591,3.3,False
-2026-11-20,Round 2,6A,Coffee,4,9-2,38.8,Steady,Newnan,20,7-4,25.2,Up,32,17,Coffee,0.855,0.855,15.2,False
-2026-11-20,Round 2,6A,East Paulding,5,11-0,29.1,Steady,Bradwell Institute,12,9-2,15.1,Steady,41,25,East Paulding,0.865,0.865,15.7,False
-2026-11-20,Round 2,6A,Milton,6,10-1,33.3,Steady,New Manchester,22,8-3,15.7,Steady,37,18,Milton,0.912,0.912,19.3,False
-2026-11-20,Round 2,6A,Sequoyah,7,10-1,45.0,Steady,Woodward Academy,23,7-4,21.9,Up,36,12,Sequoyah,0.959,0.959,24.9,False
-2026-11-20,Round 2,6A,Creekside,8,10-1,56.3,Steady,Clarke Central,9,9-2,17.7,Steady,47,7,Creekside,0.997,0.997,40.2,False
-2026-11-20,Round 2,5A,Blessed Trinity,1,11-0,34.2,Steady,Lithonia,17,7-4,25.8,Up,29,19,Blessed Trinity,0.762,0.762,10.1,False
-2026-11-20,Round 2,5A,Cartersville,2,11-0,51.3,Up,Stockbridge,15,9-2,23.3,Steady,44,14,Cartersville,0.982,0.982,29.7,False
-2026-11-20,Round 2,5A,North Oconee,3,9-2,38.2,Steady,Richmond Academy,14,9-2,21.8,Up,36,18,North Oconee,0.898,0.898,18.1,False
-2026-11-20,Round 2,5A,Dalton,4,9-2,29.4,Steady,Ware County,13,9-2,30.3,Fire,27,26,Dalton,0.522,0.522,0.8,False
-2026-11-20,Round 2,5A,Tucker,5,10-1,30.8,Steady,LaGrange,12,9-2,32.3,Steady,25,24,Tucker,0.503,0.503,0.1,False
-2026-11-20,Round 2,5A,Jefferson,6,9-2,31.7,Steady,Benedictine,11,9-2,26.1,Down,28,21,Jefferson,0.693,0.693,7.2,False
-2026-11-20,Round 2,5A,Cass,7,9-2,15.0,Steady,"Central, Carroll",10,8-3,33.0,Up,22,38,"Central, Carroll",0.876,0.124,16.4,False
-2026-11-20,Round 2,5A,Marist,9,9-2,32.4,Steady,Centennial,25,7-4,3.0,Steady,40,9,Marist,0.987,0.987,31.0,False
-2026-11-20,Round 2,4A,Peach County,1,11-0,41.0,Up,West Laurens,16,7-4,12.5,Steady,41,11,Peach County,0.983,0.983,30.2,False
-2026-11-20,Round 2,4A,Troup County,2,10-1,39.4,Steady,White County,18,9-2,-1.0,Steady,48,6,Troup County,0.998,0.998,42.1,False
-2026-11-20,Round 2,4A,Monroe Area,3,11-0,26.2,Ice,Mary Persons,14,7-4,20.5,Steady,32,24,Monroe Area,0.699,0.699,7.4,False
-2026-11-20,Round 2,4A,Sandy Creek,4,11-0,39.0,Steady,North Hall,13,9-2,18.5,Up,39,17,Sandy Creek,0.94,0.94,22.2,False
-2026-11-20,Round 2,4A,Cairo,5,10-1,30.8,Fire,Northwest Whitfield,12,9-2,12.3,Steady,38,18,Cairo,0.921,0.921,20.2,False
-2026-11-20,Round 2,4A,Dougherty,6,10-1,17.3,Up,Hampton,11,8-3,15.2,Steady,27,23,Dougherty,0.605,0.605,3.8,False
-2026-11-20,Round 2,4A,Stephenson,7,10-1,28.1,Up,Calhoun,10,7-4,17.0,Up,32,20,Stephenson,0.817,0.817,12.8,False
-2026-11-20,Round 2,4A,Baldwin,8,8-3,17.3,Steady,"Douglass, Atlanta",9,9-2,24.4,Up,27,32,"Douglass, Atlanta",0.648,0.352,5.4,False
-2026-11-20,Round 2,3A,Appling County,1,11-0,24.1,Fire,Lamar County,16,8-3,13.6,Steady,28,16,Appling County,0.803,0.803,12.1,False
-2026-11-20,Round 2,3A,Toombs County,2,10-1,44.3,Steady,"Carver, Columbus",15,7-4,15.2,Up,44,13,Toombs County,0.985,0.985,30.8,False
-2026-11-20,Round 2,3A,Hart County,3,10-1,20.6,Steady,Stephens County,14,8-3,12.4,Steady,33,23,Hart County,0.758,0.758,9.8,False
-2026-11-20,Round 2,3A,Rockmart,4,9-2,27.6,Fire,Callaway,13,8-3,11.6,Up,37,19,Rockmart,0.893,0.893,17.7,False
-2026-11-20,Round 2,3A,Columbia,5,9-2,26.2,Up,Lumpkin County,12,8-3,9.6,Fire,36,18,Columbia,0.901,0.901,18.3,False
-2026-11-20,Round 2,3A,KIPP Atlanta Collegiate,7,8-3,26.1,Steady,Hephzibah,10,9-2,14.6,Up,33,20,KIPP Atlanta Collegiate,0.82,0.82,13.1,False
-2026-11-20,Round 2,3A,Pierce County,8,9-2,23.8,Down,Hapeville,9,8-3,14.5,Up,33,22,Pierce County,0.779,0.779,11.0,False
-2026-11-20,Round 2,3A,Northeast,11,9-2,25.0,Steady,North Murray,27,5-6,-6.5,Fire,43,10,Northeast,0.99,0.99,33.2,False
-2026-11-20,Round 2,2A,Heard County,1,11-0,29.1,Steady,Cook,17,5-6,11.0,Steady,34,15,Heard County,0.918,0.918,19.8,False
-2026-11-20,Round 2,2A,Thomasville,2,10-1,21.9,Ice,Dodge County,18,6-5,15.8,Ice,34,26,Thomasville,0.707,0.707,7.7,False
-2026-11-20,Round 2,2A,Bleckley County,3,10-1,29.2,Down,Pepperell,19,6-5,-5.5,Up,44,8,Bleckley County,0.995,0.995,36.4,False
-2026-11-20,Round 2,2A,Dublin,4,10-1,31.6,Steady,Swainsboro,13,6-5,18.7,Fire,34,20,Dublin,0.851,0.851,14.6,False
-2026-11-20,Round 2,2A,Jeff Davis,5,10-1,22.7,Down,Laney,12,7-4,11.2,Fire,30,17,Jeff Davis,0.823,0.823,13.2,False
-2026-11-20,Round 2,2A,Bremen,6,10-1,21.8,Steady,ACE Charter,22,6-5,4.2,Up,36,17,Bremen,0.912,0.912,19.3,False
-2026-11-20,Round 2,2A,Commerce,7,10-1,20.1,Steady,Model,10,9-2,10.3,Steady,33,22,Commerce,0.789,0.789,11.4,False
-2026-11-20,Round 2,2A,Social Circle,8,9-2,2.7,Up,Fitzgerald,9,8-3,21.1,Up,13,30,Fitzgerald,0.879,0.121,16.7,False
-2026-11-20,Round 2,A,Lincoln County,1,9-2,16.8,Steady,Treutlen,17,9-2,2.5,Fire,33,17,Lincoln County,0.869,0.869,16.0,False
-2026-11-20,Round 2,A,Johnson County,2,11-0,21.2,Steady,Clinch County,15,8-3,7.9,Steady,32,18,Johnson County,0.853,0.853,14.9,False
-2026-11-20,Round 2,A,Taylor County,3,10-1,11.2,Steady,Warren County,14,7-4,-3.0,Steady,35,19,Taylor County,0.868,0.868,15.9,False
-2026-11-20,Round 2,A,Randolph-Clay,4,11-0,2.2,Steady,Schley County,13,9-2,1.6,Up,27,25,Randolph-Clay,0.564,0.564,2.3,False
-2026-11-20,Round 2,A,Bowdon,5,8-3,12.5,Down,Charlton County,12,8-2-1,0.8,Steady,31,18,Bowdon,0.825,0.825,13.4,False
-2026-11-20,Round 2,A,Washington-Wilkes,6,9-2,5.2,Down,Emanuel County Institute,11,7-4,8.4,Steady,25,26,Emanuel County Institute,0.542,0.458,1.5,False
-2026-11-20,Round 2,A,Macon County,7,10-1,6.1,Up,Portal,10,9-2,-3.3,Fire,32,21,Macon County,0.782,0.782,11.1,False
-2026-11-20,Round 2,A,Trion,8,9-2,0.0,Up,Mitchell County,9,9-2,-0.8,Steady,28,25,Trion,0.57,0.57,2.5,False
+2026-11-27,Quarterfinal,7A,Valdosta,1,11-1,53.6,Steady,Buford,9,12-0,52.9,Steady,30,28,Valdosta,0.567,0.567,2.4,False
+2026-11-27,Quarterfinal,7A,Newton,2,12-0,48.6,Steady,Colquitt County,7,9-3,38.6,Steady,37,25,Newton,0.795,0.795,11.7,False
+2026-11-27,Quarterfinal,7A,Carrollton,3,12-0,60.6,Steady,North Gwinnett,6,11-1,40.7,Steady,42,20,Carrollton,0.936,0.936,21.6,False
+2026-11-27,Quarterfinal,7A,Brookwood,4,11-1,45.5,Fire,Grayson,12,8-4,49.7,Fire,24,27,Grayson,0.573,0.427,2.6,False
+2026-11-27,Quarterfinal,6A,Thomas County Central,1,12-0,60.9,Steady,Creekside,8,11-1,57.6,Steady,33,28,Thomas County Central,0.637,0.637,5.0,False
+2026-11-27,Quarterfinal,6A,Lee County,2,11-1,52.6,Fire,Woodward Academy,23,8-4,24.7,Fire,39,9,Lee County,0.981,0.981,29.6,False
+2026-11-27,Quarterfinal,6A,Coffee,4,10-2,40.2,Steady,East Paulding,5,12-0,30.0,Up,29,17,Coffee,0.798,0.798,11.9,False
+2026-11-27,Quarterfinal,6A,Milton,6,11-1,35.2,Up,Gainesville,14,9-3,38.5,Up,28,30,Gainesville,0.543,0.457,1.5,False
+2026-11-27,Quarterfinal,5A,Blessed Trinity,1,12-0,35.2,Steady,Marist,9,10-2,32.6,Steady,25,21,Blessed Trinity,0.621,0.621,4.3,False
+2026-11-27,Quarterfinal,5A,Cartersville,2,12-0,51.7,Steady,"Central, Carroll",10,9-3,32.9,Up,41,21,Cartersville,0.927,0.927,20.5,False
+2026-11-27,Quarterfinal,5A,North Oconee,3,10-2,38.8,Steady,Benedictine,11,10-2,26.2,Steady,34,20,North Oconee,0.845,0.845,14.3,False
+2026-11-27,Quarterfinal,5A,Dalton,4,10-2,29.3,Up,Tucker,5,11-1,34.0,Fire,27,30,Tucker,0.584,0.416,3.0,False
+2026-11-27,Quarterfinal,4A,Peach County,1,12-0,42.2,Fire,"Douglass, Atlanta",9,10-2,28.2,Fire,38,22,Peach County,0.867,0.867,15.7,False
+2026-11-27,Quarterfinal,4A,Troup County,2,11-1,40.0,Up,Stephenson,7,11-1,30.8,Steady,34,23,Troup County,0.78,0.78,10.9,False
+2026-11-27,Quarterfinal,4A,Sandy Creek,4,12-0,40.7,Steady,Cairo,5,11-1,33.2,Up,32,23,Sandy Creek,0.742,0.742,9.2,False
+2026-11-27,Quarterfinal,4A,Dougherty,6,11-1,17.7,Steady,Mary Persons,14,8-4,21.4,Steady,26,28,Mary Persons,0.556,0.444,2.0,False
+2026-11-27,Quarterfinal,3A,Appling County,1,12-0,23.6,Up,Pierce County,8,10-2,24.0,Steady,27,26,Appling County,0.537,0.537,1.3,False
+2026-11-27,Quarterfinal,3A,Toombs County,2,11-1,43.5,Steady,KIPP Atlanta Collegiate,7,9-3,24.8,Steady,37,17,Toombs County,0.925,0.925,20.4,False
+2026-11-27,Quarterfinal,3A,Rockmart,4,10-2,27.1,Up,Columbia,5,10-2,28.6,Fire,29,28,Rockmart,0.506,0.506,0.2,False
+2026-11-27,Quarterfinal,3A,Northeast,11,10-2,25.3,Steady,Stephens County,14,9-3,12.5,Steady,34,19,Northeast,0.846,0.846,14.4,False
+2026-11-27,Quarterfinal,2A,Heard County,1,12-0,29.4,Up,Fitzgerald,9,9-3,22.7,Up,28,20,Heard County,0.722,0.722,8.3,False
+2026-11-27,Quarterfinal,2A,Bleckley County,3,11-1,29.2,Down,Bremen,6,11-1,22.6,Steady,32,23,Bleckley County,0.722,0.722,8.3,False
+2026-11-27,Quarterfinal,2A,Jeff Davis,5,11-1,23.8,Steady,Swainsboro,13,7-5,19.9,Fire,27,21,Jeff Davis,0.655,0.655,5.6,False
+2026-11-27,Quarterfinal,2A,Commerce,7,11-1,20.7,Up,Dodge County,18,7-5,16.6,Steady,32,26,Commerce,0.66,0.66,5.8,False
+2026-11-27,Quarterfinal,A,Lincoln County,1,10-2,17.5,Steady,Mitchell County,9,10-2,0.8,Steady,36,17,Lincoln County,0.905,0.905,18.5,False
+2026-11-27,Quarterfinal,A,Johnson County,2,12-0,20.1,Steady,Macon County,7,11-1,7.4,Fire,35,20,Johnson County,0.846,0.846,14.4,False
+2026-11-27,Quarterfinal,A,Taylor County,3,11-1,11.3,Steady,Emanuel County Institute,11,8-4,10.2,Up,29,26,Taylor County,0.579,0.579,2.8,False
+2026-11-27,Quarterfinal,A,Randolph-Clay,4,12-0,3.1,Steady,Bowdon,5,9-3,11.6,Ice,21,28,Bowdon,0.685,0.315,6.8,False

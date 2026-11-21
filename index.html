@@ -594,7 +594,8 @@ dash.draw('nextround', (el) => {
   const d = dash.data('games');
   if (!G.state(el, d)) return;
   const g = d.data[0];
-  el.textContent = g ? g.round + ', ' + d3.utcFormat('%A %b %-d')(new Date(g.date)) : 'Season complete';
+  const label = { Quarterfinal: 'Quarterfinals', Semifinal: 'Semifinals', Final: 'State finals' }[g && g.round] || (g && g.round);
+  el.textContent = g ? label + ', ' + d3.utcFormat('%A %b %-d')(new Date(g.date)) : 'Season complete';
 });
 dash.draw('v', (el) => {
   const d = dash.data(el.dataset.source);

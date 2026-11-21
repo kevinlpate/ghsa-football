@@ -10,7 +10,7 @@ ACE Charter,2026-10-16,9,Regular season,Dublin,True,Home,L,14,60,0.07,-21.8,fina
 ACE Charter,2026-10-23,10,Regular season,Swainsboro,True,Away,L,15,21,0.218,-11.3,final
 ACE Charter,2026-11-06,12,Regular season,Dodge County,True,Home,L,25,35,0.225,-10.8,final
 ACE Charter,2026-11-13,13,Round 1,Jasper County,True,Away,W,14,10,0.278,-8.4,final
-ACE Charter,2026-11-20,14,Round 2,Bremen,True,Away,,17,36,0.088,,upcoming
+ACE Charter,2026-11-20,14,Round 2,Bremen,True,Away,L,7,41,0.088,-19.3,final
 Adairsville,2026-08-21,1,Regular season,Sonoraville,True,Away,W,13,0,0.371,-7.0,final
 Adairsville,2026-08-28,2,Regular season,"Woodland, Cartersville",True,Away,W,33,25,0.716,10.9,final
 Adairsville,2026-09-04,3,Regular season,North Murray,True,Home,W,31,0,0.479,-1.0,final
@@ -83,7 +83,8 @@ Appling County,2026-10-23,10,Regular season,Islands,True,Home,W,45,7,0.999,45.2,
 Appling County,2026-10-30,11,Regular season,Toombs County,True,Away,W,11,7,0.03,-27.2,final
 Appling County,2026-11-06,12,Regular season,Pierce County,True,Home,W,35,21,0.455,-1.6,final
 Appling County,2026-11-13,13,Round 1,Jackson,True,Home,W,41,10,0.947,23.3,final
-Appling County,2026-11-20,14,Round 2,Lamar County,True,Home,,28,16,0.803,,upcoming
+Appling County,2026-11-20,14,Round 2,Lamar County,True,Home,W,34,24,0.804,12.1,final
+Appling County,2026-11-27,15,Quarterfinal,Pierce County,True,Home,,27,26,0.537,,upcoming
 Aquinas,2026-08-21,1,Regular season,Glascock County,True,Away,W,37,12,0.952,35.2,final
 Aquinas,2026-08-28,2,Regular season,Washington-Wilkes,True,Home,W,28,14,0.762,13.6,final
 Aquinas,2026-09-04,3,Regular season,Lincoln County,True,Away,L,20,53,0.373,-5.6,final
@@ -94,6 +95,7 @@ Aquinas,2026-10-09,8,Regular season,Jefferson County,True,Home,W,42,19,0.972,28.
 Aquinas,2026-10-23,10,Regular season,Glenn Hills,True,Away,W,42,6,0.976,29.1,final
 Aquinas,2026-10-30,11,Regular season,Jasper County,True,Home,W,35,14,0.361,-5.1,final
 Aquinas,2026-11-06,12,Regular season,Josey,True,Away,W,48,7,1.0,57.6,final
+Aquinas,2026-11-20,14,Round 2,Kings Ridge,True,Home,W,33,14,0.818,13.0,final
 Arabia Mountain,2026-08-21,1,Regular season,Redan,True,Home,W,42,6,0.486,-0.7,final
 Arabia Mountain,2026-08-28,2,Regular season,Chamblee,True,Away,L,8,15,0.568,3.3,final
 Arabia Mountain,2026-09-03,3,Regular season,Eastside,True,Home,L,18,45,0.125,-20.0,final
@@ -115,7 +117,7 @@ Archer,2026-10-16,9,Regular season,South Gwinnett,True,Away,L,21,52,0.595,3.6,fi
 Archer,2026-10-23,10,Regular season,Rockdale County,True,Home,W,43,31,0.893,18.3,final
 Archer,2026-10-30,11,Regular season,Newton,True,Away,L,23,49,0.035,-26.1,final
 Archer,2026-11-13,13,Round 1,North Cobb,True,Away,W,24,17,0.25,-9.7,final
-Archer,2026-11-20,14,Round 2,Buford,True,Away,,11,39,0.025,,upcoming
+Archer,2026-11-20,14,Round 2,Buford,True,Away,L,6,42,0.025,-27.8,final
 Armuchee,2026-08-21,1,Regular season,Banks County,True,Home,L,0,16,0.197,-18.0,final
 Armuchee,2026-08-27,2,Regular season,Walker,True,Home,L,18,20,0.523,1.1,final
 Armuchee,2026-09-11,4,Regular season,Southeast Whitfield,True,Away,L,0,42,0.36,-6.1,final
@@ -201,7 +203,7 @@ Baldwin,2026-10-23,10,Regular season,Mary Persons,True,Home,W,33,28,0.385,-4.3,f
 Baldwin,2026-10-30,11,Regular season,Peach County,True,Home,L,24,52,0.089,-19.4,final
 Baldwin,2026-11-06,12,Regular season,Spalding,True,Away,W,30,25,0.858,15.3,final
 Baldwin,2026-11-13,13,Round 1,Harlem,True,Home,W,53,21,0.823,13.3,final
-Baldwin,2026-11-20,14,Round 2,"Douglass, Atlanta",True,Home,,27,32,0.352,,upcoming
+Baldwin,2026-11-20,14,Round 2,"Douglass, Atlanta",True,Home,L,13,50,0.353,-5.4,final
 Banks County,2026-08-21,1,Regular season,Armuchee,True,Away,W,16,0,0.803,18.0,final
 Banks County,2026-08-28,2,Regular season,West Hall,True,Away,W,29,12,0.753,13.0,final
 Banks County,2026-09-04,3,Regular season,East Jackson,True,Home,L,14,28,0.202,-14.7,final
@@ -244,7 +246,8 @@ Benedictine,2026-10-23,10,Regular season,Wayne County,True,Home,W,50,0,0.999,46.
 Benedictine,2026-10-29,11,Regular season,Groves,True,Home,W,49,6,1.0,71.7,final
 Benedictine,2026-11-06,12,Regular season,Ware County,True,Away,L,17,31,0.406,-3.4,final
 Benedictine,2026-11-13,13,Round 1,Whitewater,True,Home,W,35,10,0.821,13.2,final
-Benedictine,2026-11-20,14,Round 2,Jefferson,True,Away,,21,28,0.307,,upcoming
+Benedictine,2026-11-20,14,Round 2,Jefferson,True,Away,W,27,24,0.307,-7.2,final
+Benedictine,2026-11-27,15,Quarterfinal,North Oconee,True,Away,,20,34,0.155,,upcoming
 Berkmar,2026-08-21,1,Regular season,Meadowcreek,True,Home,L,14,17,0.49,-0.5,final
 Berkmar,2026-08-28,2,Regular season,South Cobb,True,Home,L,20,52,0.259,-12.3,final
 Berkmar,2026-09-04,3,Regular season,Northview,True,Home,L,12,20,0.603,4.6,final
@@ -277,7 +280,8 @@ Bleckley County,2026-10-16,9,Regular season,Dodge County,True,Away,W,28,21,0.769
 Bleckley County,2026-10-23,10,Regular season,Vidalia,True,Home,W,49,13,0.992,35.2,final
 Bleckley County,2026-10-30,11,Regular season,East Laurens,True,Away,W,21,14,0.99,33.5,final
 Bleckley County,2026-11-13,13,Round 1,Jefferson County,True,Home,W,59,14,1.0,52.5,final
-Bleckley County,2026-11-20,14,Round 2,Pepperell,True,Home,,44,8,0.995,,upcoming
+Bleckley County,2026-11-20,14,Round 2,Pepperell,True,Home,W,49,9,0.995,36.4,final
+Bleckley County,2026-11-27,15,Quarterfinal,Bremen,True,Home,,32,23,0.722,,upcoming
 Blessed Trinity,2026-08-20,1,Regular season,Decatur,True,Home,W,44,0,0.897,26.7,final
 Blessed Trinity,2026-08-28,2,Regular season,Milton,True,Home,W,21,20,0.647,7.2,final
 Blessed Trinity,2026-09-04,3,Regular season,Hebron Christian,True,Away,W,37,20,0.564,2.8,final
@@ -289,7 +293,8 @@ Blessed Trinity,2026-10-16,9,Regular season,St. Pius X,True,Away,W,49,7,0.996,38
 Blessed Trinity,2026-10-30,11,Regular season,Chattahoochee,True,Home,W,70,7,1.0,51.6,final
 Blessed Trinity,2026-11-06,12,Regular season,Cambridge,True,Home,W,35,17,0.98,29.3,final
 Blessed Trinity,2026-11-13,13,Round 1,M. L. King,True,Home,W,41,14,0.967,26.3,final
-Blessed Trinity,2026-11-20,14,Round 2,Lithonia,True,Home,,29,19,0.762,,upcoming
+Blessed Trinity,2026-11-20,14,Round 2,Lithonia,True,Home,W,19,0,0.761,10.1,final
+Blessed Trinity,2026-11-27,15,Quarterfinal,Marist,True,Home,,25,21,0.621,,upcoming
 Bowdon,2026-08-21,1,Regular season,Bremen,True,Away,L,19,38,0.83,20.2,final
 Bowdon,2026-08-28,2,Regular season,Callaway,True,Home,W,32,3,0.491,-0.4,final
 Bowdon,2026-09-04,3,Regular season,Lamar County,True,Away,L,7,20,0.816,15.8,final
@@ -301,7 +306,8 @@ Bowdon,2026-10-23,10,Regular season,B.E.S.T Academy,True,Home,W,44,0,0.993,36.3,
 Bowdon,2026-10-30,11,Regular season,Manchester,True,Away,W,47,20,0.978,29.3,final
 Bowdon,2026-11-06,12,Regular season,Greenville,True,Away,W,41,6,1.0,68.3,final
 Bowdon,2026-11-13,13,Round 1,Manchester,True,Home,W,38,7,0.982,29.7,final
-Bowdon,2026-11-20,14,Round 2,Charlton County,True,Home,,31,18,0.825,,upcoming
+Bowdon,2026-11-20,14,Round 2,Charlton County,True,Home,W,29,28,0.825,13.4,final
+Bowdon,2026-11-27,15,Quarterfinal,Randolph-Clay,True,Away,,28,21,0.685,,upcoming
 Bradwell Institute,2026-08-21,1,Regular season,New Hampstead,True,Home,W,47,34,0.386,-6.1,final
 Bradwell Institute,2026-08-28,2,Regular season,Wayne County,True,Home,W,65,14,0.651,7.4,final
 Bradwell Institute,2026-09-04,3,Regular season,Valdosta,True,Away,L,13,56,0.022,-35.0,final
@@ -313,7 +319,7 @@ Bradwell Institute,2026-10-23,10,Regular season,"Lakeside, Evans",True,Away,W,46
 Bradwell Institute,2026-10-30,11,Regular season,Grovetown,True,Away,W,41,35,0.883,17.2,final
 Bradwell Institute,2026-11-06,12,Regular season,South Effingham,True,Home,W,62,28,0.686,6.9,final
 Bradwell Institute,2026-11-13,13,Round 1,Dunwoody,True,Home,W,56,40,0.824,13.4,final
-Bradwell Institute,2026-11-20,14,Round 2,East Paulding,True,Away,,25,41,0.135,,upcoming
+Bradwell Institute,2026-11-20,14,Round 2,East Paulding,True,Away,L,14,42,0.135,-15.7,final
 Brantley County,2026-08-21,1,Regular season,Bacon County,True,Away,L,0,20,0.203,-17.6,final
 Brantley County,2026-08-28,2,Regular season,Lanier County,True,Home,W,26,6,0.638,6.7,final
 Brantley County,2026-09-04,3,Regular season,Claxton,True,Away,L,13,16,0.553,2.4,final
@@ -335,7 +341,8 @@ Bremen,2026-10-23,10,Regular season,Armuchee,True,Home,W,58,0,1.0,71.1,final
 Bremen,2026-10-30,11,Regular season,Coosa,True,Home,W,52,0,1.0,48.2,final
 Bremen,2026-11-06,12,Regular season,Darlington,True,Away,W,56,27,0.951,23.7,final
 Bremen,2026-11-13,13,Round 1,Washington,True,Home,W,52,13,1.0,50.3,final
-Bremen,2026-11-20,14,Round 2,ACE Charter,True,Home,,36,17,0.912,,upcoming
+Bremen,2026-11-20,14,Round 2,ACE Charter,True,Home,W,41,7,0.912,19.3,final
+Bremen,2026-11-27,15,Quarterfinal,Bleckley County,True,Away,,23,32,0.278,,upcoming
 Brooks County,2026-08-21,1,Regular season,Worth County,True,Away,L,35,49,0.241,-14.9,final
 Brooks County,2026-08-28,2,Regular season,Pierce County,True,Home,L,26,47,0.431,-3.5,final
 Brooks County,2026-09-04,3,Regular season,Crisp County,True,Away,L,32,49,0.203,-15.2,final
@@ -358,7 +365,8 @@ Brookwood,2026-10-09,8,Regular season,North Gwinnett,True,Away,W,50,24,0.35,-5.7
 Brookwood,2026-10-30,11,Regular season,Berkmar,True,Away,W,53,0,1.0,75.6,final
 Brookwood,2026-11-06,12,Regular season,Peachtree Ridge,True,Home,W,51,3,0.953,24.0,final
 Brookwood,2026-11-13,13,Round 1,Norcross,True,Home,W,49,0,0.99,32.8,final
-Brookwood,2026-11-20,14,Round 2,Richmond Hill,True,Home,,36,15,0.937,,upcoming
+Brookwood,2026-11-20,14,Round 2,Richmond Hill,True,Home,W,38,3,0.937,21.8,final
+Brookwood,2026-11-27,15,Quarterfinal,Grayson,True,Home,,24,27,0.427,,upcoming
 Brunswick,2026-08-21,1,Regular season,Camden County,True,Home,L,21,35,0.634,7.3,final
 Brunswick,2026-08-28,2,Regular season,Groves,True,Home,W,63,0,0.995,49.6,final
 Brunswick,2026-09-11,4,Regular season,Grayson,True,Home,L,31,44,0.091,-22.6,final
@@ -390,7 +398,8 @@ Buford,2026-10-23,10,Regular season,Mill Creek,True,Away,W,40,0,0.996,40.2,final
 Buford,2026-10-30,11,Regular season,Discovery,True,Home,W,67,0,1.0,75.2,final
 Buford,2026-11-06,12,Regular season,Central Gwinnett,True,Home,W,57,0,1.0,57.5,final
 Buford,2026-11-13,13,Round 1,Marietta,True,Home,W,30,6,0.969,27.2,final
-Buford,2026-11-20,14,Round 2,Archer,True,Home,,39,11,0.975,,upcoming
+Buford,2026-11-20,14,Round 2,Archer,True,Home,W,42,6,0.975,27.8,final
+Buford,2026-11-27,15,Quarterfinal,Valdosta,True,Away,,28,30,0.433,,upcoming
 Burke County,2026-08-21,1,Regular season,Greenbrier,True,Away,W,30,14,0.836,20.7,final
 Burke County,2026-08-28,2,Regular season,Statesboro,True,Away,L,22,29,0.307,-9.6,final
 Burke County,2026-09-04,3,Regular season,Southeast Bulloch,True,Home,W,30,7,0.826,16.0,final
@@ -423,7 +432,8 @@ Cairo,2026-10-16,9,Regular season,Dougherty,True,Away,L,23,26,0.842,14.8,final
 Cairo,2026-10-30,11,Regular season,Columbus,True,Away,W,75,0,0.999,47.4,final
 Cairo,2026-11-06,12,Regular season,Bainbridge,True,Home,W,46,14,0.974,27.8,final
 Cairo,2026-11-13,13,Round 1,Bainbridge,True,Home,W,39,7,0.977,28.1,final
-Cairo,2026-11-20,14,Round 2,Northwest Whitfield,True,Home,,38,18,0.921,,upcoming
+Cairo,2026-11-20,14,Round 2,Northwest Whitfield,True,Home,W,57,8,0.921,20.2,final
+Cairo,2026-11-27,15,Quarterfinal,Sandy Creek,True,Away,,23,32,0.258,,upcoming
 Calhoun,2026-08-21,1,Regular season,Jefferson,True,Home,W,21,19,0.5,0.0,final
 Calhoun,2026-08-28,2,Regular season,Greater Atlanta Christian,True,Home,L,17,24,0.778,14.6,final
 Calhoun,2026-09-04,3,Regular season,Troup County,True,Away,L,0,42,0.197,-15.0,final
@@ -435,7 +445,7 @@ Calhoun,2026-10-23,10,Regular season,"Heritage, Catoosa",True,Home,W,49,28,0.892
 Calhoun,2026-10-30,11,Regular season,Northwest Whitfield,True,Home,W,31,17,0.613,4.2,final
 Calhoun,2026-11-06,12,Regular season,Adairsville,True,Away,W,35,14,0.697,7.4,final
 Calhoun,2026-11-13,13,Round 1,Howard,True,Home,W,27,6,0.825,13.4,final
-Calhoun,2026-11-20,14,Round 2,Stephenson,True,Away,,20,32,0.183,,upcoming
+Calhoun,2026-11-20,14,Round 2,Stephenson,True,Away,L,10,41,0.183,-12.8,final
 Calhoun County,2026-08-21,1,Regular season,Pelham,True,Away,W,22,20,0.353,-8.0,final
 Calhoun County,2026-08-28,2,Regular season,Southwest Georgia Academy,False,Home,L,40,64,,,final
 Calhoun County,2026-09-04,3,Regular season,Kendrick,True,Home,L,42,43,0.588,4.0,final
@@ -457,7 +467,7 @@ Callaway,2026-10-23,10,Regular season,Rutland,True,Home,W,53,6,0.947,23.7,final
 Callaway,2026-10-29,11,Regular season,"Central, Macon",True,Away,W,42,6,0.989,33.1,final
 Callaway,2026-11-06,12,Regular season,Northeast,True,Away,W,28,24,0.109,-17.6,final
 Callaway,2026-11-13,13,Round 1,Elbert County,True,Home,W,28,17,0.792,11.7,final
-Callaway,2026-11-20,14,Round 2,Rockmart,True,Away,,19,37,0.107,,upcoming
+Callaway,2026-11-20,14,Round 2,Rockmart,True,Away,L,19,35,0.107,-17.7,final
 Calvary Day School,2026-08-20,1,Regular season,Glynn Academy,True,Away,W,49,22,0.774,15.9,final
 Calvary Day School,2026-08-28,2,Regular season,Jenkins,True,Home,W,30,13,0.606,5.1,final
 Calvary Day School,2026-09-04,3,Regular season,St. Pius X,True,Home,W,44,0,0.983,37.0,final
@@ -469,6 +479,7 @@ Calvary Day School,2026-10-23,10,Regular season,Savannah,True,Away,W,56,0,1.0,65
 Calvary Day School,2026-10-30,11,Regular season,Screven County,True,Home,W,42,7,0.973,28.1,final
 Calvary Day School,2026-11-06,12,Regular season,Savannah Christian,True,Home,W,49,7,0.963,25.9,final
 Calvary Day School,2026-11-13,13,Round 1,Westminster,True,Home,W,52,0,1.0,49.8,final
+Calvary Day School,2026-11-20,14,Round 2,Westminster,True,Away,L,34,55,0.999,44.7,final
 Cambridge,2026-08-13,0,Regular season,Brookwood,True,Neutral,L,7,52,0.428,-3.8,final
 Cambridge,2026-08-28,2,Regular season,Woodstock,True,Home,L,20,38,0.701,10.0,final
 Cambridge,2026-09-04,3,Regular season,Milton,True,Away,L,21,53,0.056,-27.7,final
@@ -512,7 +523,8 @@ Carrollton,2026-10-16,9,Regular season,Northgate,True,Home,W,62,13,1.0,68.3,fina
 Carrollton,2026-10-23,10,Regular season,Westlake,True,Away,W,66,27,0.914,20.2,final
 Carrollton,2026-10-30,11,Regular season,East Coweta,True,Home,W,48,17,0.975,28.6,final
 Carrollton,2026-11-13,13,Round 1,North Forsyth,True,Home,W,55,7,0.999,44.3,final
-Carrollton,2026-11-20,14,Round 2,Parkview,True,Home,,51,19,0.988,,upcoming
+Carrollton,2026-11-20,14,Round 2,Parkview,True,Home,W,41,33,0.988,32.3,final
+Carrollton,2026-11-27,15,Quarterfinal,North Gwinnett,True,Home,,42,20,0.936,,upcoming
 Cartersville,2026-08-21,1,Regular season,"Mt. Zion, Jonesboro",True,Home,W,49,14,0.96,37.0,final
 Cartersville,2026-08-21,1,Regular season,Hiram,True,Away,W,48,0,0.954,35.6,final
 Cartersville,2026-09-04,3,Regular season,Woodstock,True,Away,W,54,0,0.925,25.1,final
@@ -524,7 +536,8 @@ Cartersville,2026-10-16,9,Regular season,Allatoona,True,Home,W,60,0,1.0,53.9,fin
 Cartersville,2026-10-30,11,Regular season,Dalton,True,Home,W,53,14,0.939,22.4,final
 Cartersville,2026-11-06,12,Regular season,"Woodland, Cartersville",True,Away,W,69,6,1.0,62.4,final
 Cartersville,2026-11-13,13,Round 1,Perry,True,Home,W,42,3,0.985,31.0,final
-Cartersville,2026-11-20,14,Round 2,Stockbridge,True,Home,,44,14,0.982,,upcoming
+Cartersville,2026-11-20,14,Round 2,Stockbridge,True,Home,W,42,6,0.981,29.7,final
+Cartersville,2026-11-27,15,Quarterfinal,"Central, Carroll",True,Home,,41,21,0.927,,upcoming
 "Carver, Atlanta",2026-08-21,1,Regular season,Hebron Christian,True,Neutral,L,16,43,0.261,-13.5,final
 "Carver, Atlanta",2026-08-28,2,Regular season,Southwest DeKalb,True,Home,L,0,34,0.656,7.6,final
 "Carver, Atlanta",2026-09-03,3,Regular season,Grovetown,True,Home,W,9,7,0.622,5.4,final
@@ -546,7 +559,7 @@ Cartersville,2026-11-20,14,Round 2,Stockbridge,True,Home,,44,14,0.982,,upcoming
 "Carver, Columbus",2026-10-29,11,Regular season,Sumter County,True,Away,W,28,14,0.574,2.7,final
 "Carver, Columbus",2026-11-06,12,Regular season,Worth County,True,Home,W,41,14,0.338,-6.1,final
 "Carver, Columbus",2026-11-13,13,Round 1,Burke County,True,Home,W,32,28,0.653,5.7,final
-"Carver, Columbus",2026-11-20,14,Round 2,Toombs County,True,Away,,13,44,0.015,,upcoming
+"Carver, Columbus",2026-11-20,14,Round 2,Toombs County,True,Away,L,16,35,0.015,-30.8,final
 Cass,2026-08-21,1,Regular season,Flowery Branch,True,Away,W,46,27,0.604,5.6,final
 Cass,2026-08-28,2,Regular season,Sprayberry,True,Home,W,50,29,0.435,-3.1,final
 Cass,2026-09-04,3,Regular season,Creekview,True,Home,W,27,21,0.771,12.9,final
@@ -558,7 +571,7 @@ Cass,2026-10-16,9,Regular season,Cedartown,True,Home,W,14,11,0.749,9.8,final
 Cass,2026-10-23,10,Regular season,Allatoona,True,Away,W,21,14,0.898,18.3,final
 Cass,2026-11-06,12,Regular season,Dalton,True,Home,L,14,38,0.243,-10.0,final
 Cass,2026-11-13,13,Round 1,Villa Rica,True,Home,W,28,7,0.804,12.1,final
-Cass,2026-11-20,14,Round 2,"Central, Carroll",True,Home,,22,38,0.124,,upcoming
+Cass,2026-11-20,14,Round 2,"Central, Carroll",True,Home,L,14,31,0.125,-16.4,final
 Cedar Grove,2026-08-21,1,Regular season,Shiloh,True,Away,L,3,28,0.194,-18.3,final
 Cedar Grove,2026-08-28,2,Regular season,Ola,True,Home,L,0,56,0.128,-21.6,final
 Cedar Grove,2026-09-10,4,Regular season,Mays,True,Home,L,0,24,0.043,-28.9,final
@@ -601,7 +614,7 @@ Centennial,2026-10-23,10,Regular season,Sprayberry,True,Home,W,38,28,0.453,-1.7,
 Centennial,2026-10-30,11,Regular season,Marist,True,Away,L,14,50,0.02,-29.7,final
 Centennial,2026-11-06,12,Regular season,Chattahoochee,True,Home,W,41,34,0.932,21.3,final
 Centennial,2026-11-13,13,Round 1,Mays,True,Away,W,17,10,0.154,-14.6,final
-Centennial,2026-11-20,14,Round 2,Marist,True,Away,,9,40,0.013,,upcoming
+Centennial,2026-11-20,14,Round 2,Marist,True,Away,L,6,31,0.013,-31.0,final
 Central Gwinnett,2026-08-21,1,Regular season,"Lakeside, DeKalb",True,Home,W,41,7,0.71,11.7,final
 Central Gwinnett,2026-08-28,2,Regular season,Pebblebrook,True,Away,L,7,14,0.902,24.5,final
 Central Gwinnett,2026-09-11,4,Regular season,Rockdale County,True,Away,L,0,15,0.47,-1.3,final
@@ -623,7 +636,8 @@ Central Gwinnett,2026-11-06,12,Regular season,Buford,True,Away,L,0,57,0.0,-57.5,
 "Central, Carroll",2026-10-30,11,Regular season,Lithia Springs,True,Home,W,62,22,0.994,36.5,final
 "Central, Carroll",2026-11-06,12,Regular season,Griffin,True,Home,W,45,8,0.941,22.4,final
 "Central, Carroll",2026-11-13,13,Round 1,Jonesboro,True,Home,W,49,12,0.961,25.1,final
-"Central, Carroll",2026-11-20,14,Round 2,Cass,True,Away,,38,22,0.876,,upcoming
+"Central, Carroll",2026-11-20,14,Round 2,Cass,True,Away,W,31,14,0.875,16.4,final
+"Central, Carroll",2026-11-27,15,Quarterfinal,Cartersville,True,Away,,21,41,0.073,,upcoming
 "Central, Macon",2026-08-21,1,Regular season,Greenville,True,Neutral,W,30,0,0.387,-6.1,final
 "Central, Macon",2026-08-28,2,Regular season,Jordan,True,Home,W,42,0,0.919,26.6,final
 "Central, Macon",2026-09-11,4,Regular season,Brookstone School,False,Away,L,0,58,,,final
@@ -675,7 +689,7 @@ Charlton County,2026-10-23,10,Regular season,Mitchell County,True,Home,W,21,14,0
 Charlton County,2026-10-30,11,Regular season,Clinch County,True,Away,L,10,34,0.365,-5.1,final
 Charlton County,2026-11-06,12,Regular season,Irwin County,True,Away,W,48,34,0.793,11.8,final
 Charlton County,2026-11-13,13,Round 1,Lake Oconee Academy,True,Home,W,41,20,0.876,16.8,final
-Charlton County,2026-11-20,14,Round 2,Bowdon,True,Away,,18,31,0.175,,upcoming
+Charlton County,2026-11-20,14,Round 2,Bowdon,True,Away,L,28,29,0.175,-13.4,final
 Chattahoochee,2026-08-21,1,Regular season,West Hall,True,Away,W,33,6,0.639,7.5,final
 Chattahoochee,2026-09-04,3,Regular season,Forsyth Central,True,Home,W,29,26,0.488,-0.6,final
 Chattahoochee,2026-09-11,4,Regular season,Johns Creek,True,Away,W,26,18,0.876,19.5,final
@@ -747,6 +761,7 @@ Christian Heritage,2026-10-23,10,Regular season,Dade County,True,Home,W,31,7,0.7
 Christian Heritage,2026-10-30,11,Regular season,Lakeview-Ft. Oglethorpe,True,Home,W,63,7,0.996,38.4,final
 Christian Heritage,2026-11-05,12,Regular season,Chattooga,True,Home,W,52,21,0.993,35.4,final
 Christian Heritage,2026-11-13,13,Round 1,Pace Academy,True,Home,W,42,14,0.853,15.1,final
+Christian Heritage,2026-11-20,14,Round 2,Wesleyan,True,Home,W,24,21,0.356,-5.2,final
 Clarke Central,2026-08-19,1,Regular season,Pebblebrook,True,Neutral,W,34,0,0.678,9.8,final
 Clarke Central,2026-08-28,2,Regular season,Oconee County,True,Home,W,22,3,0.497,-0.1,final
 Clarke Central,2026-09-04,3,Regular season,North Oconee,True,Away,L,10,17,0.129,-19.3,final
@@ -758,7 +773,7 @@ Clarke Central,2026-10-23,10,Regular season,Loganville,True,Home,W,40,13,0.972,2
 Clarke Central,2026-10-30,11,Regular season,Jackson County,True,Home,L,14,33,0.139,-15.6,final
 Clarke Central,2026-11-06,12,Regular season,Apalachee,True,Away,W,47,18,0.996,38.0,final
 Clarke Central,2026-11-13,13,Round 1,South Effingham,True,Home,W,28,20,0.852,15.0,final
-Clarke Central,2026-11-20,14,Round 2,Creekside,True,Away,,7,47,0.003,,upcoming
+Clarke Central,2026-11-20,14,Round 2,Creekside,True,Away,L,0,48,0.003,-40.2,final
 Clarkston,2026-08-20,1,Regular season,Druid Hills,True,Away,L,2,46,0.123,-24.5,final
 Clarkston,2026-08-28,2,Regular season,Heard County,True,Away,L,8,58,0.0,-71.6,final
 Clarkston,2026-09-04,3,Regular season,Walker,True,Away,L,6,40,0.507,0.3,final
@@ -791,7 +806,7 @@ Clinch County,2026-10-23,10,Regular season,Lanier County,True,Home,W,42,7,0.998,
 Clinch County,2026-10-30,11,Regular season,Charlton County,True,Home,W,34,10,0.635,5.1,final
 Clinch County,2026-11-06,12,Regular season,Atkinson County,True,Away,W,38,7,1.0,47.4,final
 Clinch County,2026-11-13,13,Round 1,McIntosh County Academy,True,Home,W,42,7,0.939,22.1,final
-Clinch County,2026-11-20,14,Round 2,Johnson County,True,Away,,18,32,0.147,,upcoming
+Clinch County,2026-11-20,14,Round 2,Johnson County,True,Away,L,24,27,0.147,-14.9,final
 Coahulla Creek,2026-08-21,1,Regular season,Northwest Whitfield,True,Home,L,0,37,0.191,-18.5,final
 Coahulla Creek,2026-08-28,2,Regular season,Lakeview-Ft. Oglethorpe,True,Home,W,41,0,0.403,-4.7,final
 Coahulla Creek,2026-09-04,3,Regular season,Southeast Whitfield,True,Away,W,41,13,0.943,27.8,final
@@ -813,7 +828,8 @@ Coffee,2026-10-23,10,Regular season,"Northside, Warner Robins",True,Home,W,37,7,
 Coffee,2026-10-30,11,Regular season,Thomas County Central,True,Away,L,7,26,0.041,-25.5,final
 Coffee,2026-11-06,12,Regular season,Veterans,True,Away,W,42,8,0.991,34.4,final
 Coffee,2026-11-13,13,Round 1,Tift County,True,Home,W,12,0,0.97,26.7,final
-Coffee,2026-11-20,14,Round 2,Newnan,True,Home,,32,17,0.855,,upcoming
+Coffee,2026-11-20,14,Round 2,Newnan,True,Home,W,36,9,0.855,15.2,final
+Coffee,2026-11-27,15,Quarterfinal,East Paulding,True,Home,,29,17,0.798,,upcoming
 Collins Hill,2026-08-21,1,Regular season,Hillgrove,True,Away,L,21,27,0.36,-7.6,final
 Collins Hill,2026-08-28,2,Regular season,North Gwinnett,True,Home,L,0,40,0.141,-20.3,final
 Collins Hill,2026-09-04,3,Regular season,Parkview,True,Away,L,7,34,0.539,1.7,final
@@ -836,7 +852,8 @@ Colquitt County,2026-10-16,9,Regular season,Valdosta,True,Home,L,44,52,0.13,-17.
 Colquitt County,2026-10-30,11,Regular season,Camden County,True,Away,W,43,15,0.841,14.9,final
 Colquitt County,2026-11-06,12,Regular season,Lowndes,True,Home,W,23,20,0.402,-3.6,final
 Colquitt County,2026-11-13,13,Round 1,Lambert,True,Home,W,52,26,0.961,25.5,final
-Colquitt County,2026-11-20,14,Round 2,McEachern,True,Home,,29,23,0.649,,upcoming
+Colquitt County,2026-11-20,14,Round 2,McEachern,True,Home,W,27,24,0.65,5.5,final
+Colquitt County,2026-11-27,15,Quarterfinal,Newton,True,Away,,25,37,0.205,,upcoming
 Columbia,2026-08-22,1,Regular season,Tucker,True,Home,L,26,35,0.401,-5.3,final
 Columbia,2026-08-28,2,Regular season,Carrollton,True,Away,L,6,61,0.003,-52.9,final
 Columbia,2026-09-04,3,Regular season,New Manchester,True,Home,W,21,10,0.359,-6.3,final
@@ -848,7 +865,8 @@ Columbia,2026-10-23,10,Regular season,"Carver, Atlanta",True,Home,W,43,0,0.961,2
 Columbia,2026-10-30,11,Regular season,Redan,True,Home,W,73,0,1.0,68.2,final
 Columbia,2026-11-06,12,Regular season,McNair,True,Home,W,55,0,0.998,42.4,final
 Columbia,2026-11-13,13,Round 1,Beach,True,Home,W,56,0,0.993,35.6,final
-Columbia,2026-11-20,14,Round 2,Lumpkin County,True,Home,,36,18,0.901,,upcoming
+Columbia,2026-11-20,14,Round 2,Lumpkin County,True,Home,W,63,14,0.9,18.3,final
+Columbia,2026-11-27,15,Quarterfinal,Rockmart,True,Away,,28,29,0.494,,upcoming
 Columbus,2026-08-21,1,Regular season,Jordan,True,Away,W,44,0,0.975,41.3,final
 Columbus,2026-08-28,2,Regular season,Marion County,True,Away,W,21,20,0.843,19.2,final
 Columbus,2026-09-04,3,Regular season,Westover,True,Home,L,8,49,0.092,-23.2,final
@@ -870,7 +888,8 @@ Commerce,2026-10-23,10,Regular season,Prince Avenue Christian,True,Away,L,9,24,0
 Commerce,2026-10-30,11,Regular season,Athens Academy,True,Home,W,49,20,0.983,31.3,final
 Commerce,2026-11-06,12,Regular season,Providence Christian,True,Away,W,46,36,0.972,27.5,final
 Commerce,2026-11-13,13,Round 1,Gordon Lee,True,Home,W,49,0,0.959,24.9,final
-Commerce,2026-11-20,14,Round 2,Model,True,Home,,33,22,0.789,,upcoming
+Commerce,2026-11-20,14,Round 2,Model,True,Home,W,38,13,0.789,11.4,final
+Commerce,2026-11-27,15,Quarterfinal,Dodge County,True,Home,,32,26,0.66,,upcoming
 Cook,2026-08-21,1,Regular season,Swainsboro,True,Away,W,36,35,0.281,-12.3,final
 Cook,2026-08-28,2,Regular season,Bleckley County,True,Away,L,19,34,0.114,-22.9,final
 Cook,2026-09-04,3,Regular season,Colquitt County,True,Away,L,6,38,0.083,-24.4,final
@@ -882,7 +901,7 @@ Cook,2026-10-23,10,Regular season,Jeff Davis,True,Away,L,14,21,0.093,-19.4,final
 Cook,2026-10-30,11,Regular season,Bacon County,True,Home,W,35,7,0.924,20.8,final
 Cook,2026-11-06,12,Regular season,Thomasville,True,Away,L,27,28,0.123,-16.6,final
 Cook,2026-11-13,13,Round 1,Fannin County,True,Away,W,28,21,0.89,17.6,final
-Cook,2026-11-20,14,Round 2,Heard County,True,Away,,15,34,0.082,,upcoming
+Cook,2026-11-20,14,Round 2,Heard County,True,Away,L,10,35,0.082,-19.8,final
 Coosa,2026-08-21,1,Regular season,Murray County,True,Home,L,20,21,0.517,0.9,final
 Coosa,2026-09-04,3,Regular season,Gordon Central,True,Away,W,42,14,0.58,3.8,final
 Coosa,2026-09-11,4,Regular season,Chattooga,True,Home,W,14,7,0.654,6.9,final
@@ -914,7 +933,8 @@ Creekside,2026-10-24,10,Regular season,Hughes,True,Home,W,23,0,0.812,13.1,final
 Creekside,2026-11-02,12,Regular season,"Northside, Columbus",True,Home,W,58,6,1.0,57.1,final
 Creekside,2026-11-06,12,Regular season,Woodward Academy,True,Home,W,56,21,0.996,38.6,final
 Creekside,2026-11-13,13,Round 1,Shiloh,True,Home,W,69,7,1.0,53.9,final
-Creekside,2026-11-20,14,Round 2,Clarke Central,True,Home,,47,7,0.997,,upcoming
+Creekside,2026-11-20,14,Round 2,Clarke Central,True,Home,W,48,0,0.997,40.2,final
+Creekside,2026-11-27,15,Quarterfinal,Thomas County Central,True,Away,,28,33,0.363,,upcoming
 Creekview,2026-08-21,1,Regular season,Forsyth Central,True,Away,W,33,0,0.858,22.7,final
 Creekview,2026-08-28,2,Regular season,North Springs,True,Home,W,57,12,0.91,25.6,final
 Creekview,2026-09-04,3,Regular season,Cass,True,Away,L,21,27,0.229,-12.9,final
@@ -989,7 +1009,8 @@ Dalton,2026-10-23,10,Regular season,Villa Rica,True,Home,W,57,19,0.954,24.5,fina
 Dalton,2026-10-30,11,Regular season,Cartersville,True,Away,L,14,53,0.061,-22.4,final
 Dalton,2026-11-06,12,Regular season,Cass,True,Away,W,38,14,0.757,10.0,final
 Dalton,2026-11-13,13,Round 1,Griffin,True,Home,W,52,19,0.921,20.3,final
-Dalton,2026-11-20,14,Round 2,Ware County,True,Home,,27,26,0.522,,upcoming
+Dalton,2026-11-20,14,Round 2,Ware County,True,Home,W,27,21,0.522,0.8,final
+Dalton,2026-11-27,15,Quarterfinal,Tucker,True,Home,,27,30,0.416,,upcoming
 Darlington,2026-08-21,1,Regular season,Christian Heritage,True,Away,L,28,37,0.33,-9.3,final
 Darlington,2026-08-28,2,Regular season,Mt. Paran Christian,True,Away,W,27,0,0.469,-1.6,final
 Darlington,2026-09-11,4,Regular season,Sonoraville,True,Home,W,48,6,0.539,1.7,final
@@ -1001,6 +1022,7 @@ Darlington,2026-10-23,10,Regular season,Model,True,Home,L,21,54,0.36,-5.3,final
 Darlington,2026-10-30,11,Regular season,Armuchee,True,Away,W,34,0,0.998,41.1,final
 Darlington,2026-11-06,12,Regular season,Bremen,True,Home,L,27,56,0.049,-23.7,final
 Darlington,2026-11-13,13,Round 1,Mt. Bethel Christian,True,Home,W,42,38,0.911,19.4,final
+Darlington,2026-11-20,14,Round 2,Prince Avenue Christian,True,Away,L,7,41,0.003,-38.6,final
 Dawson County,2026-08-21,1,Regular season,Lumpkin County,True,Away,L,31,42,0.362,-7.5,final
 Dawson County,2026-08-28,2,Regular season,East Forsyth,True,Home,L,24,37,0.426,-3.6,final
 Dawson County,2026-09-04,3,Regular season,Rabun County,True,Home,L,21,35,0.313,-8.8,final
@@ -1053,7 +1075,8 @@ Dodge County,2026-10-23,10,Regular season,Dublin,True,Away,L,47,53,0.16,-14.6,fi
 Dodge County,2026-10-30,11,Regular season,Swainsboro,True,Home,L,13,52,0.737,9.2,final
 Dodge County,2026-11-06,12,Regular season,ACE Charter,True,Away,W,35,25,0.775,10.8,final
 Dodge County,2026-11-13,13,Round 1,Berrien,True,Away,W,41,22,0.776,10.8,final
-Dodge County,2026-11-20,14,Round 2,Thomasville,True,Away,,26,34,0.293,,upcoming
+Dodge County,2026-11-20,14,Round 2,Thomasville,True,Away,W,35,31,0.293,-7.7,final
+Dodge County,2026-11-27,15,Quarterfinal,Commerce,True,Away,,26,32,0.34,,upcoming
 Dooly County,2026-08-21,1,Regular season,Macon County,True,Away,L,0,36,0.275,-12.7,final
 Dooly County,2026-08-28,2,Regular season,Crisp County,True,Home,L,0,50,0.033,-37.1,final
 Dooly County,2026-09-11,4,Regular season,Pelham,True,Home,W,26,14,0.645,6.4,final
@@ -1075,7 +1098,8 @@ Dougherty,2026-10-23,10,Regular season,Bainbridge,True,Away,W,27,20,0.715,8.3,fi
 Dougherty,2026-10-30,11,Regular season,Westover,True,Home,W,31,8,0.629,4.7,final
 Dougherty,2026-11-06,12,Regular season,Hardaway,True,Away,W,62,0,1.0,48.6,final
 Dougherty,2026-11-13,13,Round 1,Gilmer,True,Home,W,42,25,0.899,18.4,final
-Dougherty,2026-11-20,14,Round 2,Hampton,True,Home,,27,23,0.605,,upcoming
+Dougherty,2026-11-20,14,Round 2,Hampton,True,Home,W,27,26,0.605,3.8,final
+Dougherty,2026-11-27,15,Quarterfinal,Mary Persons,True,Home,,26,28,0.444,,upcoming
 Douglas County,2026-08-22,1,Regular season,Newton,True,Neutral,L,27,34,0.542,2.3,final
 Douglas County,2026-08-28,2,Regular season,Sandy Creek,True,Home,L,0,21,0.314,-9.2,final
 Douglas County,2026-09-04,3,Regular season,"Douglass, Atlanta",True,Home,L (forfeit),0,1,0.603,4.6,final
@@ -1097,7 +1121,8 @@ Douglas County,2026-11-06,12,Regular season,Westlake,True,Away,L,28,35,0.38,-4.4
 "Douglass, Atlanta",2026-10-30,11,Regular season,Westminster,True,Home,W,49,0,0.993,36.1,final
 "Douglass, Atlanta",2026-11-06,12,Regular season,North Springs,True,Away,W,52,20,0.997,39.9,final
 "Douglass, Atlanta",2026-11-13,13,Round 1,Spalding,True,Home,W,60,6,0.935,21.8,final
-"Douglass, Atlanta",2026-11-20,14,Round 2,Baldwin,True,Away,,32,27,0.648,,upcoming
+"Douglass, Atlanta",2026-11-20,14,Round 2,Baldwin,True,Away,W,50,13,0.647,5.4,final
+"Douglass, Atlanta",2026-11-27,15,Quarterfinal,Peach County,True,Away,,22,38,0.133,,upcoming
 Drew,2026-08-20,1,Regular season,Riverdale,True,Away,W,33,12,0.304,-10.9,final
 Drew,2026-08-28,2,Regular season,Northview,True,Away,W,26,7,0.756,13.2,final
 Drew,2026-09-03,3,Regular season,M. L. King,True,Home,L,20,59,0.135,-19.4,final
@@ -1129,7 +1154,7 @@ Dublin,2026-10-23,10,Regular season,Dodge County,True,Home,W,53,47,0.84,14.6,fin
 Dublin,2026-10-30,11,Regular season,Vidalia,True,Away,W,48,6,0.988,32.5,final
 Dublin,2026-11-06,12,Regular season,East Laurens,True,Home,W,56,28,0.992,34.2,final
 Dublin,2026-11-13,13,Round 1,Vidalia,True,Home,W,60,20,0.997,38.2,final
-Dublin,2026-11-20,14,Round 2,Swainsboro,True,Home,,34,20,0.851,,upcoming
+Dublin,2026-11-20,14,Round 2,Swainsboro,True,Home,L,7,13,0.851,14.6,final
 Duluth,2026-08-21,1,Regular season,South Forsyth,True,Home,L,28,31,0.717,12.2,final
 Duluth,2026-08-28,2,Regular season,Lanier,True,Away,L,6,38,0.412,-4.2,final
 Duluth,2026-09-11,4,Regular season,Alpharetta,True,Away,L,16,17,0.519,0.8,final
@@ -1205,7 +1230,7 @@ East Coweta,2026-10-16,9,Regular season,Douglas County,True,Home,L,24,27,0.746,1
 East Coweta,2026-10-30,11,Regular season,Carrollton,True,Away,L,17,48,0.025,-28.6,final
 East Coweta,2026-11-06,12,Regular season,Northgate,True,Home,W,34,13,0.996,38.4,final
 East Coweta,2026-11-13,13,Round 1,Denmark,True,Away,W,44,13,0.826,13.4,final
-East Coweta,2026-11-20,14,Round 2,Valdosta,True,Away,,18,42,0.049,,upcoming
+East Coweta,2026-11-20,14,Round 2,Valdosta,True,Away,L,31,38,0.049,-23.5,final
 East Forsyth,2026-08-21,1,Regular season,Cherokee Bluff,True,Home,W,17,13,0.415,-4.5,final
 East Forsyth,2026-08-28,2,Regular season,Dawson County,True,Away,W,37,24,0.574,3.6,final
 East Forsyth,2026-09-04,3,Regular season,Pope,True,Home,W,43,7,0.935,26.4,final
@@ -1259,7 +1284,8 @@ East Paulding,2026-10-23,10,Regular season,Alexander,True,Away,W,45,13,0.967,26.
 East Paulding,2026-10-30,11,Regular season,South Paulding,True,Home,W,48,14,0.997,39.9,final
 East Paulding,2026-11-06,12,Regular season,South Cobb,True,Away,W,56,0,0.982,30.0,final
 East Paulding,2026-11-13,13,Round 1,Loganville,True,Home,W,48,20,0.993,35.7,final
-East Paulding,2026-11-20,14,Round 2,Bradwell Institute,True,Home,,41,25,0.865,,upcoming
+East Paulding,2026-11-20,14,Round 2,Bradwell Institute,True,Home,W,42,14,0.865,15.7,final
+East Paulding,2026-11-27,15,Quarterfinal,Coffee,True,Away,,17,29,0.202,,upcoming
 Eastside,2026-08-21,1,Regular season,Seckinger,True,Home,W,41,21,0.765,15.3,final
 Eastside,2026-08-28,2,Regular season,Morgan County,True,Home,L,10,24,0.474,-1.2,final
 Eastside,2026-09-03,3,Regular season,Arabia Mountain,True,Away,W,45,18,0.875,20.0,final
@@ -1303,7 +1329,8 @@ Emanuel County Institute,2026-10-20,10,Regular season,McIntosh County Academy,Tr
 Emanuel County Institute,2026-10-23,10,Regular season,Montgomery County,True,Away,W,41,13,0.929,21.7,final
 Emanuel County Institute,2026-10-30,11,Regular season,Portal,True,Home,W,36,28,0.894,18.1,final
 Emanuel County Institute,2026-11-13,13,Round 1,Montgomery County,True,Home,W,36,0,0.969,26.3,final
-Emanuel County Institute,2026-11-20,14,Round 2,Washington-Wilkes,True,Away,,26,25,0.542,,upcoming
+Emanuel County Institute,2026-11-20,14,Round 2,Washington-Wilkes,True,Away,W,56,27,0.542,1.5,final
+Emanuel County Institute,2026-11-27,15,Quarterfinal,Taylor County,True,Away,,26,29,0.421,,upcoming
 Etowah,2026-08-21,1,Regular season,Woodstock,True,Away,W,36,35,0.382,-6.3,final
 Etowah,2026-08-28,2,Regular season,River Ridge,True,Away,W,41,7,0.262,-12.1,final
 Etowah,2026-09-04,3,Regular season,Roswell,True,Home,L,17,52,0.327,-7.9,final
@@ -1356,6 +1383,7 @@ Fellowship Christian,2026-10-23,10,Regular season,Kings Ridge,True,Home,W,41,26,
 Fellowship Christian,2026-10-30,11,Regular season,Walker,True,Away,W,49,20,0.997,39.8,final
 Fellowship Christian,2026-11-06,12,Regular season,Mt. Bethel Christian,True,Home,W,35,19,0.977,28.8,final
 Fellowship Christian,2026-11-13,13,Round 1,Landmark Christian,True,Home,W,58,27,0.989,32.8,final
+Fellowship Christian,2026-11-20,14,Round 2,Whitefield Academy,True,Away,L,10,41,0.181,-12.9,final
 Fitzgerald,2026-08-21,1,Regular season,Clinch County,True,Away,W,22,13,0.595,5.1,final
 Fitzgerald,2026-09-04,3,Regular season,Irwin County,True,Home,W,28,0,0.926,27.1,final
 Fitzgerald,2026-09-11,4,Regular season,Dodge County,True,Away,W,28,14,0.506,0.3,final
@@ -1367,7 +1395,8 @@ Fitzgerald,2026-10-16,9,Regular season,Cook,True,Away,L,14,21,0.813,13.2,final
 Fitzgerald,2026-10-23,10,Regular season,Berrien,True,Home,W,47,7,0.853,15.3,final
 Fitzgerald,2026-10-30,11,Regular season,Brooks County,True,Away,W,30,0,0.865,15.8,final
 Fitzgerald,2026-11-13,13,Round 1,Rabun County,True,Home,W,24,3,0.952,23.9,final
-Fitzgerald,2026-11-20,14,Round 2,Social Circle,True,Away,,30,13,0.879,,upcoming
+Fitzgerald,2026-11-20,14,Round 2,Social Circle,True,Away,W,35,0,0.878,16.7,final
+Fitzgerald,2026-11-27,15,Quarterfinal,Heard County,True,Away,,20,28,0.278,,upcoming
 Flowery Branch,2026-08-21,1,Regular season,Cass,True,Home,L,27,46,0.396,-5.6,final
 Flowery Branch,2026-08-28,2,Regular season,Cherokee Bluff,True,Away,W,10,9,0.613,5.5,final
 Flowery Branch,2026-09-04,3,Regular season,Gilmer,True,Away,W,28,21,0.561,2.7,final
@@ -1420,7 +1449,8 @@ Gainesville,2026-10-16,9,Regular season,Riverwood,True,Home,W,55,6,1.0,80.5,fina
 Gainesville,2026-10-23,10,Regular season,Milton,True,Home,L,46,49,0.563,2.3,final
 Gainesville,2026-10-30,11,Regular season,Lanier,True,Away,W,29,14,0.968,26.9,final
 Gainesville,2026-11-13,13,Round 1,Lassiter,True,Home,W,59,10,0.791,11.7,final
-Gainesville,2026-11-20,14,Round 2,Jackson County,True,Away,,27,31,0.409,,upcoming
+Gainesville,2026-11-20,14,Round 2,Jackson County,True,Away,W,35,21,0.408,-3.3,final
+Gainesville,2026-11-27,15,Quarterfinal,Milton,True,Away,,30,28,0.543,,upcoming
 Georgia Military College,2026-08-28,2,Regular season,Crawford County,True,Away,W,49,12,0.599,5.1,final
 Georgia Military College,2026-09-04,3,Regular season,McIntosh County Academy,True,Home,L,0,19,0.581,3.9,final
 Georgia Military College,2026-09-11,4,Regular season,Glenn Hills,True,Home,W,12,6,0.755,11.9,final
@@ -1505,7 +1535,8 @@ Grayson,2026-10-16,9,Regular season,Newton,True,Away,L,27,38,0.346,-5.9,final
 Grayson,2026-10-23,10,Regular season,South Gwinnett,True,Home,W,52,0,0.855,15.6,final
 Grayson,2026-11-06,12,Regular season,Rockdale County,True,Home,W,52,10,0.995,37.6,final
 Grayson,2026-11-13,13,Round 1,Camden County,True,Home,W,49,0,0.97,27.3,final
-Grayson,2026-11-20,14,Round 2,Lowndes,True,Away,,25,23,0.575,,upcoming
+Grayson,2026-11-20,14,Round 2,Lowndes,True,Away,W,42,14,0.576,2.7,final
+Grayson,2026-11-27,15,Quarterfinal,Brookwood,True,Away,,27,24,0.573,,upcoming
 Greater Atlanta Christian,2026-08-21,1,Regular season,North Hall,True,Home,W,28,21,0.19,-18.5,final
 Greater Atlanta Christian,2026-08-28,2,Regular season,Calhoun,True,Away,W,24,17,0.222,-14.6,final
 Greater Atlanta Christian,2026-09-11,4,Regular season,Prince Avenue Christian,True,Away,L,15,38,0.338,-7.5,final
@@ -1600,7 +1631,7 @@ Hampton,2026-10-23,10,Regular season,Sandy Creek,True,Home,L,7,34,0.103,-18.5,fi
 Hampton,2026-10-30,11,Regular season,"Woodland, Stockbridge",True,Away,W,41,34,0.802,12.2,final
 Hampton,2026-11-06,12,Regular season,Luella,True,Away,W,44,7,0.99,33.3,final
 Hampton,2026-11-13,13,Round 1,"Woodland, Stockbridge",True,Home,W,48,20,0.84,14.0,final
-Hampton,2026-11-20,14,Round 2,Dougherty,True,Away,,23,27,0.395,,upcoming
+Hampton,2026-11-20,14,Round 2,Dougherty,True,Away,L,26,27,0.395,-3.8,final
 Hancock Central,2026-08-21,1,Regular season,Cross Creek,True,Away,W,20,18,0.661,8.8,final
 Hancock Central,2026-08-28,2,Regular season,Putnam County,True,Home,L,6,55,0.099,-24.5,final
 Hancock Central,2026-09-11,4,Regular season,Claxton,True,Away,L,0,22,0.203,-14.4,final
@@ -1622,7 +1653,7 @@ Hapeville,2026-10-23,10,Regular season,Redan,True,Away,W,45,0,1.0,55.0,final
 Hapeville,2026-10-29,11,Regular season,South Atlanta,True,Home,W,35,0,0.99,33.7,final
 Hapeville,2026-11-06,12,Regular season,Cedar Grove,True,Away,W,63,7,0.985,31.1,final
 Hapeville,2026-11-13,13,Round 1,Miller Grove,True,Home,W,26,7,0.859,15.2,final
-Hapeville,2026-11-20,14,Round 2,Pierce County,True,Away,,22,33,0.221,,upcoming
+Hapeville,2026-11-20,14,Round 2,Pierce County,True,Away,L,27,42,0.221,-11.0,final
 Haralson County,2026-08-21,1,Regular season,"Sardis, AL",False,Away,W,40,0,,,final
 Haralson County,2026-08-28,2,Regular season,Bremen,True,Home,L,3,41,0.368,-6.8,final
 Haralson County,2026-09-04,3,Regular season,Miller Grove,True,Home,W,17,7,0.363,-6.4,final
@@ -1687,7 +1718,7 @@ Hart County,2026-10-16,9,Regular season,Elbert County,True,Away,W,36,30,0.846,15
 Hart County,2026-10-23,10,Regular season,Morgan County,True,Home,W,49,35,0.907,19.2,final
 Hart County,2026-10-30,11,Regular season,Franklin County,True,Away,W,49,30,0.898,18.4,final
 Hart County,2026-11-13,13,Round 1,Murray County,True,Home,W,48,14,0.998,40.9,final
-Hart County,2026-11-20,14,Round 2,Stephens County,True,Home,,33,23,0.758,,upcoming
+Hart County,2026-11-20,14,Round 2,Stephens County,True,Home,L,34,35,0.759,9.8,final
 Hawkinsville,2026-08-21,1,Regular season,Marion County,True,Away,W,25,6,0.917,29.3,final
 Hawkinsville,2026-08-28,2,Regular season,Mitchell County,True,Home,L,26,30,0.28,-11.1,final
 Hawkinsville,2026-09-04,3,Regular season,Schley County,True,Away,L,19,27,0.678,8.1,final
@@ -1710,7 +1741,8 @@ Heard County,2026-10-23,10,Regular season,Pepperell,True,Away,W,48,7,0.988,33.1,
 Heard County,2026-10-30,11,Regular season,"Mt. Zion, Carroll",True,Home,W,50,9,1.0,49.2,final
 Heard County,2026-11-06,12,Regular season,Model,True,Home,W,45,0,0.898,18.2,final
 Heard County,2026-11-13,13,Round 1,Bacon County,True,Home,W,49,14,0.997,39.4,final
-Heard County,2026-11-20,14,Round 2,Cook,True,Home,,34,15,0.918,,upcoming
+Heard County,2026-11-20,14,Round 2,Cook,True,Home,W,35,10,0.918,19.8,final
+Heard County,2026-11-27,15,Quarterfinal,Fitzgerald,True,Home,,28,20,0.722,,upcoming
 Hebron Christian,2026-08-21,1,Regular season,"Carver, Atlanta",True,Neutral,W,43,16,0.739,13.5,final
 Hebron Christian,2026-08-28,2,Regular season,Benedictine,True,Away,L,17,48,0.841,19.0,final
 Hebron Christian,2026-09-04,3,Regular season,Blessed Trinity,True,Home,L,20,37,0.436,-2.8,final
@@ -1722,6 +1754,7 @@ Hebron Christian,2026-10-16,9,Regular season,Lumpkin County,True,Home,W,38,21,0.
 Hebron Christian,2026-10-23,10,Regular season,Stephens County,True,Away,L,10,29,0.724,8.7,final
 Hebron Christian,2026-11-06,12,Regular season,Elbert County,True,Home,W,69,7,0.756,9.9,final
 Hebron Christian,2026-11-13,13,Round 1,Eagles Landing Christian,True,Home,W,30,16,0.942,22.7,final
+Hebron Christian,2026-11-20,14,Round 2,Holy Innocents,True,Away,L,11,21,0.214,-11.3,final
 Hephzibah,2026-08-21,1,Regular season,Oglethorpe County,True,Home,W,47,0,0.481,-1.0,final
 Hephzibah,2026-08-28,2,Regular season,Baldwin,True,Away,L,26,35,0.454,-2.2,final
 Hephzibah,2026-09-04,3,Regular season,Laney,True,Home,W,28,14,0.505,0.2,final
@@ -1733,7 +1766,7 @@ Hephzibah,2026-10-16,9,Regular season,"Westside, Augusta",True,Away,W,34,24,0.71
 Hephzibah,2026-10-23,10,Regular season,Cross Creek,True,Home,W,74,0,1.0,62.4,final
 Hephzibah,2026-11-06,12,Regular season,Thomson,True,Away,L,14,21,0.475,-0.9,final
 Hephzibah,2026-11-13,13,Round 1,Pike County,True,Home,W,55,14,0.871,16.2,final
-Hephzibah,2026-11-20,14,Round 2,KIPP Atlanta Collegiate,True,Away,,20,33,0.18,,upcoming
+Hephzibah,2026-11-20,14,Round 2,KIPP Atlanta Collegiate,True,Away,L,13,14,0.179,-13.1,final
 "Heritage, Catoosa",2026-08-21,1,Regular season,North Murray,True,Home,W,34,14,0.388,-6.0,final
 "Heritage, Catoosa",2026-08-28,2,Regular season,Ringgold,True,Away,L,28,42,0.365,-6.6,final
 "Heritage, Catoosa",2026-09-04,3,Regular season,Dalton,True,Home,L,14,50,0.235,-12.6,final
@@ -1787,6 +1820,7 @@ Holy Innocents,2026-10-02,7,Regular season,Lovett,True,Home,W,22,0,0.898,19.2,fi
 Holy Innocents,2026-10-09,8,Regular season,Wesleyan,True,Home,W,42,7,0.875,17.0,final
 Holy Innocents,2026-10-23,10,Regular season,KIPP Atlanta Collegiate,True,Home,W,13,12,0.647,5.5,final
 Holy Innocents,2026-11-06,12,Regular season,North Cobb Christian,True,Away,W,28,21,0.89,17.5,final
+Holy Innocents,2026-11-20,14,Round 2,Hebron Christian,True,Home,W,21,11,0.786,11.3,final
 Houston County,2026-08-21,1,Regular season,West Forsyth,True,Neutral,W,38,14,0.696,10.9,final
 Houston County,2026-09-04,3,Regular season,Jones County,True,Home,W,45,14,0.95,29.9,final
 Houston County,2026-09-11,4,Regular season,"Central, Carroll",True,Away,L,66,73,0.609,4.7,final
@@ -1863,7 +1897,7 @@ Jackson County,2026-10-23,10,Regular season,Cedar Shoals,True,Home,W,56,0,0.999,
 Jackson County,2026-10-30,11,Regular season,Clarke Central,True,Away,W,33,14,0.861,15.6,final
 Jackson County,2026-11-06,12,Regular season,Walnut Grove,True,Home,W,50,13,0.991,34.0,final
 Jackson County,2026-11-13,13,Round 1,Creekview,True,Home,W,47,0,0.968,26.6,final
-Jackson County,2026-11-20,14,Round 2,Gainesville,True,Home,,31,27,0.591,,upcoming
+Jackson County,2026-11-20,14,Round 2,Gainesville,True,Home,L,21,35,0.592,3.3,final
 "Jackson, Atlanta",2026-08-21,1,Regular season,Midtown,True,Home,W,37,0,0.795,17.4,final
 "Jackson, Atlanta",2026-08-28,2,Regular season,Griffin,True,Home,L,7,14,0.268,-11.8,final
 "Jackson, Atlanta",2026-09-04,3,Regular season,North Atlanta,True,Away,L,6,45,0.524,1.0,final
@@ -1896,7 +1930,8 @@ Jeff Davis,2026-10-23,10,Regular season,Cook,True,Home,W,21,14,0.907,19.4,final
 Jeff Davis,2026-10-30,11,Regular season,Berrien,True,Away,W,41,20,0.926,20.9,final
 Jeff Davis,2026-11-06,12,Regular season,Brooks County,True,Home,W,28,0,0.956,24.4,final
 Jeff Davis,2026-11-13,13,Round 1,East Laurens,True,Home,W,14,13,0.974,27.8,final
-Jeff Davis,2026-11-20,14,Round 2,Laney,True,Home,,30,17,0.823,,upcoming
+Jeff Davis,2026-11-20,14,Round 2,Laney,True,Home,W,37,12,0.823,13.2,final
+Jeff Davis,2026-11-27,15,Quarterfinal,Swainsboro,True,Home,,27,21,0.655,,upcoming
 Jefferson,2026-08-21,1,Regular season,Calhoun,True,Away,L,19,21,0.5,-0.0,final
 Jefferson,2026-08-28,2,Regular season,Westside (SC),False,Home,W,41,21,,,final
 Jefferson,2026-09-04,3,Regular season,Peach County,True,Away,L,23,30,0.259,-11.7,final
@@ -1908,7 +1943,7 @@ Jefferson,2026-10-16,9,Regular season,Madison County,True,Home,W,42,0,0.995,38.3
 Jefferson,2026-10-23,10,Regular season,Winder-Barrow,True,Away,W,41,7,0.989,33.4,final
 Jefferson,2026-10-30,11,Regular season,North Oconee,True,Home,W,27,17,0.313,-7.0,final
 Jefferson,2026-11-13,13,Round 1,Warner Robins,True,Home,W,28,14,0.932,21.4,final
-Jefferson,2026-11-20,14,Round 2,Benedictine,True,Home,,28,21,0.693,,upcoming
+Jefferson,2026-11-20,14,Round 2,Benedictine,True,Home,L,24,27,0.693,7.2,final
 Jefferson County,2026-08-21,1,Regular season,Washington-Wilkes,True,Away,L,12,55,0.476,-1.3,final
 Jefferson County,2026-08-28,2,Regular season,Cross Creek,True,Away,W,43,7,0.526,1.3,final
 Jefferson County,2026-09-04,3,Regular season,Wilkinson County,True,Away,L,12,25,0.427,-3.2,final
@@ -1962,7 +1997,8 @@ Johnson County,2026-10-23,10,Regular season,Hancock Central,True,Home,W,55,6,1.0
 Johnson County,2026-10-30,11,Regular season,Georgia Military College,True,Home,W,48,3,1.0,48.6,final
 Johnson County,2026-11-06,12,Regular season,Jenkins County,True,Away,W,42,7,0.968,26.5,final
 Johnson County,2026-11-13,13,Round 1,Greene County,True,Home,W,48,0,0.998,41.9,final
-Johnson County,2026-11-20,14,Round 2,Clinch County,True,Home,,32,18,0.853,,upcoming
+Johnson County,2026-11-20,14,Round 2,Clinch County,True,Home,W,27,24,0.853,14.9,final
+Johnson County,2026-11-27,15,Quarterfinal,Macon County,True,Home,,35,20,0.846,,upcoming
 "Johnson, Gainesville",2026-08-21,1,Regular season,Kings Academy,False,Home,L,21,47,,,final
 "Johnson, Gainesville",2026-08-28,2,Regular season,Riverside Preparatory Academy,False,Away,L,6,18,,,final
 "Johnson, Gainesville",2026-09-04,3,Regular season,East Hall,True,Away,L,8,49,0.064,-29.5,final
@@ -2036,7 +2072,8 @@ KIPP Atlanta Collegiate,2026-10-23,10,Regular season,Holy Innocents,True,Away,L,
 KIPP Atlanta Collegiate,2026-10-31,11,Regular season,Wesleyan,True,Home,L,7,14,0.912,19.6,final
 KIPP Atlanta Collegiate,2026-11-06,12,Regular season,Haralson County,True,Away,W,35,0,0.974,28.0,final
 KIPP Atlanta Collegiate,2026-11-13,13,Round 1,Haralson County,True,Home,W,56,3,0.989,32.3,final
-KIPP Atlanta Collegiate,2026-11-20,14,Round 2,Hephzibah,True,Home,,33,20,0.82,,upcoming
+KIPP Atlanta Collegiate,2026-11-20,14,Round 2,Hephzibah,True,Home,W,14,13,0.821,13.1,final
+KIPP Atlanta Collegiate,2026-11-27,15,Quarterfinal,Toombs County,True,Away,,17,37,0.075,,upcoming
 Kell,2026-08-19,1,Regular season,McEachern,True,Home,L,10,40,0.338,-8.8,final
 Kell,2026-08-28,2,Regular season,Luella,True,Home,W,51,0,0.96,33.3,final
 Kell,2026-09-04,3,Regular season,Sprayberry,True,Away,W,52,20,0.594,4.2,final
@@ -2048,7 +2085,7 @@ Kell,2026-10-23,10,Regular season,Woodstock,True,Home,W,56,24,0.93,21.5,final
 Kell,2026-10-30,11,Regular season,River Ridge,True,Away,W,46,0,0.992,34.9,final
 Kell,2026-11-06,12,Regular season,Pope,True,Home,W,45,0,0.998,40.4,final
 Kell,2026-11-13,13,Round 1,Houston County,True,Home,W,37,17,0.366,-4.9,final
-Kell,2026-11-20,14,Round 2,Lee County,True,Away,,14,41,0.026,,upcoming
+Kell,2026-11-20,14,Round 2,Lee County,True,Away,L,0,35,0.026,-27.6,final
 Kendrick,2026-08-21,1,Regular season,Miller County,True,Home,L,8,51,0.249,-14.3,final
 Kendrick,2026-08-27,2,Regular season,Hardaway,True,Home,W,13,12,0.461,-1.8,final
 Kendrick,2026-09-04,3,Regular season,Calhoun County,True,Away,W,43,42,0.412,-4.0,final
@@ -2080,6 +2117,7 @@ Kings Ridge,2026-10-23,10,Regular season,Fellowship Christian,True,Away,L,26,41,
 Kings Ridge,2026-10-31,11,Regular season,Mt. Bethel Christian,True,Away,W,36,14,0.816,13.2,final
 Kings Ridge,2026-11-06,12,Regular season,Walker,True,Home,W,42,14,0.983,30.5,final
 Kings Ridge,2026-11-13,13,Round 1,Athens Academy,True,Home,W,35,14,0.559,2.1,final
+Kings Ridge,2026-11-20,14,Round 2,Aquinas,True,Away,L,14,33,0.182,-13.0,final
 LaFayette,2026-08-21,1,Regular season,Chattooga,True,Away,W,33,14,0.739,13.5,final
 LaFayette,2026-08-28,2,Regular season,Dade County,True,Home,W,56,13,0.689,9.4,final
 LaFayette,2026-09-11,4,Regular season,Ridgeland,True,Home,W,27,17,0.955,28.6,final
@@ -2102,7 +2140,7 @@ LaGrange,2026-10-16,9,Regular season,Lithia Springs,True,Home,W,50,0,0.992,35.8,
 LaGrange,2026-10-23,10,Regular season,Starrs Mill,True,Away,W,35,7,0.986,32.0,final
 LaGrange,2026-10-30,11,Regular season,Griffin,True,Home,W,50,13,0.921,20.3,final
 LaGrange,2026-11-13,13,Round 1,Ola,True,Home,W,27,21,0.565,2.3,final
-LaGrange,2026-11-20,14,Round 2,Tucker,True,Away,,24,25,0.497,,upcoming
+LaGrange,2026-11-20,14,Round 2,Tucker,True,Away,L,14,50,0.496,-0.1,final
 Lake Oconee Academy,2026-08-21,1,Regular season,Mt. Pisgah Christian,True,Home,W,33,0,0.728,12.8,final
 Lake Oconee Academy,2026-08-28,2,Regular season,Greenville,True,Away,W,50,12,0.902,24.5,final
 Lake Oconee Academy,2026-09-04,3,Regular season,Crawford County,True,Home,W,40,7,0.954,29.6,final
@@ -2155,7 +2193,7 @@ Lamar County,2026-10-23,10,Regular season,Pike County,True,Away,W,33,6,0.784,11.
 Lamar County,2026-10-30,11,Regular season,Rutland,True,Home,W,31,0,0.986,31.6,final
 Lamar County,2026-11-06,12,Regular season,Jackson,True,Home,W,32,7,0.8,12.1,final
 Lamar County,2026-11-13,13,Round 1,Worth County,True,Home,W,22,19,0.465,-1.3,final
-Lamar County,2026-11-20,14,Round 2,Appling County,True,Away,,16,28,0.197,,upcoming
+Lamar County,2026-11-20,14,Round 2,Appling County,True,Away,L,24,34,0.196,-12.1,final
 Lambert,2026-08-21,1,Regular season,Peachtree Ridge,True,Home,L,28,36,0.448,-2.8,final
 Lambert,2026-08-28,2,Regular season,Sequoyah,True,Away,L,7,45,0.069,-28.2,final
 Lambert,2026-09-04,3,Regular season,Tift County,True,Away,W,21,7,0.29,-9.6,final
@@ -2189,7 +2227,7 @@ Laney,2026-10-23,10,Regular season,Jefferson County,True,Away,W,54,12,0.943,23.3
 Laney,2026-10-30,11,Regular season,Social Circle,True,Home,W,16,14,0.718,8.4,final
 Laney,2026-11-06,12,Regular season,Glenn Hills,True,Away,W,50,6,0.982,30.1,final
 Laney,2026-11-13,13,Round 1,Brooks County,True,Home,W,50,0,0.679,6.7,final
-Laney,2026-11-20,14,Round 2,Jeff Davis,True,Away,,17,30,0.177,,upcoming
+Laney,2026-11-20,14,Round 2,Jeff Davis,True,Away,L,12,37,0.177,-13.2,final
 Lanier,2026-08-12,0,Regular season,South Gwinnett,True,Neutral,L,3,29,0.257,-13.8,final
 Lanier,2026-08-28,2,Regular season,Duluth,True,Home,W,38,6,0.588,4.2,final
 Lanier,2026-09-04,3,Regular season,West Forsyth,True,Home,W,28,10,0.189,-15.4,final
@@ -2232,7 +2270,8 @@ Lee County,2026-10-16,9,Regular season,"Northside, Warner Robins",True,Away,W,37
 Lee County,2026-10-23,10,Regular season,Tift County,True,Away,W,49,14,0.987,32.3,final
 Lee County,2026-11-06,12,Regular season,Houston County,True,Home,W,49,7,0.889,17.5,final
 Lee County,2026-11-13,13,Round 1,"Northside, Warner Robins",True,Home,W,55,0,0.999,43.0,final
-Lee County,2026-11-20,14,Round 2,Kell,True,Home,,41,14,0.974,,upcoming
+Lee County,2026-11-20,14,Round 2,Kell,True,Home,W,35,0,0.974,27.6,final
+Lee County,2026-11-27,15,Quarterfinal,Woodward Academy,True,Home,,39,9,0.981,,upcoming
 Liberty County,2026-08-21,1,Regular season,Wayne County,True,Away,L,21,24,0.652,8.2,final
 Liberty County,2026-08-28,2,Regular season,Richmond Hill,True,Away,L,7,42,0.116,-22.8,final
 Liberty County,2026-09-04,3,Regular season,"Johnson, Savannah",True,Away,W,43,19,0.74,11.2,final
@@ -2254,7 +2293,8 @@ Lincoln County,2026-10-23,10,Regular season,Washington-Wilkes,True,Home,W,21,7,0
 Lincoln County,2026-10-30,11,Regular season,Warren County,True,Away,W,45,24,0.865,16.1,final
 Lincoln County,2026-11-06,12,Regular season,Lake Oconee Academy,True,Home,W,49,7,0.988,32.5,final
 Lincoln County,2026-11-13,13,Round 1,Irwin County,True,Home,W,21,0,0.987,32.2,final
-Lincoln County,2026-11-20,14,Round 2,Treutlen,True,Home,,33,17,0.869,,upcoming
+Lincoln County,2026-11-20,14,Round 2,Treutlen,True,Home,W,28,0,0.87,16.0,final
+Lincoln County,2026-11-27,15,Quarterfinal,Mitchell County,True,Home,,36,17,0.905,,upcoming
 Lithia Springs,2026-08-21,1,Regular season,Chapel Hill,True,Home,L,27,43,0.603,5.5,final
 Lithia Springs,2026-09-04,3,Regular season,Rockdale County,True,Home,W,26,13,0.078,-26.6,final
 Lithia Springs,2026-09-11,4,Regular season,Banneker,True,Home,W,35,14,0.286,-9.8,final
@@ -2276,7 +2316,7 @@ Lithonia,2026-10-23,10,Regular season,"Jackson, Atlanta",True,Home,W,35,12,0.974
 Lithonia,2026-10-30,11,Regular season,Tucker,True,Away,W,27,21,0.262,-9.2,final
 Lithonia,2026-11-06,12,Regular season,Banneker,True,Home,W,38,6,0.975,28.0,final
 Lithonia,2026-11-13,13,Round 1,Jones County,True,Away,W,34,24,0.529,1.0,final
-Lithonia,2026-11-20,14,Round 2,Blessed Trinity,True,Away,,19,29,0.238,,upcoming
+Lithonia,2026-11-20,14,Round 2,Blessed Trinity,True,Away,L,0,19,0.239,-10.1,final
 Locust Grove,2026-08-21,1,Regular season,Griffin,True,Away,L,34,54,0.588,4.7,final
 Locust Grove,2026-08-28,2,Regular season,Dutchtown,True,Home,W,28,27,0.534,1.6,final
 Locust Grove,2026-09-04,3,Regular season,Newton,True,Away,L,7,71,0.054,-28.0,final
@@ -2328,6 +2368,7 @@ Lovett,2026-10-09,8,Regular season,North Cobb Christian,True,Home,W,17,13,0.616,
 Lovett,2026-10-23,10,Regular season,Haralson County,True,Home,W,27,3,0.874,16.7,final
 Lovett,2026-10-30,11,Regular season,Temple,True,Away,W,55,13,0.811,12.7,final
 Lovett,2026-11-06,12,Regular season,Therrell,True,Home,W,34,6,0.987,31.7,final
+Lovett,2026-11-20,14,Round 2,North Cobb Christian,True,Home,W,17,14,0.58,2.8,final
 Lowndes,2026-08-21,1,Regular season,Jenkins,True,Home,W,31,6,0.755,14.6,final
 Lowndes,2026-08-28,2,Regular season,Harris County,True,Home,W,38,0,0.99,44.2,final
 Lowndes,2026-09-04,3,Regular season,Lithonia,True,Home,W,22,8,0.851,18.8,final
@@ -2339,7 +2380,7 @@ Lowndes,2026-10-23,10,Regular season,Richmond Hill,True,Away,W,36,15,0.896,18.7,
 Lowndes,2026-10-30,11,Regular season,Valdosta,True,Home,W,32,31,0.215,-11.7,final
 Lowndes,2026-11-06,12,Regular season,Colquitt County,True,Away,L,20,23,0.598,3.6,final
 Lowndes,2026-11-13,13,Round 1,South Forsyth,True,Home,W,62,27,0.995,37.5,final
-Lowndes,2026-11-20,14,Round 2,Grayson,True,Home,,23,25,0.425,,upcoming
+Lowndes,2026-11-20,14,Round 2,Grayson,True,Home,L,14,42,0.424,-2.7,final
 Luella,2026-08-21,1,Regular season,Tift County,True,Away,L,0,41,0.231,-15.6,final
 Luella,2026-08-28,2,Regular season,Kell,True,Away,L,0,51,0.04,-33.3,final
 Luella,2026-09-04,3,Regular season,Riverdale,True,Away,W,20,12,0.648,6.7,final
@@ -2361,7 +2402,7 @@ Lumpkin County,2026-10-23,10,Regular season,Elbert County,True,Home,L,21,24,0.50
 Lumpkin County,2026-10-30,11,Regular season,Morgan County,True,Away,W,43,19,0.492,-0.3,final
 Lumpkin County,2026-11-06,12,Regular season,Franklin County,True,Home,W,35,12,0.716,8.2,final
 Lumpkin County,2026-11-13,13,Round 1,LaFayette,True,Home,W,34,13,0.879,16.8,final
-Lumpkin County,2026-11-20,14,Round 2,Columbia,True,Away,,18,36,0.099,,upcoming
+Lumpkin County,2026-11-20,14,Round 2,Columbia,True,Away,L,14,63,0.1,-18.3,final
 M. L. King,2026-08-22,1,Regular season,Lithonia,True,Home,L,8,38,0.302,-11.0,final
 M. L. King,2026-08-28,2,Regular season,Miller Grove,True,Home,W,28,21,0.295,-10.2,final
 M. L. King,2026-09-03,3,Regular season,Drew,True,Away,W,59,20,0.865,19.4,final
@@ -2384,7 +2425,8 @@ Macon County,2026-10-23,10,Regular season,Crawford County,True,Home,W,39,3,1.0,5
 Macon County,2026-10-30,11,Regular season,"Central, Talbotton",True,Away,W,55,0,1.0,59.9,final
 Macon County,2026-11-06,12,Regular season,Chattahoochee County,True,Away,W,59,12,0.992,34.5,final
 Macon County,2026-11-13,13,Round 1,Early County,True,Home,W,35,7,0.662,6.0,final
-Macon County,2026-11-20,14,Round 2,Portal,True,Home,,32,21,0.782,,upcoming
+Macon County,2026-11-20,14,Round 2,Portal,True,Home,W,42,14,0.781,11.1,final
+Macon County,2026-11-27,15,Quarterfinal,Johnson County,True,Away,,20,35,0.154,,upcoming
 Madison County,2026-08-21,1,Regular season,Morgan County,True,Away,L,13,28,0.175,-19.8,final
 Madison County,2026-08-28,2,Regular season,Hart County,True,Home,L,12,51,0.302,-9.9,final
 Madison County,2026-09-04,3,Regular season,Franklin County,True,Home,L,14,30,0.137,-19.2,final
@@ -2438,7 +2480,8 @@ Marist,2026-10-23,10,Regular season,Chattahoochee,True,Away,W,49,20,1.0,51.6,fin
 Marist,2026-10-30,11,Regular season,Centennial,True,Home,W,50,14,0.98,29.7,final
 Marist,2026-11-06,12,Regular season,St. Pius X,True,Away,W,31,0,0.989,32.9,final
 Marist,2026-11-13,13,Round 1,Cambridge,True,Home,W,37,7,0.963,25.1,final
-Marist,2026-11-20,14,Round 2,Centennial,True,Home,,40,9,0.987,,upcoming
+Marist,2026-11-20,14,Round 2,Centennial,True,Home,W,31,6,0.987,31.0,final
+Marist,2026-11-27,15,Quarterfinal,Blessed Trinity,True,Away,,21,25,0.379,,upcoming
 Mary Persons,2026-08-21,1,Regular season,Jackson,True,Away,W,52,31,0.6,5.4,final
 Mary Persons,2026-08-28,2,Regular season,Jasper County,True,Away,L,22,32,0.74,12.2,final
 Mary Persons,2026-09-04,3,Regular season,Rockmart,True,Home,W,42,21,0.204,-14.4,final
@@ -2450,7 +2493,8 @@ Mary Persons,2026-10-23,10,Regular season,Baldwin,True,Away,L,28,33,0.615,4.3,fi
 Mary Persons,2026-10-30,11,Regular season,Spalding,True,Away,W,38,14,0.915,19.8,final
 Mary Persons,2026-11-06,12,Regular season,Upson-Lee,True,Home,W,43,14,0.996,37.3,final
 Mary Persons,2026-11-13,13,Round 1,North Clayton,True,Home,W,43,36,0.878,16.7,final
-Mary Persons,2026-11-20,14,Round 2,Monroe Area,True,Away,,24,32,0.301,,upcoming
+Mary Persons,2026-11-20,14,Round 2,Monroe Area,True,Away,W,41,35,0.301,-7.4,final
+Mary Persons,2026-11-27,15,Quarterfinal,Dougherty,True,Away,,28,26,0.556,,upcoming
 Mays,2026-08-21,1,Regular season,New Manchester,True,Away,W,19,16,0.262,-13.5,final
 Mays,2026-08-28,2,Regular season,"Northside, Warner Robins",True,Home,W,23,9,0.558,2.8,final
 Mays,2026-09-04,3,Regular season,Pebblebrook,True,Away,W,20,7,0.871,19.8,final
@@ -2483,7 +2527,7 @@ McEachern,2026-10-16,9,Regular season,Pebblebrook,True,Away,W,42,13,0.987,33.1,f
 McEachern,2026-10-30,11,Regular season,Harrison,True,Home,W,29,13,0.784,11.4,final
 McEachern,2026-11-06,12,Regular season,Kennesaw Mountain,True,Away,W,57,0,0.995,36.6,final
 McEachern,2026-11-13,13,Round 1,Harrison,True,Home,W,24,7,0.834,13.7,final
-McEachern,2026-11-20,14,Round 2,Colquitt County,True,Away,,23,29,0.351,,upcoming
+McEachern,2026-11-20,14,Round 2,Colquitt County,True,Away,L,24,27,0.35,-5.5,final
 McIntosh,2026-08-21,1,Regular season,Starrs Mill,True,Away,W,24,20,0.597,5.2,final
 McIntosh,2026-08-28,2,Regular season,Whitewater,True,Home,L,0,14,0.185,-17.0,final
 McIntosh,2026-09-18,5,Regular season,Woodward Academy,True,Away,L,7,37,0.085,-23.1,final
@@ -2588,7 +2632,8 @@ Milton,2026-10-23,10,Regular season,Gainesville,True,Away,W,49,46,0.437,-2.3,fin
 Milton,2026-10-30,11,Regular season,Riverwood,True,Away,W,55,0,1.0,69.4,final
 Milton,2026-11-06,12,Regular season,Roswell,True,Home,W,33,26,0.72,8.4,final
 Milton,2026-11-13,13,Round 1,"Northside, Columbus",True,Home,W,48,6,0.987,32.4,final
-Milton,2026-11-20,14,Round 2,New Manchester,True,Home,,37,18,0.912,,upcoming
+Milton,2026-11-20,14,Round 2,New Manchester,True,Home,W,42,7,0.912,19.3,final
+Milton,2026-11-27,15,Quarterfinal,Gainesville,True,Home,,28,30,0.457,,upcoming
 Mitchell County,2026-08-21,1,Regular season,Seminole County,True,Away,W,42,7,0.343,-8.5,final
 Mitchell County,2026-08-28,2,Regular season,Hawkinsville,True,Away,W,30,26,0.72,11.1,final
 Mitchell County,2026-09-04,3,Regular season,Randolph-Clay,True,Home,L,0,30,0.791,14.1,final
@@ -2600,7 +2645,8 @@ Mitchell County,2026-10-23,10,Regular season,Charlton County,True,Away,L,14,21,0
 Mitchell County,2026-10-30,11,Regular season,Irwin County,True,Home,W,52,44,0.873,16.6,final
 Mitchell County,2026-11-06,12,Regular season,Lanier County,True,Home,W,44,14,0.989,32.8,final
 Mitchell County,2026-11-13,13,Round 1,Miller County,True,Home,W,30,22,0.856,15.0,final
-Mitchell County,2026-11-20,14,Round 2,Trion,True,Away,,25,28,0.43,,upcoming
+Mitchell County,2026-11-20,14,Round 2,Trion,True,Away,W,38,27,0.431,-2.5,final
+Mitchell County,2026-11-27,15,Quarterfinal,Lincoln County,True,Away,,17,36,0.095,,upcoming
 Model,2026-08-21,1,Regular season,Walker,True,Away,W,49,13,0.823,19.6,final
 Model,2026-08-28,2,Regular season,Trion,True,Away,W,31,7,0.235,-13.8,final
 Model,2026-09-04,3,Regular season,Chattooga,True,Away,W,42,7,0.851,18.8,final
@@ -2612,7 +2658,7 @@ Model,2026-10-23,10,Regular season,Darlington,True,Away,W,54,21,0.64,5.3,final
 Model,2026-10-30,11,Regular season,Pepperell,True,Home,W,34,7,0.911,19.4,final
 Model,2026-11-06,12,Regular season,Heard County,True,Away,L,0,45,0.102,-18.2,final
 Model,2026-11-13,13,Round 1,"Mt. Zion, Carroll",True,Home,W,49,0,0.975,27.7,final
-Model,2026-11-20,14,Round 2,Commerce,True,Away,,22,33,0.211,,upcoming
+Model,2026-11-20,14,Round 2,Commerce,True,Away,L,13,38,0.211,-11.4,final
 Monroe,2026-08-28,2,Regular season,Colquitt County,True,Away,L,0,52,0.129,-22.7,final
 Monroe,2026-09-11,4,Regular season,Dougherty,True,Home,L,14,28,0.323,-8.3,final
 Monroe,2026-09-18,5,Regular season,Cairo,True,Away,L,0,40,0.015,-36.3,final
@@ -2634,7 +2680,7 @@ Monroe Area,2026-10-23,10,Regular season,Cherokee Bluff,True,Away,W,35,31,0.891,
 Monroe Area,2026-10-30,11,Regular season,Oconee County,True,Home,W,27,14,0.9,18.6,final
 Monroe Area,2026-11-06,12,Regular season,West Hall,True,Away,W,43,3,1.0,56.5,final
 Monroe Area,2026-11-13,13,Round 1,Shaw,True,Home,W,27,14,0.994,36.2,final
-Monroe Area,2026-11-20,14,Round 2,Mary Persons,True,Home,,32,24,0.699,,upcoming
+Monroe Area,2026-11-20,14,Round 2,Mary Persons,True,Home,L,35,41,0.699,7.4,final
 Montgomery County,2026-08-21,1,Regular season,Telfair County,True,Away,W,22,15,0.257,-13.8,final
 Montgomery County,2026-08-28,2,Regular season,Wheeler County,True,Home,W,15,14,0.051,-31.0,final
 Montgomery County,2026-09-04,3,Regular season,Lanier County,True,Away,W,26,6,0.892,21.7,final
@@ -2676,6 +2722,7 @@ Mount Vernon,2026-10-02,7,Regular season,Fellowship Christian,True,Home,W,28,14,
 Mount Vernon,2026-10-16,9,Regular season,Walker,True,Away,W,37,7,1.0,51.4,final
 Mount Vernon,2026-10-30,11,Regular season,Mt. Paran Christian,True,Home,W,47,17,0.992,35.5,final
 Mount Vernon,2026-11-06,12,Regular season,Mt. Pisgah Christian,True,Away,W,53,0,1.0,53.3,final
+Mount Vernon,2026-11-20,14,Round 2,Savannah Christian,True,Home,W,28,17,0.754,9.9,final
 Mountain View,2026-08-21,1,Regular season,Discovery,True,Away,W,39,0,0.6,5.4,final
 Mountain View,2026-09-04,3,Regular season,Johns Creek,True,Away,W,36,2,0.951,30.0,final
 Mountain View,2026-09-11,4,Regular season,Morgan County,True,Home,W,35,12,0.183,-15.2,final
@@ -2784,7 +2831,7 @@ New Manchester,2026-10-23,10,Regular season,South Cobb,True,Home,W,42,19,0.944,2
 New Manchester,2026-10-30,11,Regular season,Osborne,True,Home,W,44,0,0.997,40.1,final
 New Manchester,2026-11-06,12,Regular season,South Paulding,True,Away,W,21,0,0.95,23.5,final
 New Manchester,2026-11-13,13,Round 1,"Heritage, Conyers",True,Away,W,42,36,0.62,4.4,final
-New Manchester,2026-11-20,14,Round 2,Milton,True,Away,,18,37,0.088,,upcoming
+New Manchester,2026-11-20,14,Round 2,Milton,True,Away,L,7,42,0.088,-19.3,final
 Newnan,2026-08-21,1,Regular season,LaGrange,True,Home,L,9,28,0.416,-4.5,final
 Newnan,2026-08-28,2,Regular season,East Coweta,True,Away,L,35,56,0.243,-13.3,final
 Newnan,2026-09-11,4,Regular season,Creekside,True,Home,L,24,62,0.025,-37.9,final
@@ -2796,7 +2843,7 @@ Newnan,2026-10-23,10,Regular season,Tri-Cities,True,Away,W,42,6,0.984,31.4,final
 Newnan,2026-10-30,11,Regular season,"Northside, Columbus",True,Home,W,48,14,0.93,21.4,final
 Newnan,2026-11-06,12,Regular season,Morrow,True,Away,W,51,6,0.998,40.5,final
 Newnan,2026-11-13,13,Round 1,Habersham Central,True,Away,W,37,7,0.806,12.5,final
-Newnan,2026-11-20,14,Round 2,Coffee,True,Away,,17,32,0.145,,upcoming
+Newnan,2026-11-20,14,Round 2,Coffee,True,Away,L,9,36,0.145,-15.2,final
 Newton,2026-08-22,1,Regular season,Douglas County,True,Neutral,W,34,27,0.458,-2.3,final
 Newton,2026-08-28,2,Regular season,Roswell,True,Away,W,42,15,0.566,3.2,final
 Newton,2026-09-04,3,Regular season,Locust Grove,True,Home,W,71,7,0.946,28.0,final
@@ -2808,7 +2855,8 @@ Newton,2026-10-16,9,Regular season,Grayson,True,Home,W,38,27,0.654,5.9,final
 Newton,2026-10-30,11,Regular season,Archer,True,Home,W,49,23,0.965,26.1,final
 Newton,2026-11-06,12,Regular season,South Gwinnett,True,Away,W,56,21,0.953,23.9,final
 Newton,2026-11-13,13,Round 1,Collins Hill,True,Home,W,42,15,0.995,36.6,final
-Newton,2026-11-20,14,Round 2,Peachtree Ridge,True,Home,,45,11,0.992,,upcoming
+Newton,2026-11-20,14,Round 2,Peachtree Ridge,True,Home,W,44,17,0.992,34.0,final
+Newton,2026-11-27,15,Quarterfinal,Colquitt County,True,Home,,37,25,0.795,,upcoming
 Norcross,2026-08-21,1,Regular season,Mill Creek,True,Home,W,40,16,0.241,-14.9,final
 Norcross,2026-08-28,2,Regular season,West Forsyth,True,Away,L,13,23,0.541,1.9,final
 Norcross,2026-09-11,4,Regular season,North Atlanta,True,Away,W,28,10,0.537,1.6,final
@@ -2864,6 +2912,7 @@ North Cobb Christian,2026-10-23,10,Regular season,Temple,True,Home,W,28,10,0.8,1
 North Cobb Christian,2026-10-30,11,Regular season,Therrell,True,Away,W,49,8,0.929,21.2,final
 North Cobb Christian,2026-11-06,12,Regular season,Holy Innocents,True,Home,L,21,28,0.11,-17.5,final
 North Cobb Christian,2026-11-13,13,Round 1,Trinity Christian,True,Home,W,35,14,0.702,7.6,final
+North Cobb Christian,2026-11-20,14,Round 2,Lovett,True,Away,L,14,17,0.42,-2.8,final
 North Forsyth,2026-08-21,1,Regular season,Jackson County,True,Away,L,22,34,0.151,-21.8,final
 North Forsyth,2026-08-28,2,Regular season,Archer,True,Home,L,19,44,0.155,-19.3,final
 North Forsyth,2026-09-04,3,Regular season,Dacula,True,Home,W,56,14,0.289,-9.5,final
@@ -2886,7 +2935,8 @@ North Gwinnett,2026-10-23,10,Regular season,Peachtree Ridge,True,Home,W,39,18,0.
 North Gwinnett,2026-10-30,11,Regular season,Norcross,True,Away,W,46,7,0.962,25.6,final
 North Gwinnett,2026-11-06,12,Regular season,Parkview,True,Home,W,57,55,0.782,11.1,final
 North Gwinnett,2026-11-13,13,Round 1,North Atlanta,True,Home,W,53,28,0.99,33.1,final
-North Gwinnett,2026-11-20,14,Round 2,Westlake,True,Home,,34,28,0.674,,upcoming
+North Gwinnett,2026-11-20,14,Round 2,Westlake,True,Home,W,35,28,0.674,6.4,final
+North Gwinnett,2026-11-27,15,Quarterfinal,Carrollton,True,Away,,20,42,0.064,,upcoming
 North Hall,2026-08-21,1,Regular season,Greater Atlanta Christian,True,Away,L,21,28,0.81,18.5,final
 North Hall,2026-08-28,2,Regular season,Winder-Barrow,True,Home,W,33,28,0.923,27.1,final
 North Hall,2026-09-04,3,Regular season,Cherokee Bluff,True,Away,W,28,27,0.625,5.6,final
@@ -2898,7 +2948,7 @@ North Hall,2026-10-23,10,Regular season,Pickens,True,Away,W,49,13,0.86,15.9,fina
 North Hall,2026-10-30,11,Regular season,White County,True,Away,W,42,20,0.889,17.6,final
 North Hall,2026-11-06,12,Regular season,Gilmer,True,Home,W,56,37,0.881,16.9,final
 North Hall,2026-11-13,13,Round 1,Adairsville,True,Home,W,49,21,0.83,13.6,final
-North Hall,2026-11-20,14,Round 2,Sandy Creek,True,Away,,17,39,0.06,,upcoming
+North Hall,2026-11-20,14,Round 2,Sandy Creek,True,Away,L,17,56,0.06,-22.2,final
 North Murray,2026-08-21,1,Regular season,"Heritage, Catoosa",True,Away,L,14,34,0.612,6.0,final
 North Murray,2026-09-04,3,Regular season,Adairsville,True,Away,L,0,31,0.521,1.0,final
 North Murray,2026-09-11,4,Regular season,Northwest Whitfield,True,Home,L,14,41,0.094,-22.0,final
@@ -2910,7 +2960,7 @@ North Murray,2026-10-23,10,Regular season,Rockmart,True,Home,L,7,42,0.016,-31.5,
 North Murray,2026-10-30,11,Regular season,Murray County,True,Away,W,35,14,0.665,6.1,final
 North Murray,2026-11-06,12,Regular season,Union County,True,Home,W,34,28,0.661,5.9,final
 North Murray,2026-11-13,13,Round 1,Ringgold,True,Away,W,34,23,0.136,-15.5,final
-North Murray,2026-11-20,14,Round 2,Northeast,True,Away,,10,43,0.01,,upcoming
+North Murray,2026-11-20,14,Round 2,Northeast,True,Away,L,12,50,0.01,-33.2,final
 North Oconee,2026-08-21,1,Regular season,Oconee County,True,Away,W,42,21,0.899,27.0,final
 North Oconee,2026-08-28,2,Regular season,Stockbridge,True,Home,W,38,24,0.675,9.1,final
 North Oconee,2026-09-04,3,Regular season,Clarke Central,True,Home,W,17,10,0.871,19.3,final
@@ -2922,7 +2972,8 @@ North Oconee,2026-10-16,9,Regular season,Flowery Branch,True,Home,W,31,6,0.992,3
 North Oconee,2026-10-23,10,Regular season,East Forsyth,True,Away,W,51,7,0.979,29.6,final
 North Oconee,2026-10-30,11,Regular season,Jefferson,True,Away,L,17,27,0.687,7.0,final
 North Oconee,2026-11-13,13,Round 1,Dutchtown,True,Home,W,52,6,0.991,34.1,final
-North Oconee,2026-11-20,14,Round 2,Richmond Academy,True,Home,,36,18,0.898,,upcoming
+North Oconee,2026-11-20,14,Round 2,Richmond Academy,True,Home,W,42,6,0.898,18.1,final
+North Oconee,2026-11-27,15,Quarterfinal,Benedictine,True,Home,,34,20,0.845,,upcoming
 North Paulding,2026-08-21,1,Regular season,East Paulding,True,Home,L,10,33,0.52,1.1,final
 North Paulding,2026-08-28,2,Regular season,South Paulding,True,Away,W,34,0,0.819,17.3,final
 North Paulding,2026-09-04,3,Regular season,Harrison,True,Home,L,9,12,0.375,-5.4,final
@@ -2955,7 +3006,8 @@ Northeast,2026-10-22,10,Regular season,Southwest,True,Away,W,40,0,1.0,50.4,final
 Northeast,2026-10-30,11,Regular season,Pike County,True,Home,W,47,7,0.984,30.9,final
 Northeast,2026-11-06,12,Regular season,Callaway,True,Home,L,24,28,0.891,17.6,final
 Northeast,2026-11-13,13,Round 1,Thomson,True,Home,W,49,28,0.818,13.0,final
-Northeast,2026-11-20,14,Round 2,North Murray,True,Home,,43,10,0.99,,upcoming
+Northeast,2026-11-20,14,Round 2,North Murray,True,Home,W,50,12,0.99,33.2,final
+Northeast,2026-11-27,15,Quarterfinal,Stephens County,True,Home,,34,19,0.846,,upcoming
 Northgate,2026-08-21,1,Regular season,Archer,True,Home,L,3,35,0.273,-12.8,final
 Northgate,2026-08-28,2,Regular season,New Manchester,True,Away,L,7,23,0.381,-5.8,final
 Northgate,2026-09-04,3,Regular season,Griffin,True,Away,L,3,35,0.194,-15.1,final
@@ -3009,7 +3061,7 @@ Northwest Whitfield,2026-10-23,10,Regular season,Ridgeland,True,Home,W,43,15,0.9
 Northwest Whitfield,2026-10-30,11,Regular season,Calhoun,True,Away,L,17,31,0.387,-4.2,final
 Northwest Whitfield,2026-11-06,12,Regular season,"Heritage, Catoosa",True,Away,W,38,21,0.767,10.4,final
 Northwest Whitfield,2026-11-13,13,Round 1,Oconee County,True,Home,W,42,21,0.483,-0.6,final
-Northwest Whitfield,2026-11-20,14,Round 2,Cairo,True,Away,,18,38,0.079,,upcoming
+Northwest Whitfield,2026-11-20,14,Round 2,Cairo,True,Away,L,8,57,0.079,-20.2,final
 Oconee County,2026-08-21,1,Regular season,North Oconee,True,Home,L,21,42,0.101,-27.0,final
 Oconee County,2026-08-28,2,Regular season,Clarke Central,True,Away,L,3,22,0.503,0.1,final
 Oconee County,2026-09-04,3,Regular season,Morgan County,True,Away,W,36,15,0.127,-19.9,final
@@ -3074,7 +3126,7 @@ Parkview,2026-10-09,8,Regular season,Berkmar,True,Home,W,55,0,1.0,68.7,final
 Parkview,2026-10-23,10,Regular season,Norcross,True,Home,W,55,21,0.882,17.2,final
 Parkview,2026-11-06,12,Regular season,North Gwinnett,True,Away,L,55,57,0.218,-11.1,final
 Parkview,2026-11-13,13,Round 1,South Gwinnett,True,Home,W,63,56,0.791,11.5,final
-Parkview,2026-11-20,14,Round 2,Carrollton,True,Away,,19,51,0.012,,upcoming
+Parkview,2026-11-20,14,Round 2,Carrollton,True,Away,L,33,41,0.012,-32.3,final
 Pataula Charter,2026-08-21,1,Regular season,WEWAHITCHKA HIGH SCHOOL,False,Home,L,24,30,,,final
 Pataula Charter,2026-09-04,3,Regular season,Southwest Georgia STEM,True,Away,W,42,16,0.776,16.0,final
 Pataula Charter,2026-09-11,4,Regular season,Sneads,False,Away,L,6,22,,,final
@@ -3105,7 +3157,8 @@ Peach County,2026-10-23,10,Regular season,Howard,True,Home,W,48,12,0.993,35.8,fi
 Peach County,2026-10-30,11,Regular season,Baldwin,True,Away,W,52,24,0.911,19.4,final
 Peach County,2026-11-06,12,Regular season,Troup County,True,Away,W,52,38,0.485,-0.5,final
 Peach County,2026-11-13,13,Round 1,East Jackson,True,Home,W,49,0,0.998,41.7,final
-Peach County,2026-11-20,14,Round 2,West Laurens,True,Home,,41,11,0.983,,upcoming
+Peach County,2026-11-20,14,Round 2,West Laurens,True,Home,W,49,0,0.983,30.2,final
+Peach County,2026-11-27,15,Quarterfinal,"Douglass, Atlanta",True,Home,,38,22,0.867,,upcoming
 Peachtree Ridge,2026-08-21,1,Regular season,Lambert,True,Away,W,36,28,0.552,2.8,final
 Peachtree Ridge,2026-08-28,2,Regular season,Shiloh,True,Home,W,17,0,0.634,6.5,final
 Peachtree Ridge,2026-09-04,3,Regular season,Greenville High School,False,Away,W,33,30,,,final
@@ -3117,7 +3170,7 @@ Peachtree Ridge,2026-10-23,10,Regular season,North Gwinnett,True,Away,L,18,39,0.
 Peachtree Ridge,2026-10-30,11,Regular season,Duluth,True,Home,W,40,34,0.939,22.5,final
 Peachtree Ridge,2026-11-06,12,Regular season,Brookwood,True,Away,L,3,51,0.047,-24.0,final
 Peachtree Ridge,2026-11-13,13,Round 1,Hillgrove,True,Home,W,31,27,0.331,-6.3,final
-Peachtree Ridge,2026-11-20,14,Round 2,Newton,True,Away,,11,45,0.008,,upcoming
+Peachtree Ridge,2026-11-20,14,Round 2,Newton,True,Away,L,17,44,0.008,-34.0,final
 Pebblebrook,2026-08-19,1,Regular season,Clarke Central,True,Neutral,L,0,34,0.322,-9.8,final
 Pebblebrook,2026-08-28,2,Regular season,Central Gwinnett,True,Home,W,14,7,0.098,-24.5,final
 Pebblebrook,2026-09-04,3,Regular season,Mays,True,Home,L,7,20,0.129,-19.8,final
@@ -3149,7 +3202,7 @@ Pepperell,2026-10-23,10,Regular season,Heard County,True,Home,L,7,48,0.012,-33.1
 Pepperell,2026-10-30,11,Regular season,Model,True,Away,L,7,34,0.089,-19.4,final
 Pepperell,2026-11-06,12,Regular season,Coosa,True,Away,W,49,17,0.85,14.8,final
 Pepperell,2026-11-13,13,Round 1,Putnam County,True,Away,W,30,21,0.246,-9.9,final
-Pepperell,2026-11-20,14,Round 2,Bleckley County,True,Away,,8,44,0.005,,upcoming
+Pepperell,2026-11-20,14,Round 2,Bleckley County,True,Away,L,9,49,0.005,-36.4,final
 Perry,2026-08-21,1,Regular season,Peach County,True,Home,L,24,63,0.337,-8.9,final
 Perry,2026-08-28,2,Regular season,Dublin,True,Away,L,20,41,0.1,-24.4,final
 Perry,2026-09-04,3,Regular season,Howard,True,Home,W,48,7,0.726,10.5,final
@@ -3182,7 +3235,8 @@ Pierce County,2026-10-23,10,Regular season,Brantley County,True,Away,W,52,0,0.99
 Pierce County,2026-10-30,11,Regular season,Islands,True,Home,W,48,6,1.0,51.1,final
 Pierce County,2026-11-06,12,Regular season,Appling County,True,Away,L,21,35,0.545,1.6,final
 Pierce County,2026-11-13,13,Round 1,"Westside, Augusta",True,Home,W,41,18,0.929,21.1,final
-Pierce County,2026-11-20,14,Round 2,Hapeville,True,Home,,33,22,0.779,,upcoming
+Pierce County,2026-11-20,14,Round 2,Hapeville,True,Home,W,42,27,0.779,11.0,final
+Pierce County,2026-11-27,15,Quarterfinal,Appling County,True,Away,,26,27,0.463,,upcoming
 Pike County,2026-08-21,1,Regular season,Taylor County,True,Away,L,17,28,0.364,-7.4,final
 Pike County,2026-08-28,2,Regular season,Fayette County,True,Away,W,29,22,0.839,18.8,final
 Pike County,2026-09-11,4,Regular season,ACE Charter,True,Home,L,21,42,0.26,-10.9,final
@@ -3215,7 +3269,7 @@ Portal,2026-10-16,9,Regular season,Montgomery County,True,Home,W,28,0,0.644,5.5,
 Portal,2026-10-30,11,Regular season,Emanuel County Institute,True,Away,L,28,36,0.106,-18.1,final
 Portal,2026-11-06,12,Regular season,McIntosh County Academy,True,Home,W,49,20,0.629,4.8,final
 Portal,2026-11-13,13,Round 1,Glascock County,True,Home,W,41,6,0.777,11.0,final
-Portal,2026-11-20,14,Round 2,Macon County,True,Away,,21,32,0.218,,upcoming
+Portal,2026-11-20,14,Round 2,Macon County,True,Away,L,14,42,0.219,-11.1,final
 Prince Avenue Christian,2026-08-21,1,Regular season,Thomson,True,Home,W,30,21,0.59,4.8,final
 Prince Avenue Christian,2026-09-11,4,Regular season,Greater Atlanta Christian,True,Home,W,38,15,0.662,7.5,final
 Prince Avenue Christian,2026-09-18,5,Regular season,Trinity Christian,True,Home,W,56,17,0.877,19.2,final
@@ -3225,6 +3279,7 @@ Prince Avenue Christian,2026-10-16,9,Regular season,Athens Academy,True,Away,W,5
 Prince Avenue Christian,2026-10-23,10,Regular season,Commerce,True,Home,W,24,9,0.837,14.6,final
 Prince Avenue Christian,2026-10-30,11,Regular season,Oglethorpe County,True,Away,W,42,7,1.0,61.3,final
 Prince Avenue Christian,2026-11-06,12,Regular season,Rabun County,True,Away,W,42,0,0.976,28.5,final
+Prince Avenue Christian,2026-11-20,14,Round 2,Darlington,True,Home,W,41,7,0.997,38.6,final
 Providence Christian,2026-08-21,1,Regular season,Loganville Christian Academy,False,Home,W,55,0,,,final
 Providence Christian,2026-08-28,2,Regular season,Social Circle,True,Away,L,28,31,0.051,-34.6,final
 Providence Christian,2026-09-03,3,Regular season,B.E.S.T Academy,True,Away,W,30,6,0.626,5.9,final
@@ -3269,7 +3324,8 @@ Randolph-Clay,2026-10-23,10,Regular season,Early County,True,Home,W,22,16,0.61,4
 Randolph-Clay,2026-10-30,11,Regular season,Terrell County,True,Home,W,28,8,0.998,40.7,final
 Randolph-Clay,2026-11-06,12,Regular season,Pelham,True,Home,W,40,6,0.996,38.2,final
 Randolph-Clay,2026-11-13,13,Round 1,Telfair County,True,Home,W,44,14,0.891,17.7,final
-Randolph-Clay,2026-11-20,14,Round 2,Schley County,True,Home,,27,25,0.564,,upcoming
+Randolph-Clay,2026-11-20,14,Round 2,Schley County,True,Home,W,36,28,0.564,2.3,final
+Randolph-Clay,2026-11-27,15,Quarterfinal,Bowdon,True,Home,,21,28,0.315,,upcoming
 Redan,2026-08-21,1,Regular season,Arabia Mountain,True,Away,L,6,42,0.514,0.7,final
 Redan,2026-08-27,2,Regular season,Stone Mountain,True,Away,W,34,12,0.845,19.3,final
 Redan,2026-09-10,4,Regular season,Druid Hills,True,Home,L,12,34,0.158,-16.9,final
@@ -3291,7 +3347,7 @@ Richmond Academy,2026-10-23,10,Regular season,Groves,True,Away,W,67,0,1.0,55.5,f
 Richmond Academy,2026-10-30,11,Regular season,Evans,True,Home,W,49,14,0.892,17.9,final
 Richmond Academy,2026-11-06,12,Regular season,Jenkins,True,Away,W,35,21,0.503,0.1,final
 Richmond Academy,2026-11-13,13,Round 1,Statesboro,True,Home,W,49,34,0.845,14.3,final
-Richmond Academy,2026-11-20,14,Round 2,North Oconee,True,Away,,18,36,0.102,,upcoming
+Richmond Academy,2026-11-20,14,Round 2,North Oconee,True,Away,L,6,42,0.102,-18.1,final
 Richmond Hill,2026-08-21,1,Regular season,Effingham County,True,Home,W,22,21,0.687,10.3,final
 Richmond Hill,2026-08-28,2,Regular season,Liberty County,True,Home,W,42,7,0.884,22.8,final
 Richmond Hill,2026-09-04,3,Regular season,Jenkins,True,Home,W,31,27,0.484,-0.7,final
@@ -3303,7 +3359,7 @@ Richmond Hill,2026-10-16,9,Regular season,Camden County,True,Away,L,27,40,0.514,
 Richmond Hill,2026-10-23,10,Regular season,Lowndes,True,Home,L,15,36,0.104,-18.7,final
 Richmond Hill,2026-11-06,12,Regular season,Valdosta,True,Away,L,12,49,0.01,-33.9,final
 Richmond Hill,2026-11-13,13,Round 1,North Paulding,True,Away,W,21,16,0.297,-7.7,final
-Richmond Hill,2026-11-20,14,Round 2,Brookwood,True,Away,,15,36,0.063,,upcoming
+Richmond Hill,2026-11-20,14,Round 2,Brookwood,True,Away,L,3,38,0.063,-21.8,final
 Ridgeland,2026-08-21,1,Regular season,Cedartown,True,Away,L,7,51,0.348,-8.2,final
 Ridgeland,2026-08-28,2,Regular season,Gordon Lee,True,Away,L,7,21,0.107,-23.6,final
 Ridgeland,2026-09-04,3,Regular season,Trion,True,Home,L,24,38,0.149,-17.7,final
@@ -3376,7 +3432,8 @@ Rockmart,2026-10-23,10,Regular season,North Murray,True,Away,W,42,7,0.984,31.5,f
 Rockmart,2026-10-30,11,Regular season,LaFayette,True,Home,W,56,10,0.981,30.0,final
 Rockmart,2026-11-06,12,Regular season,Sonoraville,True,Away,W,63,14,0.998,40.9,final
 Rockmart,2026-11-13,13,Round 1,Washington County,True,Home,W,56,14,0.941,22.5,final
-Rockmart,2026-11-20,14,Round 2,Callaway,True,Home,,37,19,0.893,,upcoming
+Rockmart,2026-11-20,14,Round 2,Callaway,True,Home,W,35,19,0.893,17.7,final
+Rockmart,2026-11-27,15,Quarterfinal,Columbia,True,Home,,29,28,0.506,,upcoming
 Rome,2026-08-21,1,Regular season,Carrollton,True,Home,L,7,55,0.43,-3.7,final
 Rome,2026-08-28,2,Regular season,Tucker,True,Home,L,14,41,0.738,12.1,final
 Rome,2026-09-11,4,Regular season,Creekview,True,Away,L,7,17,0.469,-1.3,final
@@ -3398,7 +3455,7 @@ Roswell,2026-10-16,9,Regular season,Johns Creek,True,Home,W,43,3,1.0,61.3,final
 Roswell,2026-10-23,10,Regular season,Riverwood,True,Home,W,62,0,1.0,63.8,final
 Roswell,2026-11-06,12,Regular season,Milton,True,Away,L,26,33,0.28,-8.4,final
 Roswell,2026-11-13,13,Round 1,Effingham County,True,Away,W,38,27,0.592,3.4,final
-Roswell,2026-11-20,14,Round 2,Thomas County Central,True,Away,,10,46,0.006,,upcoming
+Roswell,2026-11-20,14,Round 2,Thomas County Central,True,Away,L,7,42,0.006,-35.8,final
 Rutland,2026-08-22,1,Regular season,Crawford County,True,Neutral,W,54,6,0.496,-0.2,final
 Rutland,2026-08-28,2,Regular season,"Westside, Macon",True,Home,L,23,40,0.774,14.3,final
 Rutland,2026-09-11,4,Regular season,Wilkinson County,True,Away,W,12,6,0.651,6.5,final
@@ -3430,7 +3487,8 @@ Sandy Creek,2026-10-23,10,Regular season,Hampton,True,Away,W,34,7,0.897,18.5,fin
 Sandy Creek,2026-10-30,11,Regular season,McDonough,True,Home,W,66,0,1.0,51.6,final
 Sandy Creek,2026-11-06,12,Regular season,"Mt. Zion, Jonesboro",True,Home,W,45,12,0.997,38.9,final
 Sandy Creek,2026-11-13,13,Round 1,"Heritage, Catoosa",True,Home,W,56,0,0.998,42.1,final
-Sandy Creek,2026-11-20,14,Round 2,North Hall,True,Home,,39,17,0.94,,upcoming
+Sandy Creek,2026-11-20,14,Round 2,North Hall,True,Home,W,56,17,0.94,22.2,final
+Sandy Creek,2026-11-27,15,Quarterfinal,Cairo,True,Home,,32,23,0.742,,upcoming
 Savannah,2026-08-21,1,Regular season,"Johnson, Savannah",True,Home,L,6,20,0.543,2.3,final
 Savannah,2026-08-27,2,Regular season,Islands,True,Away,L,0,18,0.364,-6.6,final
 Savannah,2026-09-04,3,Regular season,Appling County,True,Away,L,0,49,0.005,-47.0,final
@@ -3452,6 +3510,7 @@ Savannah Christian,2026-10-23,10,Regular season,Screven County,True,Away,W,31,22
 Savannah Christian,2026-10-30,11,Regular season,Bryan County,True,Home,W,49,13,0.968,27.2,final
 Savannah Christian,2026-11-06,12,Regular season,Calvary Day School,True,Away,L,7,49,0.037,-25.9,final
 Savannah Christian,2026-11-13,13,Round 1,Providence Christian,True,Home,W,38,28,0.822,13.4,final
+Savannah Christian,2026-11-20,14,Round 2,Mount Vernon,True,Away,L,17,28,0.246,-9.9,final
 Schley County,2026-08-21,1,Regular season,Turner County,True,Away,W,41,26,0.645,7.8,final
 Schley County,2026-08-28,2,Regular season,Manchester,True,Home,L,20,28,0.808,16.6,final
 Schley County,2026-09-04,3,Regular season,Hawkinsville,True,Home,W,27,19,0.322,-8.1,final
@@ -3463,7 +3522,7 @@ Schley County,2026-10-16,9,Regular season,Chattahoochee County,True,Away,W,55,14
 Schley County,2026-10-23,10,Regular season,Taylor County,True,Home,L,34,35,0.231,-10.7,final
 Schley County,2026-11-06,12,Regular season,Marion County,True,Away,W,33,14,0.949,23.4,final
 Schley County,2026-11-13,13,Round 1,Hawkinsville,True,Home,W,56,14,0.777,10.8,final
-Schley County,2026-11-20,14,Round 2,Randolph-Clay,True,Away,,25,27,0.436,,upcoming
+Schley County,2026-11-20,14,Round 2,Randolph-Clay,True,Away,L,28,36,0.436,-2.3,final
 Scintilla Charter Academy,2026-08-28,2,Regular season,Terrell County,True,Away,L,7,18,0.748,27.4,final
 Scintilla Charter Academy,2026-09-04,3,Regular season,"Central, Talbotton",True,Away,L,8,14,0.808,19.2,final
 Scintilla Charter Academy,2026-10-02,7,Regular season,Pataula Charter,True,Home,L,12,14,0.123,-22.0,final
@@ -3511,7 +3570,7 @@ Sequoyah,2026-10-23,10,Regular season,Lassiter,True,Away,W,49,13,0.909,19.6,fina
 Sequoyah,2026-10-30,11,Regular season,Woodstock,True,Home,W,66,7,0.999,45.4,final
 Sequoyah,2026-11-06,12,Regular season,Creekview,True,Away,W,34,0,0.989,32.6,final
 Sequoyah,2026-11-13,13,Round 1,Walnut Grove,True,Home,W,41,3,0.999,44.4,final
-Sequoyah,2026-11-20,14,Round 2,Woodward Academy,True,Home,,36,12,0.959,,upcoming
+Sequoyah,2026-11-20,14,Round 2,Woodward Academy,True,Home,L,24,31,0.959,24.9,final
 Shaw,2026-08-21,1,Regular season,Washington,True,Away,W,14,0,0.713,11.9,final
 Shaw,2026-08-27,2,Regular season,Upson-Lee,True,Home,W,21,0,0.343,-7.7,final
 Shaw,2026-09-04,3,Regular season,Bainbridge,True,Away,L,10,25,0.362,-6.1,final
@@ -3545,7 +3604,7 @@ Social Circle,2026-10-23,10,Regular season,Josey,True,Away,W,57,8,1.0,48.8,final
 Social Circle,2026-10-30,11,Regular season,Laney,True,Away,L,14,16,0.282,-8.4,final
 Social Circle,2026-11-06,12,Regular season,Putnam County,True,Home,W,20,0,0.475,-0.9,final
 Social Circle,2026-11-13,13,Round 1,Dade County,True,Home,W,27,13,0.902,18.7,final
-Social Circle,2026-11-20,14,Round 2,Fitzgerald,True,Home,,13,30,0.121,,upcoming
+Social Circle,2026-11-20,14,Round 2,Fitzgerald,True,Home,L,0,35,0.122,-16.7,final
 Sonoraville,2026-08-21,1,Regular season,Adairsville,True,Home,L,0,13,0.629,7.0,final
 Sonoraville,2026-09-04,3,Regular season,Northwest Whitfield,True,Away,L,20,42,0.112,-22.0,final
 Sonoraville,2026-09-11,4,Regular season,Darlington,True,Away,L,6,48,0.461,-1.7,final
@@ -3741,7 +3800,8 @@ Stephens County,2026-10-23,10,Regular season,Hebron Christian,True,Home,W,29,10,
 Stephens County,2026-10-30,11,Regular season,Elbert County,True,Away,W,33,17,0.538,1.4,final
 Stephens County,2026-11-06,12,Regular season,Morgan County,True,Home,W,35,26,0.81,12.6,final
 Stephens County,2026-11-13,13,Round 1,Crisp County,True,Home,W,35,23,0.562,2.3,final
-Stephens County,2026-11-20,14,Round 2,Hart County,True,Away,,23,33,0.242,,upcoming
+Stephens County,2026-11-20,14,Round 2,Hart County,True,Away,W,35,34,0.241,-9.8,final
+Stephens County,2026-11-27,15,Quarterfinal,Northeast,True,Away,,19,34,0.154,,upcoming
 Stephenson,2026-08-22,1,Regular season,Southwest DeKalb,True,Home,W,29,7,0.427,-3.9,final
 Stephenson,2026-08-28,2,Regular season,Decatur,True,Home,W,50,0,0.951,31.5,final
 Stephenson,2026-09-04,3,Regular season,Tucker,True,Away,L,14,21,0.663,7.4,final
@@ -3753,7 +3813,8 @@ Stephenson,2026-10-16,9,Regular season,"Douglass, Atlanta",True,Home,W,7,6,0.754
 Stephenson,2026-10-23,10,Regular season,Westminster,True,Away,W,55,0,0.995,37.4,final
 Stephenson,2026-10-30,11,Regular season,North Springs,True,Home,W,60,7,1.0,48.4,final
 Stephenson,2026-11-13,13,Round 1,New Hampstead,True,Home,W,45,22,0.964,25.7,final
-Stephenson,2026-11-20,14,Round 2,Calhoun,True,Home,,32,20,0.817,,upcoming
+Stephenson,2026-11-20,14,Round 2,Calhoun,True,Home,W,41,10,0.817,12.8,final
+Stephenson,2026-11-27,15,Quarterfinal,Troup County,True,Away,,23,34,0.22,,upcoming
 Stockbridge,2026-08-28,2,Regular season,North Oconee,True,Away,L,24,38,0.325,-9.1,final
 Stockbridge,2026-09-04,3,Regular season,Dutchtown,True,Home,W,41,16,0.792,14.8,final
 Stockbridge,2026-09-11,4,Regular season,Arabia Mountain,True,Home,W,47,6,0.987,37.5,final
@@ -3765,7 +3826,7 @@ Stockbridge,2026-10-23,10,Regular season,Mundys Mill,True,Away,W,39,0,0.999,45.2
 Stockbridge,2026-10-30,11,Regular season,Eastside,True,Home,W,47,0,0.977,28.8,final
 Stockbridge,2026-11-06,12,Regular season,Jonesboro,True,Away,W,27,19,0.855,15.1,final
 Stockbridge,2026-11-13,13,Round 1,Flowery Branch,True,Home,W,42,37,0.878,16.7,final
-Stockbridge,2026-11-20,14,Round 2,Cartersville,True,Away,,14,44,0.018,,upcoming
+Stockbridge,2026-11-20,14,Round 2,Cartersville,True,Away,L,6,42,0.019,-29.7,final
 Stone Mountain,2026-08-20,1,Regular season,Therrell,True,Home,L,0,42,0.223,-16.1,final
 Stone Mountain,2026-08-27,2,Regular season,Redan,True,Home,L,12,34,0.155,-19.3,final
 Stone Mountain,2026-09-04,3,Regular season,Salem,True,Away,L,0,41,0.206,-14.4,final
@@ -3797,7 +3858,8 @@ Swainsboro,2026-10-23,10,Regular season,ACE Charter,True,Home,W,21,15,0.782,11.3
 Swainsboro,2026-10-30,11,Regular season,Dodge County,True,Away,W,52,13,0.263,-9.2,final
 Swainsboro,2026-11-06,12,Regular season,Vidalia,True,Home,W,36,0,0.94,22.2,final
 Swainsboro,2026-11-13,13,Round 1,Screven County,True,Home,W,31,6,0.859,15.4,final
-Swainsboro,2026-11-20,14,Round 2,Dublin,True,Away,,20,34,0.149,,upcoming
+Swainsboro,2026-11-20,14,Round 2,Dublin,True,Away,W,13,7,0.149,-14.6,final
+Swainsboro,2026-11-27,15,Quarterfinal,Jeff Davis,True,Away,,21,27,0.345,,upcoming
 Tattnall County,2026-08-28,2,Regular season,Windsor Forest,True,Home,L,21,31,0.492,-0.4,final
 Tattnall County,2026-09-04,3,Regular season,Treutlen,True,Home,L,12,41,0.238,-13.4,final
 Tattnall County,2026-09-11,4,Regular season,Savannah,True,Home,W,31,0,0.819,15.4,final
@@ -3819,7 +3881,8 @@ Taylor County,2026-10-23,10,Regular season,Schley County,True,Away,W,35,34,0.769
 Taylor County,2026-10-30,11,Regular season,Marion County,True,Home,W,74,19,0.991,34.1,final
 Taylor County,2026-11-06,12,Regular season,Crawford County,True,Home,W,48,0,1.0,57.9,final
 Taylor County,2026-11-13,13,Round 1,Seminole County,True,Home,W,38,14,0.946,23.2,final
-Taylor County,2026-11-20,14,Round 2,Warren County,True,Home,,35,19,0.868,,upcoming
+Taylor County,2026-11-20,14,Round 2,Warren County,True,Home,W,36,20,0.869,15.9,final
+Taylor County,2026-11-27,15,Quarterfinal,Emanuel County Institute,True,Home,,29,26,0.579,,upcoming
 Telfair County,2026-08-21,1,Regular season,Montgomery County,True,Home,L,15,22,0.743,13.8,final
 Telfair County,2026-09-04,3,Regular season,Atkinson County,True,Home,W,23,9,0.428,-3.4,final
 Telfair County,2026-09-11,4,Regular season,Portal,True,Away,L,28,49,0.548,2.0,final
@@ -3873,7 +3936,8 @@ Thomas County Central,2026-10-16,9,Regular season,Tift County,True,Home,W,63,7,0
 Thomas County Central,2026-10-30,11,Regular season,Coffee,True,Home,W,26,7,0.959,25.5,final
 Thomas County Central,2026-11-05,12,Regular season,"Northside, Warner Robins",True,Away,W,52,7,1.0,51.5,final
 Thomas County Central,2026-11-13,13,Round 1,Veterans,True,Home,W,56,6,1.0,59.6,final
-Thomas County Central,2026-11-20,14,Round 2,Roswell,True,Home,,46,10,0.994,,upcoming
+Thomas County Central,2026-11-20,14,Round 2,Roswell,True,Home,W,42,7,0.994,35.8,final
+Thomas County Central,2026-11-27,15,Quarterfinal,Creekside,True,Home,,33,28,0.637,,upcoming
 Thomasville,2026-08-21,1,Regular season,Cairo,True,Away,L,14,36,0.656,8.5,final
 Thomasville,2026-08-28,2,Regular season,Bainbridge,True,Home,W,45,21,0.81,16.7,final
 Thomasville,2026-09-11,4,Regular season,Worth County,True,Home,W,30,16,0.397,-4.5,final
@@ -3885,7 +3949,7 @@ Thomasville,2026-10-16,9,Regular season,Jeff Davis,True,Home,W,28,25,0.566,2.5,f
 Thomasville,2026-10-23,10,Regular season,Bacon County,True,Away,W,45,21,0.994,36.8,final
 Thomasville,2026-11-06,12,Regular season,Cook,True,Home,W,28,27,0.877,16.6,final
 Thomasville,2026-11-13,13,Round 1,Utopian Academy,True,Home,W,47,12,1.0,57.9,final
-Thomasville,2026-11-20,14,Round 2,Dodge County,True,Home,,34,26,0.707,,upcoming
+Thomasville,2026-11-20,14,Round 2,Dodge County,True,Home,L,31,35,0.707,7.7,final
 Thomson,2026-08-21,1,Regular season,Prince Avenue Christian,True,Away,L,21,30,0.41,-4.8,final
 Thomson,2026-08-28,2,Regular season,Richmond Academy,True,Home,L,40,41,0.563,3.0,final
 Thomson,2026-09-04,3,Regular season,Warren County,True,Home,W,42,14,0.921,24.8,final
@@ -3919,7 +3983,8 @@ Toombs County,2026-10-23,10,Regular season,"Johnson, Savannah",True,Home,W,62,0,
 Toombs County,2026-10-30,11,Regular season,Appling County,True,Home,L,7,11,0.97,27.2,final
 Toombs County,2026-11-06,12,Regular season,Tattnall County,True,Away,W,49,3,1.0,58.2,final
 Toombs County,2026-11-13,13,Round 1,Temple,True,Home,W,88,0,1.0,48.6,final
-Toombs County,2026-11-20,14,Round 2,"Carver, Columbus",True,Home,,44,13,0.985,,upcoming
+Toombs County,2026-11-20,14,Round 2,"Carver, Columbus",True,Home,W,35,16,0.985,30.8,final
+Toombs County,2026-11-27,15,Quarterfinal,KIPP Atlanta Collegiate,True,Home,,37,17,0.925,,upcoming
 Towers,2026-08-21,1,Regular season,Cooper Basin,False,Home,W,30,7,,,final
 Towers,2026-08-27,2,Regular season,B.E.S.T Academy,True,Home,L,7,41,0.759,14.2,final
 Towers,2026-09-03,3,Regular season,McNair,True,Home,L,10,37,0.199,-15.3,final
@@ -3950,7 +4015,7 @@ Treutlen,2026-10-16,9,Regular season,Dooly County,True,Home,W,28,14,0.924,21.3,f
 Treutlen,2026-10-30,11,Regular season,Hawkinsville,True,Away,W,41,7,0.554,2.0,final
 Treutlen,2026-11-06,12,Regular season,Wilcox County,True,Home,W,43,8,0.987,31.8,final
 Treutlen,2026-11-13,13,Round 1,Wheeler County,True,Away,W,35,6,0.418,-2.9,final
-Treutlen,2026-11-20,14,Round 2,Lincoln County,True,Away,,17,33,0.131,,upcoming
+Treutlen,2026-11-20,14,Round 2,Lincoln County,True,Away,L,0,28,0.13,-16.0,final
 Tri-Cities,2026-08-21,1,Regular season,Salem,True,Away,W,46,18,0.718,12.2,final
 Tri-Cities,2026-09-04,3,Regular season,Therrell,True,Home,W,20,8,0.48,-0.9,final
 Tri-Cities,2026-09-11,4,Regular season,Woodward Academy,True,Home,L,6,31,0.041,-30.2,final
@@ -3983,7 +4048,7 @@ Trion,2026-10-16,9,Regular season,Bowdon,True,Away,L,7,34,0.13,-16.9,final
 Trion,2026-10-23,10,Regular season,Manchester,True,Home,W,35,7,0.781,11.4,final
 Trion,2026-11-06,12,Regular season,B.E.S.T Academy,True,Home,W,40,7,0.92,20.1,final
 Trion,2026-11-13,13,Round 1,B.E.S.T Academy,True,Home,W,35,6,0.942,22.2,final
-Trion,2026-11-20,14,Round 2,Mitchell County,True,Home,,28,25,0.57,,upcoming
+Trion,2026-11-20,14,Round 2,Mitchell County,True,Home,L,27,38,0.569,2.5,final
 Troup County,2026-08-21,1,Regular season,Hampton,True,Away,W,40,0,0.69,10.5,final
 Troup County,2026-08-28,2,Regular season,LaGrange,True,Home,W,22,20,0.678,8.8,final
 Troup County,2026-09-04,3,Regular season,Calhoun,True,Home,W,42,0,0.803,15.0,final
@@ -3995,7 +4060,8 @@ Troup County,2026-10-23,10,Regular season,Upson-Lee,True,Away,W,64,21,1.0,56.0,f
 Troup County,2026-10-30,11,Regular season,Howard,True,Away,W,42,14,0.989,33.1,final
 Troup County,2026-11-06,12,Regular season,Peach County,True,Home,L,38,52,0.515,0.5,final
 Troup County,2026-11-13,13,Round 1,"Mt. Zion, Jonesboro",True,Home,W,69,7,0.995,37.3,final
-Troup County,2026-11-20,14,Round 2,White County,True,Home,,48,6,0.998,,upcoming
+Troup County,2026-11-20,14,Round 2,White County,True,Home,W,60,6,0.998,42.1,final
+Troup County,2026-11-27,15,Quarterfinal,Stephenson,True,Home,,34,23,0.78,,upcoming
 Tucker,2026-08-22,1,Regular season,Columbia,True,Away,W,35,26,0.599,5.3,final
 Tucker,2026-08-28,2,Regular season,Rome,True,Away,W,41,14,0.262,-12.1,final
 Tucker,2026-09-04,3,Regular season,Stephenson,True,Home,W,21,14,0.337,-7.4,final
@@ -4007,7 +4073,8 @@ Tucker,2026-10-23,10,Regular season,Banneker,True,Home,W,41,2,0.99,34.4,final
 Tucker,2026-10-30,11,Regular season,Lithonia,True,Home,L,21,27,0.738,9.2,final
 Tucker,2026-11-06,12,Regular season,Mays,True,Away,W,28,0,0.821,13.2,final
 Tucker,2026-11-13,13,Round 1,Southwest DeKalb,True,Home,W,21,17,0.773,10.6,final
-Tucker,2026-11-20,14,Round 2,LaGrange,True,Home,,25,24,0.503,,upcoming
+Tucker,2026-11-20,14,Round 2,LaGrange,True,Home,W,50,14,0.504,0.1,final
+Tucker,2026-11-27,15,Quarterfinal,Dalton,True,Away,,30,27,0.584,,upcoming
 Turner County,2026-08-21,1,Regular season,Schley County,True,Home,L,26,41,0.355,-7.8,final
 Turner County,2026-08-28,2,Regular season,Randolph-Clay,True,Away,L,27,40,0.233,-13.9,final
 Turner County,2026-09-04,3,Regular season,Tiftarea Academy,False,Away,L,0,21,,,final
@@ -4080,7 +4147,8 @@ Valdosta,2026-10-23,10,Regular season,Camden County,True,Home,W,63,10,0.976,29.7
 Valdosta,2026-10-30,11,Regular season,Lowndes,True,Away,L,31,32,0.785,11.7,final
 Valdosta,2026-11-06,12,Regular season,Richmond Hill,True,Home,W,49,12,0.99,33.9,final
 Valdosta,2026-11-13,13,Round 1,West Forsyth,True,Home,W,63,7,1.0,48.9,final
-Valdosta,2026-11-20,14,Round 2,East Coweta,True,Home,,42,18,0.951,,upcoming
+Valdosta,2026-11-20,14,Round 2,East Coweta,True,Home,W,38,31,0.951,23.5,final
+Valdosta,2026-11-27,15,Quarterfinal,Buford,True,Home,,30,28,0.567,,upcoming
 Veterans,2026-08-21,1,Regular season,Warner Robins,True,Home,L,23,34,0.374,-6.8,final
 Veterans,2026-08-28,2,Regular season,Trinity Christian,True,Away,W,35,31,0.137,-20.8,final
 Veterans,2026-09-11,4,Regular season,Forsyth Central,True,Away,W,22,6,0.79,13.6,final
@@ -4158,7 +4226,7 @@ Ware County,2026-10-23,10,Regular season,Jenkins,True,Home,W,17,0,0.633,5.0,fina
 Ware County,2026-10-30,11,Regular season,Wayne County,True,Away,W,49,0,0.998,41.9,final
 Ware County,2026-11-06,12,Regular season,Benedictine,True,Home,W,31,17,0.594,3.4,final
 Ware County,2026-11-13,13,Round 1,Cedartown,True,Home,W,45,0,0.92,20.1,final
-Ware County,2026-11-20,14,Round 2,Dalton,True,Away,,26,27,0.478,,upcoming
+Ware County,2026-11-20,14,Round 2,Dalton,True,Away,L,21,27,0.478,-0.8,final
 Warner Robins,2026-08-21,1,Regular season,Veterans,True,Away,W,34,23,0.626,6.8,final
 Warner Robins,2026-08-28,2,Regular season,Northeast,True,Home,W,21,20,0.163,-18.7,final
 Warner Robins,2026-09-04,3,Regular season,"Northside, Warner Robins",True,Away,L,10,32,0.655,6.9,final
@@ -4181,7 +4249,7 @@ Warren County,2026-10-23,10,Regular season,Lake Oconee Academy,True,Away,W,36,14
 Warren County,2026-10-30,11,Regular season,Lincoln County,True,Home,L,24,45,0.135,-16.1,final
 Warren County,2026-11-06,12,Regular season,Greene County,True,Away,W,32,27,0.878,16.7,final
 Warren County,2026-11-13,13,Round 1,Jenkins County,True,Home,W,37,27,0.698,7.3,final
-Warren County,2026-11-20,14,Round 2,Taylor County,True,Away,,19,35,0.132,,upcoming
+Warren County,2026-11-20,14,Round 2,Taylor County,True,Away,L,20,36,0.131,-15.9,final
 Washington,2026-08-21,1,Regular season,Shaw,True,Home,L,0,14,0.287,-11.9,final
 Washington,2026-08-27,2,Regular season,Therrell,True,Away,L,0,24,0.254,-12.6,final
 Washington,2026-09-04,3,Regular season,South Atlanta,True,Home,W,25,7,0.389,-5.1,final
@@ -4215,7 +4283,7 @@ Washington-Wilkes,2026-10-16,9,Regular season,Lake Oconee Academy,True,Home,W,16
 Washington-Wilkes,2026-10-23,10,Regular season,Lincoln County,True,Away,L,7,21,0.269,-9.1,final
 Washington-Wilkes,2026-10-30,11,Regular season,Greene County,True,Home,W,39,22,0.98,29.6,final
 Washington-Wilkes,2026-11-13,13,Round 1,Claxton,True,Home,W,35,14,0.985,31.0,final
-Washington-Wilkes,2026-11-20,14,Round 2,Emanuel County Institute,True,Home,,25,26,0.458,,upcoming
+Washington-Wilkes,2026-11-20,14,Round 2,Emanuel County Institute,True,Home,L,27,56,0.458,-1.5,final
 Wayne County,2026-08-21,1,Regular season,Liberty County,True,Home,W,24,21,0.348,-8.2,final
 Wayne County,2026-08-28,2,Regular season,Bradwell Institute,True,Away,L,14,65,0.349,-7.4,final
 Wayne County,2026-09-11,4,Regular season,Appling County,True,Away,L,7,56,0.028,-32.5,final
@@ -4237,6 +4305,7 @@ Wesleyan,2026-10-23,10,Regular season,Therrell,True,Home,W,18,14,0.978,29.7,fina
 Wesleyan,2026-10-31,11,Regular season,KIPP Atlanta Collegiate,True,Away,W,14,7,0.088,-19.6,final
 Wesleyan,2026-11-06,12,Regular season,Temple,True,Home,W,41,20,0.913,19.4,final
 Wesleyan,2026-11-13,13,Round 1,Walker,True,Home,W,42,14,1.0,47.8,final
+Wesleyan,2026-11-20,14,Round 2,Christian Heritage,True,Away,L,21,24,0.644,5.2,final
 West Forsyth,2026-08-21,1,Regular season,Houston County,True,Neutral,L,14,38,0.304,-10.9,final
 West Forsyth,2026-08-28,2,Regular season,Norcross,True,Home,W,23,13,0.459,-1.9,final
 West Forsyth,2026-09-04,3,Regular season,Lanier,True,Away,L,10,28,0.811,15.4,final
@@ -4269,7 +4338,7 @@ West Laurens,2026-10-16,9,Regular season,Long County,True,Away,W,48,26,0.852,15.
 West Laurens,2026-10-23,10,Regular season,Liberty County,True,Away,W,28,6,0.81,12.7,final
 West Laurens,2026-11-06,12,Regular season,Windsor Forest,True,Home,W,22,12,0.947,23.1,final
 West Laurens,2026-11-13,13,Round 1,Westover,True,Home,W,28,13,0.595,3.5,final
-West Laurens,2026-11-20,14,Round 2,Peach County,True,Away,,11,41,0.017,,upcoming
+West Laurens,2026-11-20,14,Round 2,Peach County,True,Away,L,0,49,0.017,-30.2,final
 Westlake,2026-08-22,1,Regular season,Lovejoy,True,Neutral,W,35,13,0.437,-3.4,final
 Westlake,2026-08-28,2,Regular season,Wheeler,True,Home,W,66,10,0.913,25.8,final
 Westlake,2026-09-04,3,Regular season,Hillgrove,True,Away,W,48,24,0.604,4.6,final
@@ -4281,7 +4350,7 @@ Westlake,2026-10-23,10,Regular season,Carrollton,True,Home,L,27,66,0.086,-20.2,f
 Westlake,2026-10-30,11,Regular season,Northgate,True,Away,W,45,14,0.995,37.4,final
 Westlake,2026-11-06,12,Regular season,Douglas County,True,Home,W,35,28,0.62,4.4,final
 Westlake,2026-11-13,13,Round 1,Walton,True,Home,W,35,14,0.854,15.1,final
-Westlake,2026-11-20,14,Round 2,North Gwinnett,True,Away,,28,34,0.326,,upcoming
+Westlake,2026-11-20,14,Round 2,North Gwinnett,True,Away,L,28,35,0.326,-6.4,final
 Westminster,2026-08-21,1,Regular season,Lovett,True,Home,L,12,32,0.284,-12.1,final
 Westminster,2026-08-28,2,Regular season,Kings Ridge,True,Away,L,7,16,0.337,-8.0,final
 Westminster,2026-09-11,4,Regular season,"Chattanooga Christian, TN",False,Away,L,14,23,,,final
@@ -4294,6 +4363,7 @@ Westminster,2026-10-30,11,Regular season,"Douglass, Atlanta",True,Away,L,0,49,0.
 Westminster,2026-11-06,12,Regular season,Greater Atlanta Christian,True,Away,L,13,48,0.011,-32.8,final
 Westminster,2026-11-13,13,Round 1,Calvary Day School,True,Away,L,0,52,0.0,-49.8,final
 Westminster,2026-11-13,13,Round 1,Mt. Paran Christian,True,Home,W,44,14,0.652,5.7,final
+Westminster,2026-11-20,14,Round 2,Calvary Day School,True,Home,W,55,34,0.001,-44.7,final
 Westover,2026-08-21,1,Regular season,Kings Ridge,True,Home,W,30,12,0.803,18.0,final
 Westover,2026-08-28,2,Regular season,Seminole County,True,Home,W,34,0,0.855,20.1,final
 Westover,2026-09-04,3,Regular season,Columbus,True,Away,W,49,8,0.908,23.2,final
@@ -4358,7 +4428,7 @@ White County,2026-10-16,9,Regular season,Dawson County,True,Away,W,29,19,0.699,7
 White County,2026-10-30,11,Regular season,North Hall,True,Home,L,20,42,0.111,-17.6,final
 White County,2026-11-06,12,Regular season,Chestatee,True,Away,W,55,6,0.998,41.1,final
 White County,2026-11-13,13,Round 1,Spencer,True,Away,W,22,19,0.193,-12.5,final
-White County,2026-11-20,14,Round 2,Troup County,True,Away,,6,48,0.002,,upcoming
+White County,2026-11-20,14,Round 2,Troup County,True,Away,L,6,60,0.002,-42.1,final
 Whitefield Academy,2026-08-21,1,Regular season,Wesleyan,True,Away,W,42,35,0.585,4.5,final
 Whitefield Academy,2026-08-28,2,Regular season,Mount Vernon,True,Home,L,28,34,0.719,11.0,final
 Whitefield Academy,2026-09-11,4,Regular season,Stratford Academy,False,Home,W,35,26,,,final
@@ -4370,6 +4440,7 @@ Whitefield Academy,2026-10-23,10,Regular season,Utopian Academy,True,Home,W,63,1
 Whitefield Academy,2026-10-29,11,Regular season,Washington,True,Away,W,49,0,0.996,38.2,final
 Whitefield Academy,2026-11-06,12,Regular season,Trinity Christian,True,Away,W,56,44,0.717,8.2,final
 Whitefield Academy,2026-11-13,13,Round 1,Mt. Pisgah Christian,True,Home,W,63,6,1.0,59.1,final
+Whitefield Academy,2026-11-20,14,Round 2,Fellowship Christian,True,Home,W,41,10,0.819,12.9,final
 Whitewater,2026-08-21,1,Regular season,McDonough,True,Away,W,57,8,0.58,4.3,final
 Whitewater,2026-08-28,2,Regular season,McIntosh,True,Away,W,14,0,0.815,17.0,final
 Whitewater,2026-09-04,3,Regular season,Callaway,True,Home,W,30,20,0.751,11.8,final
@@ -4463,7 +4534,8 @@ Woodward Academy,2026-10-23,10,Regular season,Morrow,True,Home,W,40,6,0.997,39.7
 Woodward Academy,2026-10-30,11,Regular season,Lovejoy,True,Home,W,28,14,0.785,11.4,final
 Woodward Academy,2026-11-06,12,Regular season,Creekside,True,Away,L,21,56,0.004,-38.6,final
 Woodward Academy,2026-11-13,13,Round 1,Hughes,True,Away,W,24,21,0.037,-25.2,final
-Woodward Academy,2026-11-20,14,Round 2,Sequoyah,True,Away,,12,36,0.041,,upcoming
+Woodward Academy,2026-11-20,14,Round 2,Sequoyah,True,Away,W,31,24,0.041,-24.9,final
+Woodward Academy,2026-11-27,15,Quarterfinal,Lee County,True,Away,,9,39,0.019,,upcoming
 Worth County,2026-08-21,1,Regular season,Brooks County,True,Home,W,49,35,0.759,14.9,final
 Worth County,2026-09-04,3,Regular season,Early County,True,Away,W,31,0,0.877,21.8,final
 Worth County,2026-09-11,4,Regular season,Thomasville,True,Away,L,16,30,0.603,4.5,final
